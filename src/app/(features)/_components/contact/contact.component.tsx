@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <Box className="p-8 relative">
+    <Box className="p-8 relative" id="contact">
       <Paper withBorder className="rounded-md -mb-20 relative z-10" shadow="md">
         <Flex className="md:min-h-[60dvh] flex-col md:flex-row">
           <Stack className="md:w-1/2 p-6 justify-center">

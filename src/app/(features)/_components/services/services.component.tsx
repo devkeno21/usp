@@ -54,7 +54,7 @@ export default function Services() {
   const theme = useMantineTheme();
 
   return (
-    <Stack className="min-h-[100dvh] justify-evenly items-center">
+    <Stack id="services" className="min-h-[100dvh] justify-evenly items-center">
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR SERVICES

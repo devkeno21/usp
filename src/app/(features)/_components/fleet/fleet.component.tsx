@@ -104,7 +104,7 @@ export default function Fleet() {
   const autoplay2 = useRef(Autoplay({ delay: isMobile ? 3000 : 1500 }));
 
   return (
-    <Stack className="min-h-[100dvh] justify-around">
+    <Stack className="min-h-[100dvh] justify-around" id="fleets">
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR FLEET

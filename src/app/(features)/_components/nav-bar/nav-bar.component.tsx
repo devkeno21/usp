@@ -99,16 +99,16 @@ export function NavBar() {
           <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
 
           <Group h="100%" gap={6} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="#about" className={classes.link}>
               About
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#services" className={classes.link}>
               Services
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#fleets" className={classes.link}>
               Fleets
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#contact" className={classes.link}>
               Contact
             </a>
           </Group>
