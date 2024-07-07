@@ -119,7 +119,13 @@ import {
         defaultProps: {
           size: "sm",
         },
-        styles: {},
+        styles: {
+          input:{
+            backgroundColor:"rgba(250, 250, 249, 0.1)",
+            color:"white",
+            borderColor:"rgba(250, 250, 249, 0.1)"
+          }
+        },
       },
   
       NumberInput: {

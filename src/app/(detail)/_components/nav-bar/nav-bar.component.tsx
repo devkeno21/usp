@@ -18,7 +18,7 @@ import {
   rem,
   useMantineTheme,
 } from "@mantine/core";
-import USPLogo from "./usp-logo-white.png";
+import USPLogo from "./usp-logo-black.png";
 import { useDisclosure } from "@mantine/hooks";
 import {
   IconNotification,
@@ -95,10 +95,10 @@ export function NavBar() {
   ));
 
   return (
-    <Box className="bg-transparent z-10 relative">
+    <Box className="bg-transparent z-10 relative py-5">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
+          <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
 
           <Group h="100%" gap={6} visibleFrom="sm">
             <a href="#" className={classes.link}>
@@ -109,6 +109,9 @@ export function NavBar() {
             </a>
             <a href="#" className={classes.link}>
               Fleets
+            </a>
+            <a href="#" className={classes.link}>
+            Affiliates
             </a>
             <a href="#" className={classes.link}>
               Contact

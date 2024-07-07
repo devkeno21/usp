@@ -16,6 +16,7 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useHover, useMediaQuery } from "@mantine/hooks";
+import { useRouter } from "next/navigation";
 
 const fleet = [
   {
@@ -102,6 +103,7 @@ export default function Fleet() {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const autoplay2 = useRef(Autoplay({ delay: isMobile ? 3000 : 1500 }));
+  const router  = useRouter()
 
   return (
     <Stack className="min-h-[100dvh] justify-around">
@@ -117,7 +119,7 @@ export default function Fleet() {
       <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         height={300}
-        withIndicators
+        // withIndicators
         slideGap="xl"
         controlsOffset="xs"
         controlSize={27}
@@ -383,6 +385,7 @@ export default function Fleet() {
         rightSection={<IconArrowRight />}
         className="w-fit mx-auto"
         color={theme.colors.secondary[9]}
+        onClick={()=>router.push('/browse')}
       >
         BROWSE THROUGH ALL FLEETS
       </Button>
