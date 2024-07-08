@@ -26,6 +26,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { useRouter } from "next/navigation";
+import whiteCar from "./white-car.png";
 
 const fleet = [
   {
@@ -131,7 +132,36 @@ export default function DetailFleet() {
 
       <Box className="p-5">
         <Flex gap={10}>
-          <Box className="w-full"></Box>
+          <Box className="w-full">
+            <Stack className="h-full">
+              <Box
+                className="h-[80%]"
+                style={{
+                  backgroundImage: `url(${whiteCar.src})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              />
+              <Box className="h-[20%]">
+                <Flex className="gap-4 h-[100%]">
+                  {[1, 2, 3, 4].map((_, index) => (
+                    <Box
+                      key={index}
+                      className="w-1/4 cursor-pointer"
+                      style={{
+                        backgroundImage: `url(${whiteCar.src})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        backgroundRepeat: "no-repeat",
+                        opacity: index === 0 ? 1 : 0.4,
+                      }}
+                    />
+                  ))}
+                </Flex>
+              </Box>
+            </Stack>
+          </Box>
           <Box className="w-full px-10">
             <p className="font-semibold text-xl text-slate-500">Cadilac</p>
             <Flex justify="space-between" align="center">
