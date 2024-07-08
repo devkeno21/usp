@@ -22,9 +22,11 @@ import {
   IconX,
 } from "@tabler/icons-react";
 import { Accordion } from "@mantine/core";
+import { useRouter } from "next/navigation";
 
 const fleet = [
   {
+    id:1,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -36,6 +38,7 @@ const fleet = [
     ],
   },
   {
+    id:2,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -47,6 +50,7 @@ const fleet = [
     ],
   },
   {
+    id:3,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -58,6 +62,7 @@ const fleet = [
     ],
   },
   {
+    id:4,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -72,6 +77,7 @@ const fleet = [
 
 export default function Browse() {
   const theme = useMantineTheme();
+  const router = useRouter();
   return (
     <>
       <Breadcrumb
@@ -208,6 +214,7 @@ export default function Browse() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
+                      onClick={()=>router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -274,6 +281,7 @@ export default function Browse() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
+                          onClick={()=>router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
