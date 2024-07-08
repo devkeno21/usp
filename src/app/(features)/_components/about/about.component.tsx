@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Box,
   Button,
@@ -28,25 +28,29 @@ export default function About() {
       </Flex>
       <Flex className="w-full h-full justify-center flex flex-col gap-8">
         <Flex className="align-top mx-auto flex-col gap-2">
-          <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">About USP</Text>
-          <Box bg={theme.colors.secondary[9]} className="w-[85%] p-1 mx-auto"></Box>
+          <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
+            About USP
+          </Text>
+          <Box
+            bg={theme.colors.secondary[9]}
+            className="w-[85%] p-1 mx-auto"
+          ></Box>
         </Flex>
         <Text className="text-xs md:text-xl p-12 text-justify font-semibold">
-          In 2008, USP Holdings has expanded its corporate mission and engaged
-          in shuttle bus and limousine services. Our transportation mission is
-          to provide safe, dependable, and efficient services for people who
-          need stress-free and economic travel. We have well trained,
-          experienced, fully-insured, professional, and courteous drivers. Our
-          fleet of vehicles which include shuttle buses, limousines, and
-          taxi-cabs; are spread throughout the DMV and can be deployed at a
-          moment’s notice. Our vehicles are well-maintained, and our goal is to
-          be on time, all the time. Presently, we are providing services to a
-          major downtown corridor in Washington, DC as well as both Washington
-          Dulles International and Ronald Reagan National Airports. We maintain
-          at maximum a 7-minute headway at both airports and provide rides to a
-          million of customers every year.
+          In 2008, USP Holdings expanded its corporate mission and engaged in
+          shuttle bus and limousine services. Our transportation mission is to
+          provide safe, dependable, and efficient services for people who need
+          stress-free and economical travel. We have well-trained, experienced,
+          fully insured, professional, and courteous drivers. Our vehicles,
+          including shuttle buses, limousines, and taxi cabs, are spread
+          throughout the DMV and can be deployed immediately. Our automobiles
+          are well-maintained, and our staff is always punctual. We provide
+          services to a significant downtown corridor in Washington, DC,
+          Washington Dulles International, and Ronald Reagan National Airports.
         </Text>
-        <Button color={theme.colors.secondary[9]} className="mx-auto">Book Now</Button>
+        <Button color={theme.colors.secondary[9]} className="mx-auto">
+          Book Now
+        </Button>
       </Flex>
     </Box>
   );

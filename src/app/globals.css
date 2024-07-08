@@ -14,6 +14,10 @@ body {
   --primary: #f1f1f1;
   --secondary: #1B234C;
   --tertiary: #1B234C;
+  --cards: 4;
+	--cardHeight: 37vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
 }
 
 /* Chrome, Edge, and Safari */

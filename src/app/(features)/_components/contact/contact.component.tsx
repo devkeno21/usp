@@ -59,12 +59,24 @@ export default function Contact() {
               <Stack>
                 <TextInput
                   label="Name"
+                  styles={{
+                    input:{
+                      color:"black",
+                      border:"1px solid rgba(28, 25, 23, 0.25)"
+                    }
+                  }}
                   withAsterisk
                   {...register("name")}
                   error={errors?.name?.message}
                 />
                 <TextInput
                   label="Email"
+                  styles={{
+                    input:{
+                      color:"black",
+                      border:"1px solid rgba(28, 25, 23, 0.25)"
+                    }
+                  }}
                   withAsterisk
                   {...register("email")}
                   error={errors?.email?.message}

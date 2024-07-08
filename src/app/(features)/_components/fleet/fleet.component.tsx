@@ -16,9 +16,11 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useHover, useMediaQuery } from "@mantine/hooks";
+import { useRouter } from "next/navigation";
 
 const fleet = [
   {
+    id:1,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -30,6 +32,7 @@ const fleet = [
     ],
   },
   {
+    id:2,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -41,6 +44,7 @@ const fleet = [
     ],
   },
   {
+    id:3,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -52,6 +56,7 @@ const fleet = [
     ],
   },
   {
+    id:4,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -63,6 +68,7 @@ const fleet = [
     ],
   },
   {
+    id:5,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -74,6 +80,7 @@ const fleet = [
     ],
   },
   {
+    id:6,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -85,6 +92,7 @@ const fleet = [
     ],
   },
   {
+    id:7,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -102,6 +110,7 @@ export default function Fleet() {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const autoplay2 = useRef(Autoplay({ delay: isMobile ? 3000 : 1500 }));
+  const router  = useRouter()
 
   return (
     <Stack className="min-h-[100dvh] justify-around" id="fleets">
@@ -117,7 +126,7 @@ export default function Fleet() {
       <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         height={300}
-        withIndicators
+        // withIndicators
         slideGap="xl"
         controlsOffset="xs"
         controlSize={27}
@@ -168,6 +177,7 @@ export default function Fleet() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
+                      onClick={()=>router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -234,6 +244,7 @@ export default function Fleet() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
+                          onClick={()=>router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
@@ -300,6 +311,7 @@ export default function Fleet() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
+                      onClick={()=>router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -366,6 +378,7 @@ export default function Fleet() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
+                          onClick={()=>router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
@@ -383,6 +396,7 @@ export default function Fleet() {
         rightSection={<IconArrowRight />}
         className="w-fit mx-auto"
         color={theme.colors.secondary[9]}
+        onClick={()=>router.push('/browse')}
       >
         BROWSE THROUGH ALL FLEETS
       </Button>
