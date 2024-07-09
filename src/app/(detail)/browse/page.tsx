@@ -23,57 +23,7 @@ import {
 } from "@tabler/icons-react";
 import { Accordion } from "@mantine/core";
 import { useRouter } from "next/navigation";
-
-const fleet = [
-  {
-    id:1,
-    title: "Escalade ESV Luxury SUV",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car1.src,
-    features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
-    ],
-  },
-  {
-    id:2,
-    title: "Escalade ESV Luxury SUV",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car1.src,
-    features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
-    ],
-  },
-  {
-    id:3,
-    title: "Escalade ESV Luxury SUV",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car1.src,
-    features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
-    ],
-  },
-  {
-    id:4,
-    title: "Escalade ESV Luxury SUV",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car2.src,
-    features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
-    ],
-  },
-];
+import { fleet } from "@/app/(features)/_components/fleet/fleet.component";
 
 export default function Browse() {
   const theme = useMantineTheme();
@@ -185,7 +135,7 @@ export default function Browse() {
           </Box>
         </Box>
         <Box className="w-2/3 grid grid-cols-2 gap-5">
-          {fleet.map((car, index) => (
+          {fleet.slice(0,4).map((car, index) => (
             <Box className="relative w-full" key={index} h={300}>
               <Box className="h-full w-full absolute top-0">
                 <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">

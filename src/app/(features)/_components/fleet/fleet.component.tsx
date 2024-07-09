@@ -26,7 +26,7 @@ import { useHover, useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import Wave from "../services/Vector.svg"
 
-const fleet = [
+export const fleet = [
   {
     id: 1,
     title: "Mercedes E Class",
@@ -55,9 +55,9 @@ const fleet = [
     id: 3,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
+    fleetType: "Luxury Sedan",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car4.src,
     features: [
       "Full-size SUV that offers high-end features",
       "Semi-aniline leather seats",
@@ -121,6 +121,8 @@ const fleet = [
     features: [
       "Travel in luxury and arrive in style",
       "Available in varying passenger sizes",
+      "Travel in luxury and arrive in style",
+      "Available in varying passenger sizes",
     ],
   },
 ];
@@ -151,7 +153,7 @@ export default function Fleet() {
           className="w-[45%] p-1 mx-auto"
         ></Box>
       </Flex>
-      <Carousel
+      {/* <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         height={300}
         // withIndicators
@@ -282,7 +284,7 @@ export default function Fleet() {
             </Box>
           </Carousel.Slide>
         ))}
-      </Carousel>
+      </Carousel> */}
       <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         initialSlide={6}

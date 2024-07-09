@@ -1,10 +1,11 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
 import BlackCar from "./black-car-4.png";
-import Wave from "../services/Vector.svg"
+import { useRouter } from "next/navigation";
 
 export default function Affiliates() {
   const theme = useMantineTheme();
+  const router = useRouter();
 
   return (
     <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4" style={{
@@ -56,7 +57,7 @@ export default function Affiliates() {
             Experience the benefits of driving for a premium market and elevate
             your career to new heights.
           </Text>
-          <Button color={theme.colors.secondary[9]} className="mx-auto md:mx-0 w-fit">
+          <Button color={theme.colors.secondary[9]} className="mx-auto md:mx-0 w-fit" onClick={()=>router.push('/affiliate')}>
             Join Now
           </Button>
         </Stack>
