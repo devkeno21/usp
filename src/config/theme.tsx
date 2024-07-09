@@ -176,11 +176,11 @@ import {
         defaultProps: {
           size: "sm",
         },
-        styles: {
-          root: {
-            backgroundColor: "#FEF3C7",
-          }
-        }
+        // styles: {
+        //   root: {
+        //     backgroundColor: "#FEF3C7",
+        //   }
+        // }
       },
       SegmentedControl: {
         defaultProps: {

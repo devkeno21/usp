@@ -10,6 +10,8 @@ import { OperationInformationForm } from "./_components/operation-form";
 import { ChauffeursInformationForm } from "./_components/chauffeurs-form";
 import { FleetInformationForm } from "./_components/fleet-form";
 import { BillingInformationForm } from "./_components/billing-form";
+import { useJoinAffiliateMutation } from "@/state/api/usp.api";
+import { notifications } from "@mantine/notifications";
 
 export default function Affiliate() {
   const router = useRouter();
@@ -22,6 +24,8 @@ export default function Affiliate() {
   const [fleetInformation,setFleetInformation] = useState<any>({});
   const [billingInformation,setBillingInformation] = useState<any>({});
 
+  const [joinAffiliate,{isLoading}] = useJoinAffiliateMutation();
+
   const onNext = (data: any) => {
     if(active === 0 )
       setCompanyInfo(data)
@@ -33,10 +37,43 @@ export default function Affiliate() {
       setChauffeurInformation(data)
     else if(active === 4 )
       setFleetInformation(data)
-    else if(active === 5 )
+
+    if(active !==5)setActive(active + 1);
+    if(active === 5 ){
       setBillingInformation(data)
-    setActive(active + 1);
+      onSubmit()
+    }
+    
   };
+
+  const onSubmit = async()=>{
+    const formData = new FormData()
+    formData.append('companyInfo', JSON.stringify(companyInfo))
+    formData.append('generalInformation', JSON.stringify(generalInformation))
+    formData.append('operationInformation', JSON.stringify(operationInformation))
+    formData.append('chauffeurInformation', JSON.stringify(chauffeurInformation))
+    formData.append('fleetInformation', JSON.stringify(fleetInformation))
+    formData.append('billingInformation', JSON.stringify(billingInformation))
+    formData.append('file', file)
+    console.log({formData})
+    try{
+      await joinAffiliate(formData).unwrap();
+      notifications.show({
+        title: "Success",
+        message: "Form submitted successfully",
+        color: "green",
+      })
+      router.push('/')
+    }catch{
+      notifications.show({
+        title: "Error",
+        message: "An error occurred while joining the affiliate program. Please try again later.",
+        color: "red",
+      })
+    }
+  }
+
+  
 
   return (
     <div className="bg-primary-900 min-h-screen text-white">
@@ -119,7 +156,7 @@ export default function Affiliate() {
                   onPrev={() => setActive(active - 1)} setFile={setFile}/></div>}
             {active == 5 && <div>
               <BillingInformationForm onNext={onNext}
-                  onPrev={() => setActive(active - 1)}/>
+                  onPrev={() => setActive(active - 1)} isLoading={isLoading}/>
               </div>}
           </div>
         </Flex>

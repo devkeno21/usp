@@ -87,7 +87,7 @@ export const FleetInformationForm = ({
 
       {/* drop zone */}
       <Dropzone
-      onDrop={setFile}
+      onDrop={(file)=>setFile(file)}
       onReject={(files) => console.log('rejected files', files)}
       maxSize={5 * 1024 ** 2}
       // accept={IMAGE_MIME_TYPE}

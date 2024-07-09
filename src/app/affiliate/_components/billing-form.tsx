@@ -34,9 +34,11 @@ const operationInfoSchema = z.object({
 export const BillingInformationForm = ({
   onNext,
   onPrev,
+  isLoading = false,
 }: {
   onNext: (data: any) => void;
   onPrev: () => void;
+  isLoading?: boolean;
 }) => {
   const {
     handleSubmit,
@@ -168,13 +170,19 @@ export const BillingInformationForm = ({
       />
 
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev}>
+        <Button
+          color="white"
+          className="text-black"
+          onClick={onPrev}
+          loading={isLoading}
+        >
           Prev
         </Button>
         <Button
           color="white"
           className="text-black"
           onClick={handleSubmit(onSubmit, onError)}
+          loading={isLoading}
         >
           Finish
         </Button>
