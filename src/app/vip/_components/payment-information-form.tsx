@@ -4,6 +4,9 @@ import { Button, Flex, Group, TextInput } from "@mantine/core";
 import { DateInput } from "@mantine/dates";
 import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
+import { VisaLogo } from "./visa-svg";
+import { MasterCardLogo } from "./master-card-svg";
+import { AmericaExpress } from "./america-express-svg";
 
 const paymentInfoSchema = z.object({
   cardName: z.string().min(1, "Card name is required"),
@@ -57,7 +60,13 @@ export const PaymentInformationForm = ({
           {" "}
           Currently Selected VISA
         </span>
+
       </p>
+        <Flex className="mt-5" gap={20} align="center">
+          <VisaLogo/>
+          <MasterCardLogo/>
+          <AmericaExpress/>
+        </Flex>
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Name on Card" withAsterisk {...register("cardName")}
           error={errors.cardName?.message?.toString()}/>
