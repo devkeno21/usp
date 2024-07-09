@@ -1,12 +1,17 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
 import BlackCar from "./black-car-4.png";
+import Wave from "../services/Vector.svg"
 
 export default function Affiliates() {
   const theme = useMantineTheme();
 
   return (
-    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4">
+    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4" style={{
+      backgroundImage: `url(${Wave.src})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR AFFILIATES
@@ -28,7 +33,7 @@ export default function Affiliates() {
         />
         <Flex className="w-full h-full justify-center items-center absolute top-0">
           <Box
-            className="w-full md:hidden h-[100dvh]"
+            className="w-full md:hidden h-[70dvh]"
             style={{
               backgroundImage: `url(${BlackCar.src})`,
               backgroundSize: "contain",
