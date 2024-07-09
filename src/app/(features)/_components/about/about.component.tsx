@@ -17,11 +17,6 @@ export default function About() {
     <Box
       id="about"
       className="w-full h-[75dvh] relative mt-[100dvh]"
-      style={{
-        backgroundImage: `url(${Wave.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <Flex className="w-full h-full justify-center items-center absolute top-0">
         <Box

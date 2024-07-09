@@ -31,11 +31,6 @@ export default function Clients() {
   return (
     <Flex
       className="h-[65dvh] flex-col justify-around"
-      style={{
-        backgroundImage: `url(${Wave.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">

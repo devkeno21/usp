@@ -9,11 +9,7 @@ export default function Affiliates() {
   const router = useRouter();
 
   return (
-    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4" style={{
-      backgroundImage: `url(${Wave.src})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}>
+    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4">
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR AFFILIATES
