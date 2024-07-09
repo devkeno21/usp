@@ -13,8 +13,8 @@ const personalInfoSchema = z.object({
   city: z.string().min(1, "City is required"),
   state: z.string().min(1, "State is required"),
   zipCode: z.string().min(1, "Zip Code is required"),
-  email: z.string().min(1, "Email is required").email("Invalid Email Address"),
-  phoneNumber: z.string().min(1, "Phone number is required"),
+  primaryEmail: z.string().min(1, "Email is required").email("Invalid Email Address"),
+  primaryPhoneNumber: z.string().min(1, "Phone number is required"),
   manager: z.string().min(1, "Manager is required"),
   managerEmail: z
     .string()
@@ -109,8 +109,8 @@ export const PersonalInformationForm = ({
           className="w-full"
           label="Primary Email"
           withAsterisk
-          {...register("email")}
-          error={errors.email?.message?.toString()}
+          {...register("primaryEmail")}
+          error={errors.primaryEmail?.message?.toString()}
         />
       </Flex>
       <Flex gap={10} className="mt-5">
@@ -118,8 +118,8 @@ export const PersonalInformationForm = ({
           className="w-full"
           label="Primary Phone Number"
           withAsterisk
-          {...register("phoneNumber")}
-          error={errors.phoneNumber?.message?.toString()}
+          {...register("primaryPhoneNumber")}
+          error={errors.primaryPhoneNumber?.message?.toString()}
           type="number"
         />
         <div className="w-full"></div>
