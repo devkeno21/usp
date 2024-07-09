@@ -10,6 +10,7 @@ import { FinalForm } from "./_components/final-form";
 import { CompanyInformationForm } from "./_components/company-information-form";
 import { MonthlyPaymentInformationForm } from "./_components/monthly-payment-information";
 import { DebitPaymentInformationForm } from "./_components/debit-payment-method";
+import Wave from "../(features)/_components/services/Vector.svg"
 
 export default function VIP() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function VIP() {
 
   return (
     <div className="bg-primary-900 min-h-screen text-white" style={{
-      backgroundImage: `url(/form-bg.svg)`,
+      backgroundImage: `url(${Wave.src})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
