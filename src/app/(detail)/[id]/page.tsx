@@ -29,7 +29,7 @@ import Car6 from "../../(features)/_components/fleet/car-6.png";
 import Car7 from "../../(features)/_components/fleet/car-7.png";
 import Car8 from "../../(features)/_components/fleet/car-8.png";
 import Car9 from "../../(features)/_components/fleet/car-9.png";
-// import CarVid from "./escalade-vid.mp4"
+import Wave from "../../(features)/_components/services/Vector.svg"
 
 import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
@@ -151,7 +151,14 @@ export default function DetailFleet() {
         ]}
       />
 
-      <Box className="p-5">
+      <Box
+        className="p-5"
+        style={{
+          backgroundImage: `url(${Wave.src})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <Flex gap={10}>
           <Box className="w-full">
             <Stack className="h-full">
@@ -172,7 +179,6 @@ export default function DetailFleet() {
                 className="h-[80%]"
               >
                 <source src="/videos/escalade-vid.mp4" type="video/mp4" />
-               
                 Your browser does not support the video tag.
               </video>
               <Box className="h-[20%]">
