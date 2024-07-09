@@ -11,10 +11,10 @@ const generalInfoSchema = z.object({
   airport: z.string().min(1, "This field is required"),
   software: z.string().min(1, "This field is required"),
   realtimeUpdate: z.string().min(1, "This field is required"),
-  name: z.string().min(1, "This field is required"),
-  address: z.string().min(1, "This field is required"),
-  name2: z.string().min(1, "This field is required"),
-  address2: z.string().min(1, "This field is required"),
+  insuredName: z.string().min(1, "This field is required"),
+  insuredAddress: z.string().min(1, "This field is required"),
+  insurerName: z.string().min(1, "This field is required"),
+  insurerAddress: z.string().min(1, "This field is required"),
   insurance: z.string().min(1, "This field is required"),
   expirationDate: z.date({
     required_error:"This field is required"
@@ -43,7 +43,6 @@ export const GeneralInformationForm = ({
   };
 
   const onSubmit = (data: any) => {
-    console.log({ data });
     onNext(data);
   };
   return (
@@ -87,16 +86,16 @@ export const GeneralInformationForm = ({
       />
 
       <Flex gap={10} className="mt-14">
-        <TextInput label="Insured Name" withAsterisk  {...register("name")}
-        error={errors.name?.message?.toString()} className="w-full"/>
-        <TextInput label="Insured Address" withAsterisk  {...register("address")}
-        error={errors.address?.message?.toString()} className="w-full"/>
+        <TextInput label="Insured Name" withAsterisk  {...register("insuredName")}
+        error={errors.insuredName?.message?.toString()} className="w-full"/>
+        <TextInput label="Insured Address" withAsterisk  {...register("insuredAddress")}
+        error={errors.insuredAddress?.message?.toString()} className="w-full"/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput label="Insured Name" withAsterisk  {...register("name2")}
-        error={errors.name2?.message?.toString()} className="w-full"/>
-        <TextInput label="Insured Address" withAsterisk  {...register("address2")}
-        error={errors.address2?.message?.toString()} className="w-full"/>
+        <TextInput label="Insurer Name" withAsterisk  {...register("insurerName")}
+        error={errors.insurerName?.message?.toString()} className="w-full"/>
+        <TextInput label="Insurer Address" withAsterisk  {...register("insurerAddress")}
+        error={errors.insurerAddress?.message?.toString()} className="w-full"/>
       </Flex>
       <Flex gap={10} className="mt-5">
       <Controller
@@ -126,7 +125,7 @@ export const GeneralInformationForm = ({
       </Flex>
 
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev} disabled>
+        <Button color="white" className="text-black" onClick={onPrev} >
           Prev
         </Button>
         <Button

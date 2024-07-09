@@ -1,6 +1,7 @@
 import { Montserrat } from 'next/font/google';
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
+import '@mantine/dropzone/styles.css';
 import '@mantine/carousel/styles.css';
 import type { Metadata } from "next";
 import "./globals.css";

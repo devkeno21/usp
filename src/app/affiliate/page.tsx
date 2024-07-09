@@ -8,13 +8,15 @@ import { CompanyInformationForm } from "./_components/company-form";
 import { GeneralInformationForm } from "./_components/general-form";
 import { OperationInformationForm } from "./_components/operation-form";
 import { ChauffeursInformationForm } from "./_components/chauffeurs-form";
+import { FleetInformationForm } from "./_components/fleet-form";
+import { BillingInformationForm } from "./_components/billing-form";
 
 export default function Affiliate() {
   const router = useRouter();
   const [active, setActive] = useState(0);
 
   const onNext = (data: any) => {
-    console.log({ upperData: data });
+    console.log({ parentData: data });
     setActive(active + 1);
   };
 
@@ -94,8 +96,13 @@ export default function Affiliate() {
               <ChauffeursInformationForm onNext={onNext}
                   onPrev={() => setActive(active - 1)}/>
               </div>}
-            {active == 4 && <div>5</div>}
-            {active == 5 && <div>6</div>}
+            {active == 4 && <div>
+              <FleetInformationForm onNext={onNext}
+                  onPrev={() => setActive(active - 1)}/></div>}
+            {active == 5 && <div>
+              <BillingInformationForm onNext={onNext}
+                  onPrev={() => setActive(active - 1)}/>
+              </div>}
           </div>
         </Flex>
       </div>

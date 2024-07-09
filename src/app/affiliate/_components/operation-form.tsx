@@ -1,14 +1,13 @@
 "use client";
 import { Box, Button, Flex, Group, Textarea, TextInput } from "@mantine/core";
 import { z } from "zod";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { DateInput } from "@mantine/dates";
 import { useState } from "react";
 import { getActiveBtnColor } from "@/utils/utils";
 
-const companyInfoSchema = z.object({
-  email: z.string().min(1, "This field is required").email(),
+const operationInfoSchema = z.object({
+  departmentEmail: z.string().min(1, "This field is required").email(),
   domesticAirport: z.string().min(1, "This field is required"),
   domesticAirport2: z.string().min(1, "This field is required"),
   greeters: z.string().min(1, "This field is required"),
@@ -28,7 +27,7 @@ export const OperationInformationForm = ({
     formState: { errors },
     control,
   } = useForm({
-    resolver: zodResolver(companyInfoSchema),
+    resolver: zodResolver(operationInfoSchema),
   });
   const [verificationType, setVerificationType] = useState<"email" | "phone">(
     "email"
@@ -48,14 +47,14 @@ export const OperationInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">General Information</p>
+      <p className="text-2xl">Operation Information</p>
 
       <Flex gap={10} className="mt-14">
         <TextInput
           label="Reservation Department Email Address"
           withAsterisk
-          {...register("email")}
-          error={errors.email?.message?.toString()}
+          {...register("departmentEmail")}
+          error={errors.departmentEmail?.message?.toString()}
           className="w-full"
         />
         <Box className="w-full mt-1">
@@ -157,7 +156,7 @@ export const OperationInformationForm = ({
       />
 
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev} disabled>
+        <Button color="white" className="text-black" onClick={onPrev} >
           Prev
         </Button>
         <Button

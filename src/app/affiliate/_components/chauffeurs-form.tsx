@@ -103,7 +103,7 @@ export const ChauffeursInformationForm = ({
   
 
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev} disabled>
+        <Button color="white" className="text-black" onClick={onPrev} >
           Prev
         </Button>
         <Button
