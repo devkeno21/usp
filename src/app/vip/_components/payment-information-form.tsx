@@ -80,6 +80,14 @@ export const PaymentInformationForm = ({
           error={errors.zipCode?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
+      </Flex>
+      <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Card Number" withAsterisk type="number" {...register("cardNumber")}
           error={errors.cardNumber?.message?.toString()}/>
           <Controller

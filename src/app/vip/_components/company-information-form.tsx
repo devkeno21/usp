@@ -23,13 +23,13 @@ const companyInfoSchema = z.object({
   reservationContact: z.string().min(1, "Reservation contact is required"),
   reservationPhoneNumber: z.string().min(1, "Phone number is required"),
   reservationEmail: z.string().min(1, "Email is required"),
-  openingHours: z.date({ required_error: "Opening hours is required" }),
-  dispatchContact: z.string().min(1, "Dispatch contact is required"),
-  dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
-  dispatchEmail: z.string().min(1, "Email number is required"),
-  accountingContact: z.string().min(1, "Accounting contact is required"),
-  accountingPhoneNumber: z.string().min(1, "Phone number is required"),
-  accountingEmail: z.string().min(1, "Email number is required"),
+  // openingHours: z.date({ required_error: "Opening hours is required" }),
+  // dispatchContact: z.string().min(1, "Dispatch contact is required"),
+  // dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
+  // dispatchEmail: z.string().min(1, "Email number is required"),
+  // accountingContact: z.string().min(1, "Accounting contact is required"),
+  // accountingPhoneNumber: z.string().min(1, "Phone number is required"),
+  // accountingEmail: z.string().min(1, "Email number is required"),
 });
 
 export const CompanyInformationForm = ({
@@ -76,6 +76,14 @@ export const CompanyInformationForm = ({
           error={errors.address?.message?.toString()}/>
         <TextInput className="w-full" label="Zip/Post Code" withAsterisk  {...register("zipCode")}
           error={errors.zipCode?.message?.toString()}/>
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
       </Flex>
       <Flex gap={10} className="mt-5">
         <TextInput

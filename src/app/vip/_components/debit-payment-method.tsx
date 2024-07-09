@@ -42,6 +42,10 @@ export const DebitPaymentInformationForm = ({onNext,onPrev}:{  onNext: (data: an
         <TextInput className="w-full" label="Account Number" withAsterisk type="number" {...register("accountNumber")}
           error={errors.accountNumber?.message?.toString()}/>
       </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
+      </Flex>
    
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Sort Code" withAsterisk {...register("sortCode")}
@@ -53,6 +57,13 @@ export const DebitPaymentInformationForm = ({onNext,onPrev}:{  onNext: (data: an
           error={errors.billingAddress?.message?.toString()}/>
         <TextInput className="w-full" label="Zip/Postal Code" withAsterisk {...register("zipCode")}
           error={errors.zipCode?.message?.toString()}/>
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
+      </Flex> <Flex gap={10} className="mt-5">
+        <TextInput className="w-full"  withAsterisk />
+        <div className="w-full"></div>
       </Flex>
 
       <Group justify="flex-end" gap={10} className="mt-10">
