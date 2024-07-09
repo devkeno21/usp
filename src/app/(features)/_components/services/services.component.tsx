@@ -15,37 +15,37 @@ const services = [
   {
     title: "Airport Transfers",
     description:
-      "USP offer transfers and pickups to and from airports across London, If you're beginning or ending your journey at London Heathrow. Stansted, Gatwick. Luton and others. you should start or finish in comfort and style",
+      "USP Transportation offers transfers and pickups to and from airports across Washington DC and the DMV area. Our client's flights are monitored, tracked, and updated in real-time using state-of-the-art monitoring software.",
     icon: IconPlaneDeparture,
   },
   {
     title: "Roadshows",
     description:
-      "We can take care of the logistics of getting you and your colleagues to and from your roadshow, with sedans, MPV and luxury Minibus vehicles available, let us focus on your transport for the day, so you can concentrate on your business.",
+      "We can handle the logistics of getting you and your colleagues to and from your roadshow with Sedans, MPVs, and luxury minibus vehicles available; let us focus on your daily transport so you can concentrate on your business.",
     icon: IconRoad,
   },
   {
     title: "Weddings",
     description:
-      "We&apos;re committed to providing you with the most luxurious chauffeur services for your wedding which you can entirely rely on, Our prestigious fleet of high-end vehicles are available to add that extra element Of style to your big day.",
+      "We're committed to providing you with the most luxurious chauffeur services for your wedding. Our prestigious fleet of high-end vehicles is available to add that extra element of style to your big day.",
     icon: IconDiamond,
   },
   {
     title: "Corporate",
     description:
-      "USP offer transfers and pickups to and from airports across London, If you're beginning or ending your journey at London Heathrow. Stansted, Gatwick. Luton and others. you should start or finish in comfort and style",
+      "Our clients have highly demanding schedules, so here at USP Transportation, we always strive to be punctual, assisting you with route planning, vehicle choice, and scheduling. Offers an array of corporate chauffeur service options.",
     icon: IconBuilding,
   },
   {
-    title: "Events",
+    title: "Diplomatic",
     description:
-      "Available for both, private and public events. our team of experienced chauffeurs are always prepared for any event. Trained to deal with the fast moving nature of these specialised events, our chauffeurs Will ensure your day is stress and hassle free,",
+      "USP Transportation is highly experienced in providing diplomatic chauffeur services to diplomatic personnel who desire discreet and comfortable transportation while on the go. Paired with our extensive road, terrain, and parking knowledge",
     icon: IconCalendar,
   },
   {
     title: "Vip",
     description:
-      "USP offer transfers and pickups to and from airports across London, If you're beginning or ending your journey at London Heathrow. Stansted, Gatwick. Luton and others. you should start or finish in comfort and style",
+      "Our chauffeurs are always impeccably presented and multilingual, speaking languages such as English, French, Arabic and Amharic. We are committed to providing DMV's best high-class, reliable, stress-free executive car hire services.",
     icon: IconVip,
   },
 ];

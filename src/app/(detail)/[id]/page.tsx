@@ -22,6 +22,14 @@ import { Seats } from "./_components/seats";
 import { Carousel } from "@mantine/carousel";
 import Car1 from "../../(features)/_components/fleet/car-1.png";
 import Car2 from "../../(features)/_components/fleet/car-2.png";
+import Car3 from "../../(features)/_components/fleet/car-3.jpeg";
+import Car4 from "../../(features)/_components/fleet/car-4.jpeg";
+import Car5 from "../../(features)/_components/fleet/car-5.jpeg";
+import Car6 from "../../(features)/_components/fleet/car-6.jpg";
+import Car7 from "../../(features)/_components/fleet/car-7.jpg";
+import Car8 from "../../(features)/_components/fleet/car-8.jpg";
+import Car9 from "../../(features)/_components/fleet/car-9.jpeg";
+
 import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -31,26 +39,26 @@ import whiteCar from "./white-car.png";
 const fleet = [
   {
     id: 1,
-    title: "Escalade ESV Luxury SUV",
+    title: "Mercedes E Class",
     titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
+    fleetType: "Executive Sedan",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car3.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Exceptional design and innovative technology ",
+      "Perfect for any executive",
     ],
   },
   {
     id: 2,
-    title: "Escalade ESV Luxury SUV",
+    title: "Mercedes Benz S-Class",
     titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
+    fleetType: "Luxury Sedan",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car4.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Ultimate comfort, elegantly designed, and exceptional",
+      "Luxuriously equipped with exquisite, comfortable leather massage seats",
     ],
   },
   {
@@ -61,56 +69,68 @@ const fleet = [
     price: "$81,895",
     imageUrl: Car1.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Full-size SUV that offers high-end features",
+      "Semi-aniline leather seats",
     ],
   },
   {
     id: 4,
-    title: "Escalade ESV Luxury SUV",
+    title: "Range Rover Vogue",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
     price: "$81,895",
-    imageUrl: Car2.src,
+    imageUrl: Car5.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Providing immense space with a power recline",
+      "heated leather rear seats",
     ],
   },
   {
     id: 5,
-    title: "Escalade ESV Luxury SUV",
+    title: "Executive Eco Sedan (Tesla Models)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car6.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Zero-emission electric",
+      "Unparalleled execution in all weather conditions",
     ],
   },
   {
     id: 6,
-    title: "Escalade ESV Luxury SUV",
+    title: "Executive Eco SUV (Tesla Model X)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
     price: "$81,895",
-    imageUrl: Car2.src,
+    imageUrl: Car7.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "One of the safest SUV's ever",
+      "Zero-emission, all-electric vehicle ",
     ],
   },
   {
     id: 7,
-    title: "Escalade ESV Luxury SUV",
+    title: "Executive Minibus (Mercedes Sprinter)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car8.src,
     features: [
-      "22inch 14-Spoke alloy wheels with Bright Silver finish",
-      "6.2L V8 engine with Dynamic Fuel Management",
+      "Transporting more prominent groups",
+      "Executive-style leather seating, ample space",
+    ],
+  },
+  {
+    id: 7,
+    title: "Executive Coach",
+    titleDesc: "33/43/53/70 Passenger Coaches",
+    fleetType: "LUXURY",
+    price: "$81,895",
+    imageUrl: Car9.src,
+    features: [
+      "Travel in luxury and arrive in style",
+      "Available in varying passenger sizes",
     ],
   },
 ];
@@ -188,16 +208,16 @@ export default function DetailFleet() {
             </Flex>
 
             <p className="my-5 text-justify text-slate-500">
-              Lorem ipsum dolor sit amet consectetur. Fermentum ut cursus
-              molestie mollis purus. Nunc augue nullam proin mauris quis quis
-              volutpat ut platea. Quam vulputate ultricies eu neque tellus sed
-              praesent. Risus dolor consectetur pellentesque et integer id at.
-              Eu ultrices magnis commodo ut duis proin vulputate augue vitae. Ut
-              dictum sed turpis tincidunt amet. Venenatis fusce ipsum neque sed.
-              Sit turpis condimentum purus potenti vestibulum. Posuere dolor sem
-              aenean semper tempus. Venenatis fusce ipsum neque sed. Sit turpis
-              condimentum purus potenti vestibulum. Posuere dolor sem aenean
-              semper tempus.
+              The Escalade is a luxury full-size SUV that offers high-end
+              features, a plush ride, and powerful engine options. The
+              Escalade’s interior boasts luxury amenities such as semi-aniline
+              leather seats, aluminum speaker grilles, adjustable interior
+              ambient lighting, and a curved OLED digital dashboard that houses
+              both the driver’s gauge cluster and infotainment system. The SUV
+              also offers advanced technology features like Super Cruise
+              adaptive cruise control, which enables hands-free driving, and an
+              augmented reality navigation system. Apple CarPlay/Android Auto
+              integration and a Wi-Fi hotspot are also standard.
             </p>
             <Button fullWidth color={theme.colors.secondary[9]} size="xl">
               Book
