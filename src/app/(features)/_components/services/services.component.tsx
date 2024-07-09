@@ -58,11 +58,6 @@ export default function Services() {
     <Stack
       id="services"
       className="min-h-[100dvh] justify-evenly items-center "
-      style={{
-        backgroundImage: `url(${Wave.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <Flex className="justify-center mx-auto flex-col gap-2 mt-8">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">

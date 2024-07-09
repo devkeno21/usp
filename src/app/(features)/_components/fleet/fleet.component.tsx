@@ -138,11 +138,6 @@ export default function Fleet() {
     <Stack
       className="min-h-[100dvh] justify-around"
       id="fleets"
-      style={{
-        backgroundImage: `url(${Wave.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
