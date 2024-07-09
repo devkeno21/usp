@@ -4,37 +4,93 @@ import { DateTimePicker } from "@mantine/dates";
 import dayjs from "dayjs";
 import { PaymentMethods } from "./payment-methods";
 import { useState } from "react";
+import { z } from "zod";
+import { Controller, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const companyInfoSchema = z.object({
+  businessName: z.string().min(1, "Business name is required"),
+  businessAddress: z.string().min(1, "Business address is required"),
+  address: z.string().min(1, "Address is required"),
+  zipCode: z.string().min(1, "Zip Code is required"),
+  companyRegistrationNumber: z.string().min(1, "Company registration number is required"),
+  vatNumber: z.string().min(1, "Vat number is required"),
+  yearsOfTrading: z.string().min(1, "Years of trading is required"),
+  bookingContactName: z.string().min(1, "Booking contact name is required"),
+  email: z.string().min(1, "Email is required").email("Invalid Email Address"),
+  phoneNumber: z.string().min(1, "Phone number is required"),
+ 
+  reservationContact: z.string().min(1, "Reservation contact is required"),
+  reservationPhoneNumber: z.string().min(1, "Phone number is required"),
+  reservationEmail: z.string().min(1, "Email is required"),
+  openingHours: z.date({ required_error: "Opening hours is required" }),
+  dispatchContact: z.string().min(1, "Dispatch contact is required"),
+  dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
+  dispatchEmail: z.string().min(1, "Email number is required"),
+  accountingContact: z.string().min(1, "Accounting contact is required"),
+  accountingPhoneNumber: z.string().min(1, "Phone number is required"),
+  accountingEmail: z.string().min(1, "Email number is required"),
+});
 
 export const CompanyInformationForm = ({
   paymentMethod,
   setPaymentMethod,
+  onNext,
+  onPrev,
 }: {
   paymentMethod: "credit" | "monthly" | "debit";
   setPaymentMethod: (data: "credit" | "monthly" | "debit") => void;
+  onNext: (data: any) => void;
+  onPrev: () => void;
 }) => {
     const [businessType, setBusinessType] = useState<"ltd"|"plc" | "sole">("ltd")
+    const {
+      handleSubmit,
+      register,
+      formState: { errors },
+      control,
+    } = useForm({
+      resolver: zodResolver(companyInfoSchema),
+    });
+
+    const onError = (err: any) => {
+      console.log({ err });
+    };
+  
+    const onSubmit = (data: any) => {
+      console.log({ data });
+      onNext(data);
+    };
   return (
     <div className=" text-white font-semibold">
       <p className="text-2xl">COMPANY INFORMATION</p>
 
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Business Name" withAsterisk />
-        <TextInput className="w-full" label="Business Address" withAsterisk />
+        <TextInput className="w-full" label="Business Name" withAsterisk  {...register("businessName")}
+          error={errors.businessName?.message?.toString()}/>
+        <TextInput className="w-full" label="Business Address" withAsterisk  {...register("businessAddress")}
+          error={errors.businessAddress?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Address" withAsterisk />
-        <TextInput className="w-full" label="Zip/Post Code" withAsterisk />
+        <TextInput className="w-full" label="Address" withAsterisk  {...register("address")}
+          error={errors.address?.message?.toString()}/>
+        <TextInput className="w-full" label="Zip/Post Code" withAsterisk  {...register("zipCode")}
+          error={errors.zipCode?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
         <TextInput
           className="w-full"
           label="Company Registration Number"
           withAsterisk
+          {...register("companyRegistrationNumber")}
+          error={errors.companyRegistrationNumber?.message?.toString()}
         />
-        <TextInput className="w-full" label="VAT Number" withAsterisk />
+        <TextInput className="w-full" label="VAT Number" withAsterisk  {...register("vatNumber")}
+          error={errors.vatNumber?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Years of Trading" withAsterisk />
+        <TextInput className="w-full" label="Years of Trading" withAsterisk type="number"  {...register("yearsOfTrading")}
+          error={errors.yearsOfTrading?.message?.toString()}/>
         <div className="w-full"></div>
       </Flex>
       <PaymentMethods
@@ -81,11 +137,15 @@ export const CompanyInformationForm = ({
           className="w-full"
           label="Booking Contact Name"
           withAsterisk
+          {...register("bookingContactName")}
+          error={errors.bookingContactName?.message?.toString()}
         />
-        <TextInput className="w-full" label="Phone Number" withAsterisk />
+        <TextInput className="w-full" label="Phone Number" withAsterisk  {...register("phoneNumber")}
+          error={errors.phoneNumber?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Email" withAsterisk />
+        <TextInput className="w-full" label="Email" withAsterisk  {...register("email")}
+          error={errors.email?.message?.toString()}/>
         <div className="w-full"></div>
       </Flex>
 
@@ -95,40 +155,116 @@ export const CompanyInformationForm = ({
           className="w-full"
           label="Reservation Contact"
           withAsterisk
+          {...register("reservationContact")}
+          error={errors.reservationContact?.message?.toString()}
         />
-        <TextInput className="w-full" label="Phone Number" withAsterisk />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Email" withAsterisk />
-        <div className="w-full"></div>
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Dispatch Contact" withAsterisk />
-        <DateTimePicker
-          label="Opening Hours"
+        <TextInput
           className="w-full"
+          label="Phone Number"
           withAsterisk
-          styles={{
-            input: {
-              backgroundColor: "rgba(250, 250, 249, 0.1)",
-              color: "white",
-              borderColor: "rgba(250, 250, 249, 0.1)",
-            },
-          }}
+          type="number"
+          {...register("reservationPhoneNumber")}
+          error={errors.reservationPhoneNumber?.message?.toString()}
         />
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Phone Number" withAsterisk />
-        <TextInput className="w-full" label="Email" withAsterisk />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Accounting Contact" withAsterisk />
+        <TextInput
+          className="w-full"
+          label="Email"
+          withAsterisk
+          {...register("reservationEmail")}
+          error={errors.reservationEmail?.message?.toString()}
+        />
         <div className="w-full"></div>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Phone Number" withAsterisk />
-        <TextInput className="w-full" label="Email" withAsterisk />
+        <TextInput
+          className="w-full"
+          label="Dispatch Contact"
+          withAsterisk
+          {...register("dispatchContact")}
+          error={errors.dispatchContact?.message?.toString()}
+        />
+        <Controller
+          name="openingHours"
+          control={control}
+          render={({ field: { value, name, onChange } }) => (
+            <DateTimePicker
+              name={name}
+              value={value}
+              onChange={onChange}
+              label="Opening Hours"
+              className="w-full"
+              withAsterisk
+              styles={{
+                input: {
+                  backgroundColor: "rgba(250, 250, 249, 0.1)",
+                  color: "white",
+                  borderColor: "rgba(250, 250, 249, 0.1)",
+                },
+              }}
+              error={errors.openingHours?.message?.toString()}
+            />
+          )}
+        />
       </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput
+          className="w-full"
+          label="Phone Number"
+          withAsterisk
+          type="number"
+          {...register("dispatchPhoneNumber")}
+          error={errors.dispatchPhoneNumber?.message?.toString()}
+        />
+        <TextInput
+          className="w-full"
+          label="Email"
+          withAsterisk
+          {...register("dispatchEmail")}
+          error={errors.dispatchEmail?.message?.toString()}
+        />
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput
+          className="w-full"
+          label="Accounting Contact"
+          withAsterisk
+          {...register("accountingContact")}
+          error={errors.accountingContact?.message?.toString()}
+        />
+        <div className="w-full"></div>
+      </Flex>
+      <Flex gap={10} className="mt-5">
+        <TextInput
+          className="w-full"
+          label="Phone Number"
+          withAsterisk
+          type="number"
+          {...register("accountingPhoneNumber")}
+          error={errors.accountingPhoneNumber?.message?.toString()}
+        />
+        <TextInput
+          className="w-full"
+          label="Email"
+          withAsterisk
+          {...register("accountingEmail")}
+          error={errors.accountingEmail?.message?.toString()}
+        />
+      </Flex>
+
+      <Group justify="flex-end" gap={10} className="mt-10">
+        <Button color="white" className="text-black" onClick={onPrev} disabled>
+          Prev
+        </Button>
+        <Button
+          color="white"
+          className="text-black"
+          onClick={handleSubmit(onSubmit, onError)}
+        >
+          Next
+        </Button>
+      </Group>
     </div>
   );
 };
