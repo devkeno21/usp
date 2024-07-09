@@ -9,9 +9,9 @@ import { getActiveBtnColor } from "@/utils/utils";
 const operationInfoSchema = z.object({
   departmentEmail: z.string().min(1, "This field is required").email(),
   domesticAirport: z.string().min(1, "This field is required"),
-  domesticAirport2: z.string().min(1, "This field is required"),
-  greeters: z.string().min(1, "This field is required"),
-  track: z.string().min(1, "This field is required"),
+  internationalAirport: z.string().min(1, "This field is required"),
+  provideGreeters: z.string().min(1, "This field is required"),
+  trackAllArrivingFlights: z.string().min(1, "This field is required"),
 });
 
 export const OperationInformationForm = ({
@@ -42,8 +42,13 @@ export const OperationInformationForm = ({
   };
 
   const onSubmit = (data: any) => {
-    console.log({ data });
-    onNext(data);
+    const temp = {
+      ...data,
+      verificationVia:verificationType,
+      preferredReservationMethod:preferredReservation,
+      outsourceLocalAffiliation:outsource
+    }
+    onNext(temp);
   };
   return (
     <div className=" text-white font-semibold">
@@ -120,14 +125,14 @@ export const OperationInformationForm = ({
         <TextInput
           label="International Airport Standard Meeting Location"
           withAsterisk
-          {...register("domesticAirport2")}
-          error={errors.domesticAirport2?.message?.toString()}
+          {...register("internationalAirport")}
+          error={errors.internationalAirport?.message?.toString()}
           className="w-full"
         />
       </Flex>
       <Textarea
-        {...register("greeters")}
-        error={errors.greeters?.message?.toString()}
+        {...register("provideGreeters")}
+        error={errors.provideGreeters?.message?.toString()}
         className="w-full mt-5"
         label="Do You Provide Greeters At The Airport?"
       />
@@ -149,8 +154,8 @@ export const OperationInformationForm = ({
         </Button>
       </Flex>
       <Textarea
-        {...register("track")}
-        error={errors.track?.message?.toString()}
+        {...register("trackAllArrivingFlights")}
+        error={errors.trackAllArrivingFlights?.message?.toString()}
         className="w-full mt-5"
         label="Do You Track All Arriving Flights? If So Please Provide What System You Use"
       />

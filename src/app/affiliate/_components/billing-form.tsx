@@ -51,8 +51,8 @@ export const BillingInformationForm = ({
   };
 
   const onSubmit = (data: any) => {
-    console.log({ data });
-    onNext(data);
+    const temp = {...data,chargeForCancelledOrDelayedFlight:chargeCancelled}
+    onNext(temp);
   };
   return (
     <div className=" text-white font-semibold">
@@ -104,7 +104,7 @@ export const BillingInformationForm = ({
               name={name}
               value={value}
               onChange={onChange}
-              data={["Car 1", "Car 2"]}
+              data={["Sedan", "SUV","Crossover","Wagon"]}
               label="Choose Car Type"
               className="w-full"
               error={errors.carType?.message?.toString()}
@@ -130,10 +130,15 @@ export const BillingInformationForm = ({
               name={name}
               value={value}
               onChange={onChange}
-              data={["Car 1", "Car 2"]}
+              data={["Domestic", "International"]}
               label="Airport Type"
               className="w-full"
               error={errors.carType?.message?.toString()}
+              style={{
+                options:{
+                  background:"transparent"
+                }
+              }}
             />
           )}
         />

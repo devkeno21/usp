@@ -14,6 +14,7 @@ import { BillingInformationForm } from "./_components/billing-form";
 export default function Affiliate() {
   const router = useRouter();
   const [active, setActive] = useState(0);
+  const [file,setFile] = useState<any>(undefined)
 
   const onNext = (data: any) => {
     console.log({ parentData: data });
@@ -98,7 +99,7 @@ export default function Affiliate() {
               </div>}
             {active == 4 && <div>
               <FleetInformationForm onNext={onNext}
-                  onPrev={() => setActive(active - 1)}/></div>}
+                  onPrev={() => setActive(active - 1)} setFile={setFile}/></div>}
             {active == 5 && <div>
               <BillingInformationForm onNext={onNext}
                   onPrev={() => setActive(active - 1)}/>
