@@ -25,7 +25,7 @@ import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useHover, useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 
-const fleet = [
+export const fleet = [
   {
     id:1,
     title: "Mercedes E Class",
