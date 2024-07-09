@@ -1,4 +1,5 @@
 import { Montserrat } from "next/font/google";
+import { centuryFont } from "../utils/century";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import "@mantine/dropzone/styles.css";
@@ -17,9 +18,15 @@ export const metadata: Metadata = {
   icons: {
     icon: "/usp-logo-white.png",
   },
+    icon: "/usp-logo-white.png",
+  },
 };
 
 const montserrat = Montserrat({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  fallback: ["Arial", "sans-serif"],
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
   display: "swap",

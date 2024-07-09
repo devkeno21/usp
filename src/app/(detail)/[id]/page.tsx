@@ -22,13 +22,14 @@ import { Seats } from "./_components/seats";
 import { Carousel } from "@mantine/carousel";
 import Car1 from "../../(features)/_components/fleet/car-1.png";
 import Car2 from "../../(features)/_components/fleet/car-2.png";
-import Car3 from "../../(features)/_components/fleet/car-3.jpeg";
-import Car4 from "../../(features)/_components/fleet/car-4.jpeg";
-import Car5 from "../../(features)/_components/fleet/car-5.jpeg";
-import Car6 from "../../(features)/_components/fleet/car-6.jpg";
-import Car7 from "../../(features)/_components/fleet/car-7.jpg";
-import Car8 from "../../(features)/_components/fleet/car-8.jpg";
-import Car9 from "../../(features)/_components/fleet/car-9.jpeg";
+import Car3 from "../../(features)/_components/fleet/car-3.png";
+import Car4 from "../../(features)/_components/fleet/car-4.png";
+import Car5 from "../../(features)/_components/fleet/car-5.png";
+import Car6 from "../../(features)/_components/fleet/car-6.png";
+import Car7 from "../../(features)/_components/fleet/car-7.png";
+import Car8 from "../../(features)/_components/fleet/car-8.png";
+import Car9 from "../../(features)/_components/fleet/car-9.png";
+// import CarVid from "./escalade-vid.mp4"
 
 import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
@@ -154,7 +155,7 @@ export default function DetailFleet() {
         <Flex gap={10}>
           <Box className="w-full">
             <Stack className="h-full">
-              <Box
+              {/* <Box
                 className="h-[80%]"
                 style={{
                   backgroundImage: `url(${whiteCar.src})`,
@@ -162,7 +163,18 @@ export default function DetailFleet() {
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
-              />
+              /> */}
+              <video
+                // width="320"
+                height="240"
+                controls
+                preload="none"
+                className="h-[80%]"
+              >
+                <source src="/videos/escalade-vid.mp4" type="video/mp4" />
+               
+                Your browser does not support the video tag.
+              </video>
               <Box className="h-[20%]">
                 <Flex className="gap-4 h-[100%]">
                   {[1, 2, 3, 4].map((_, index) => (
