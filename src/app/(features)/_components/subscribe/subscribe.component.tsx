@@ -9,7 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
-import SubscribeCar from "./subscirbe.jpg";
+import SubscribeCar from "./subscribe-2.jpeg";
 
 export default function Subscribe() {
   const theme = useMantineTheme();
@@ -23,7 +23,7 @@ export default function Subscribe() {
           backgroundPosition: "center",
         }}
       >
-        <Box className="w-full h-[70dvh] bg-black bg-opacity-35 top-0 relative z-3">
+        <Box className="w-full h-[70dvh] bg-black bg-opacity-50 top-0 relative z-3">
           <Box className="flex min-h-full items-center">
             <Stack className="w-full md:w-1/2 gap-6 p-6 md:ml-24">
               <Text
