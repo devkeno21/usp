@@ -49,7 +49,7 @@ export default function About() {
           Washington Dulles International, and Ronald Reagan National Airports.
         </Text>
         <Button color={theme.colors.secondary[9]} className="mx-auto">
-          Book Now
+          <a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a>
         </Button>
       </Flex>
     </Box>

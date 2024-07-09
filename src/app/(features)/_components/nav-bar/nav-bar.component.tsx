@@ -116,7 +116,7 @@ export function NavBar() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button color={theme.colors.secondary[9]}>Book Now</Button>
+            <Button color={theme.colors.secondary[9]}><a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a></Button>
             <Button onClick={() => router.push("/vip")}>VIP Program</Button>
           </Group>
 

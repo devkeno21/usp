@@ -1,6 +1,6 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
-import BlackCar from "./black-car.png";
+import BlackCar from "./black-car-4.png";
 import { useRouter } from "next/navigation";
 
 export default function Affiliates() {
