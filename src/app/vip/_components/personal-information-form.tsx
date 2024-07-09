@@ -15,22 +15,22 @@ const personalInfoSchema = z.object({
   zipCode: z.string().min(1, "Zip Code is required"),
   primaryEmail: z.string().min(1, "Email is required").email("Invalid Email Address"),
   primaryPhoneNumber: z.string().min(1, "Phone number is required"),
-  manager: z.string().min(1, "Manager is required"),
-  managerEmail: z
-    .string()
-    .min(1, "Email is required")
-    .email("Invalid Email Address"),
-  managerPhoneNumber: z.string().min(1, "Phone number is required"),
-  reservationContact: z.string().min(1, "Reservation contact is required"),
-  reservationPhoneNumber: z.string().min(1, "Phone number is required"),
-  reservationEmail: z.string().min(1, "Email is required"),
-  openingHours: z.date({ required_error: "Opening hours is required" }),
-  dispatchContact: z.string().min(1, "Dispatch contact is required"),
-  dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
-  dispatchEmail: z.string().min(1, "Email number is required"),
-  accountingContact: z.string().min(1, "Accounting contact is required"),
-  accountingPhoneNumber: z.string().min(1, "Phone number is required"),
-  accountingEmail: z.string().min(1, "Email number is required"),
+  // manager: z.string().min(1, "Manager is required"),
+  // managerEmail: z
+  //   .string()
+  //   .min(1, "Email is required")
+  //   .email("Invalid Email Address"),
+  // managerPhoneNumber: z.string().min(1, "Phone number is required"),
+  // reservationContact: z.string().min(1, "Reservation contact is required"),
+  // reservationPhoneNumber: z.string().min(1, "Phone number is required"),
+  // reservationEmail: z.string().min(1, "Email is required"),
+  // openingHours: z.date({ required_error: "Opening hours is required" }),
+  // dispatchContact: z.string().min(1, "Dispatch contact is required"),
+  // dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
+  // dispatchEmail: z.string().min(1, "Email number is required"),
+  // accountingContact: z.string().min(1, "Accounting contact is required"),
+  // accountingPhoneNumber: z.string().min(1, "Phone number is required"),
+  // accountingEmail: z.string().min(1, "Email number is required"),
 });
 
 export const PersonalInformationForm = ({
@@ -68,14 +68,14 @@ export const PersonalInformationForm = ({
       <Flex gap={10} className="mt-5">
         <TextInput
           className="w-full"
-          label="Business Name"
+          label="Name"
           withAsterisk
           {...register("businessName")}
           error={errors.businessName?.message?.toString()}
         />
         <TextInput
           className="w-full"
-          label="Business Address"
+          label="Address"
           withAsterisk
           {...register("businessAddress")}
           error={errors.businessAddress?.message?.toString()}
@@ -124,7 +124,7 @@ export const PersonalInformationForm = ({
         />
         <div className="w-full"></div>
       </Flex>
-      <Flex gap={10} className="mt-5">
+      {/* <Flex gap={10} className="mt-5">
         <TextInput
           className="w-full"
           label="Manager"
@@ -150,121 +150,14 @@ export const PersonalInformationForm = ({
           error={errors.managerPhoneNumber?.message?.toString()}
         />
         <div className="w-full"></div>
-      </Flex>
+      </Flex> */}
 
       <PaymentMethods
         paymentMethod={paymentMethod}
         setPaymentMethod={setPaymentMethod}
+        hideDirect
       />
-
-      <p className="text-2xl mt-10">RESERVATION INFORMATION</p>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Reservation Contact"
-          withAsterisk
-          {...register("reservationContact")}
-          error={errors.reservationContact?.message?.toString()}
-        />
-        <TextInput
-          className="w-full"
-          label="Phone Number"
-          withAsterisk
-          type="number"
-          {...register("reservationPhoneNumber")}
-          error={errors.reservationPhoneNumber?.message?.toString()}
-        />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Email"
-          withAsterisk
-          {...register("reservationEmail")}
-          error={errors.reservationEmail?.message?.toString()}
-        />
-        <div className="w-full"></div>
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Dispatch Contact"
-          withAsterisk
-          {...register("dispatchContact")}
-          error={errors.dispatchContact?.message?.toString()}
-        />
-        <Controller
-          name="openingHours"
-          control={control}
-          render={({ field: { value, name, onChange } }) => (
-            <DateTimePicker
-              name={name}
-              value={value}
-              onChange={onChange}
-              label="Opening Hours"
-              className="w-full"
-              withAsterisk
-              styles={{
-                input: {
-                  backgroundColor: "rgba(250, 250, 249, 0.1)",
-                  color: "white",
-                  borderColor: "rgba(250, 250, 249, 0.1)",
-                },
-              }}
-              error={errors.openingHours?.message?.toString()}
-            />
-          )}
-        />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Phone Number"
-          withAsterisk
-          type="number"
-          {...register("dispatchPhoneNumber")}
-          error={errors.dispatchPhoneNumber?.message?.toString()}
-        />
-        <TextInput
-          className="w-full"
-          label="Email"
-          withAsterisk
-          {...register("dispatchEmail")}
-          error={errors.dispatchEmail?.message?.toString()}
-        />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Accounting Contact"
-          withAsterisk
-          {...register("accountingContact")}
-          error={errors.accountingContact?.message?.toString()}
-        />
-        <div className="w-full"></div>
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Phone Number"
-          withAsterisk
-          type="number"
-          {...register("accountingPhoneNumber")}
-          error={errors.accountingPhoneNumber?.message?.toString()}
-        />
-        <TextInput
-          className="w-full"
-          label="Email"
-          withAsterisk
-          {...register("accountingEmail")}
-          error={errors.accountingEmail?.message?.toString()}
-        />
-      </Flex>
-
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev} disabled>
-          Prev
-        </Button>
         <Button
           color="white"
           className="text-black"

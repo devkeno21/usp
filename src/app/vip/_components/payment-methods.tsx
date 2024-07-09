@@ -1,7 +1,7 @@
 "use client";
 import { Button, Flex, Group } from "@mantine/core";
 
-export const PaymentMethods = ({ paymentMethod, setPaymentMethod }: any) => {
+export const PaymentMethods = ({ paymentMethod, setPaymentMethod,hideDirect=false }: any) => {
   return (
     <>
     <p className="mt-5 font-normal">
@@ -28,7 +28,7 @@ export const PaymentMethods = ({ paymentMethod, setPaymentMethod }: any) => {
       >
         Monthly Invoice
       </Button>
-      <Button
+    {!hideDirect&&  <Button
         className={
           paymentMethod === "debit"
             ? "bg-secondary-900 bg-opacity-25 border-secondary-900 hover:bg-secondary-700 hover:bg-opacity-20 w-full"
@@ -37,7 +37,7 @@ export const PaymentMethods = ({ paymentMethod, setPaymentMethod }: any) => {
         onClick={()=>setPaymentMethod("debit")}
       >
         Direct Debit
-      </Button>
+      </Button>}
     </Flex>
     </>
   );

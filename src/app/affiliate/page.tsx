@@ -76,7 +76,11 @@ export default function Affiliate() {
   
 
   return (
-    <div className="bg-primary-900 min-h-screen text-white">
+    <div className="bg-primary-900 min-h-screen text-white" style={{
+      backgroundImage: `url(/form-bg.svg)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       <div className="container mx-auto py-10">
         <Button
           onClick={() => router.back()}

@@ -142,7 +142,7 @@ export default function Fleet() {
           className="w-[45%] p-1 mx-auto"
         ></Box>
       </Flex>
-      <Carousel
+      {/* <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         height={300}
         // withIndicators
@@ -275,7 +275,7 @@ export default function Fleet() {
             </Box>
           </Carousel.Slide>
         ))}
-      </Carousel>
+      </Carousel> */}
       <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         initialSlide={6}
