@@ -4,6 +4,7 @@ import {
     MantineColorsTuple,
     MantineThemeOverride,
     CSSVariablesResolver,
+    Textarea,
   } from "@mantine/core";
   
   const primaryColor: MantineColorsTuple = [
@@ -119,6 +120,15 @@ import {
         defaultProps: {
           size: "sm",
         },
+        styles: {
+          input:{
+            backgroundColor:"rgba(250, 250, 249, 0.1)",
+            color:"white",
+            borderColor:"rgba(250, 250, 249, 0.1)"
+          }
+        },
+      },
+      Textarea:{
         styles: {
           input:{
             backgroundColor:"rgba(250, 250, 249, 0.1)",

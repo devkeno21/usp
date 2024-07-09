@@ -1,25 +1,105 @@
 "use client";
-import { Flex, TextInput } from "@mantine/core";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Button, Flex, Group, TextInput } from "@mantine/core";
+import { DateInput } from "@mantine/dates";
+import { Controller, useForm } from "react-hook-form";
+import { z } from "zod";
 
-export const PaymentInformationForm = () => {
+const paymentInfoSchema = z.object({
+  cardName: z.string().min(1, "Card name is required"),
+  businessName: z.string().min(1, "Business name is required"),
+  billingAddress: z.string().min(1, "Billing address is required"),
+  zipCode: z.string().min(1, "Zip code is required"),
+  cardNumber: z.string().min(1, "Card number name is required"),
+  expiryDate: z.date({
+    required_error:"Expiry date is required"
+  }),
+  securityCode: z.string().min(3, "Card number name is required").max(3),
+
+  name: z.string().min(1, "Name is required"),
+  role: z.string().min(1, "Role is required"),
+  signature: z.string().min(1, "Signature is required"),
+  date: z.date({
+    required_error:"Date is required"
+  }),
+});
+
+export const PaymentInformationForm = ({
+  onNext,
+  onPrev,
+}: {
+  onNext: (data: any) => void;
+  onPrev: () => void;
+}) => {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+    control,
+  } = useForm({
+    resolver: zodResolver(paymentInfoSchema),
+  });
+
+  const onError = (err: any) => {
+    console.log({ err });
+  };
+
+  const onSubmit = (data: any) => {
+    console.log({ data });
+    onNext(data);
+  };
   return (
     <div className=" text-white font-semibold">
       <p className="text-2xl">PAYMENT INFORMATION</p>
-      <p className="text-xs font-normal text-gray-400 mt-5">Select Your Payment Method:<span className="text-white font-semibold"> Currently Selected VISA</span></p>
+      <p className="text-xs font-normal text-gray-400 mt-5">
+        Select Your Payment Method:
+        <span className="text-white font-semibold">
+          {" "}
+          Currently Selected VISA
+        </span>
+      </p>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Name on Card" withAsterisk />
-        <TextInput className="w-full" label="Business Name" withAsterisk />
+        <TextInput className="w-full" label="Name on Card" withAsterisk {...register("cardName")}
+          error={errors.cardName?.message?.toString()}/>
+        <TextInput className="w-full" label="Business Name" withAsterisk {...register("businessName")}
+          error={errors.businessName?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Billing Address" withAsterisk />
-        <TextInput className="w-full" label="Zip/Postal code" withAsterisk />
+        <TextInput className="w-full" label="Billing Address" withAsterisk {...register("billingAddress")}
+          error={errors.billingAddress?.message?.toString()}/>
+        <TextInput className="w-full" label="Zip/Postal code" withAsterisk {...register("zipCode")}
+          error={errors.zipCode?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Card Number" withAsterisk />
-        <TextInput className="w-full" label="Expiry Date" withAsterisk />
+        <TextInput className="w-full" label="Card Number" withAsterisk type="number" {...register("cardNumber")}
+          error={errors.cardNumber?.message?.toString()}/>
+          <Controller
+          name="expiryDate"
+          control={control}
+          render={({field:{name,value,onChange}})=>(
+            <DateInput
+            value={value}
+            name={name}
+            onChange={onChange}
+            label="Expiry Date"
+            withAsterisk
+            className="w-full"
+            error={errors.expiryDate?.message?.toString()}
+            styles={{
+              input: {
+                backgroundColor: "rgba(250, 250, 249, 0.1)",
+                color: "white",
+                borderColor: "rgba(250, 250, 249, 0.1)",
+              },
+            }}
+            />
+
+          )}
+          />
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Security Code" withAsterisk />
+        <TextInput className="w-full" label="Security Code" withAsterisk {...register("securityCode")}
+          error={errors.securityCode?.message?.toString()} type="number"/>
         <div className="w-full"></div>
       </Flex>
 
@@ -54,13 +134,51 @@ export const PaymentInformationForm = () => {
         iaculis et.
       </p>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Name" withAsterisk />
-        <TextInput className="w-full" label="Role" withAsterisk />
+        <TextInput className="w-full" label="Name" withAsterisk {...register("name")}
+          error={errors.name?.message?.toString()}/>
+        <TextInput className="w-full" label="Role" withAsterisk {...register("role")}
+          error={errors.role?.message?.toString()}/>
       </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Date" withAsterisk />
-        <TextInput className="w-full" label="Signature" withAsterisk />
+      <Controller
+          name="date"
+          control={control}
+          render={({field:{name,value,onChange}})=>(
+            <DateInput
+            error={errors.date?.message?.toString()}
+            value={value}
+            name={name}
+            onChange={onChange}
+            label="Date"
+            withAsterisk
+            className="w-full"
+            styles={{
+              input: {
+                backgroundColor: "rgba(250, 250, 249, 0.1)",
+                color: "white",
+                borderColor: "rgba(250, 250, 249, 0.1)",
+              },
+            }}
+            />
+
+          )}
+          />
+        <TextInput className="w-full" label="Signature" withAsterisk {...register("signature")}
+          error={errors.signature?.message?.toString()}/>
       </Flex>
+
+      <Group justify="flex-end" gap={10} className="mt-10">
+        <Button color="white" className="text-black" onClick={onPrev}>
+          Prev
+        </Button>
+        <Button
+          color="white"
+          className="text-black"
+          onClick={handleSubmit(onSubmit, onError)}
+        >
+          Next
+        </Button>
+      </Group>
     </div>
   );
 };

@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Button,
-  ButtonGroup,
-  Flex,
-  Group,
-  Stepper,
-} from "@mantine/core";
+import { Button, ButtonGroup, Flex, Group, Stepper } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -21,7 +15,14 @@ export default function VIP() {
   const router = useRouter();
   const [active, setActive] = useState(0);
   const [type, setType] = useState("Individual");
-  const [paymentMethod, setPaymentMethod] = useState<"credit" | "monthly" | "debit">("credit")
+  const [paymentMethod, setPaymentMethod] = useState<
+    "credit" | "monthly" | "debit"
+  >("credit");
+
+  const onNext = (data: any) => {
+    console.log({ upperData: data });
+    setActive(active + 1);
+  };
 
   return (
     <div className="bg-primary-900 min-h-screen text-white">
@@ -67,47 +68,55 @@ export default function VIP() {
                         ? "bg-secondary-900 hover:bg-secondary-700"
                         : "bg-transparent hover:bg-secondary-900 hover:bg-opacity-40"
                     }
-                    onClick={()=>setType("Individual")}
+                    onClick={() => setType("Individual")}
                   >
                     Individual
                   </Button>
-                  <Button className={
+                  <Button
+                    className={
                       type === "Company"
                         ? "bg-secondary-900 hover:bg-secondary-700"
                         : "bg-transparent hover:bg-secondary-900 hover:bg-opacity-40"
                     }
-                    onClick={()=>setType("Company")}
-                    >
+                    onClick={() => setType("Company")}
+                  >
                     Company
                   </Button>
                 </ButtonGroup>
-                {type==="Individual"?<PersonalInformationForm paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} />:<CompanyInformationForm paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod}/>}
+                {type === "Individual" ? (
+                  <PersonalInformationForm
+                    paymentMethod={paymentMethod}
+                    setPaymentMethod={setPaymentMethod}
+                    onPrev={() => setActive(active - 1)}
+                    onNext={onNext}
+                  />
+                ) : (
+                  <CompanyInformationForm
+                    paymentMethod={paymentMethod}
+                    setPaymentMethod={setPaymentMethod}
+                    onPrev={() => setActive(active - 1)}
+                    onNext={onNext}
+                  />
+                )}
               </div>
             )}
-            {active == 1 && <div>
-              {paymentMethod === "credit" &&<PaymentInformationForm />}
-              {paymentMethod === "monthly" &&<MonthlyPaymentInformationForm />}
-              {paymentMethod === "debit" &&<DebitPaymentInformationForm />}
-              </div>}
-            {active == 2 && <FinalForm />}
-
-            <Group justify="flex-end" gap={10} className="mt-10">
-              <Button
-                color="white"
-                disabled={active === 0}
-                className="text-black"
-                onClick={() => setActive(active - 1)}
-              >
-                Prev
-              </Button>
-              <Button
-                color="white"
-                className="text-black"
-                onClick={() => setActive(active + 1)}
-              >
-                {active === 2 ? "Finish" : "Next"}
-              </Button>
-            </Group>
+            {active == 1 && (
+              <div>
+                {paymentMethod === "credit" && <PaymentInformationForm onPrev={() => setActive(active - 1)}
+                    onNext={onNext}/>}
+                {paymentMethod === "monthly" && (
+                  <MonthlyPaymentInformationForm
+                    onPrev={() => setActive(active - 1)}
+                    onNext={onNext}
+                  />
+                )}
+                {paymentMethod === "debit" && <DebitPaymentInformationForm onPrev={() => setActive(active - 1)}
+                    onNext={onNext}/>}
+              </div>
+            )}
+            {active == 2 && (
+              <FinalForm onPrev={() => setActive(active - 1)} onNext={onNext} />
+            )}
           </div>
         </Flex>
       </div>
