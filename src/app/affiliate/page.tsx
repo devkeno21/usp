@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, ButtonGroup, Flex, Group, Stepper } from "@mantine/core";
+import { Button, Flex, Stepper } from "@mantine/core";
 import { IconArrowLeft } from "@tabler/icons-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -15,9 +15,26 @@ export default function Affiliate() {
   const router = useRouter();
   const [active, setActive] = useState(0);
   const [file,setFile] = useState<any>(undefined)
+  const [companyInfo,setCompanyInfo] = useState<any>({});
+  const [generalInformation,setGeneralInformation] = useState<any>({});
+  const [operationInformation,setOperationInformation] = useState<any>({});
+  const [chauffeurInformation,setChauffeurInformation] = useState<any>({});
+  const [fleetInformation,setFleetInformation] = useState<any>({});
+  const [billingInformation,setBillingInformation] = useState<any>({});
 
   const onNext = (data: any) => {
-    console.log({ parentData: data });
+    if(active === 0 )
+      setCompanyInfo(data)
+    else if(active === 1 )
+      setGeneralInformation(data)
+    else if(active === 2 )
+      setOperationInformation(data)
+    else if(active === 3 )
+      setChauffeurInformation(data)
+    else if(active === 4 )
+      setFleetInformation(data)
+    else if(active === 5 )
+      setBillingInformation(data)
     setActive(active + 1);
   };
 

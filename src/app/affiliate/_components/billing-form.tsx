@@ -18,15 +18,17 @@ const operationInfoSchema = z.object({
   lateCancellationFee: z.string().min(1, "This field is required"),
   garageToGarageCharge: z.string().min(1, "This field is required"),
   carType: z.string({
-      required_error: "This field is required",
-    }),
+    required_error: "This field is required",
+  }),
   airportType: z.string({
-      required_error: "This field is required",
-    }),
-    cancellationPoliciesForCarNotSelected: z.string().min(1, "This field is required"),
-    complimentaryWaitTime: z.string().min(1, "This field is required"),
-    waitTimePolicy: z.string().min(1, "This field is required"),
-    extraFee: z.string().min(1, "This field is required"),
+    required_error: "This field is required",
+  }),
+  cancellationPoliciesForCarNotSelected: z
+    .string()
+    .min(1, "This field is required"),
+  complimentaryWaitTime: z.string().min(1, "This field is required"),
+  waitTimePolicy: z.string().min(1, "This field is required"),
+  extraFee: z.string().min(1, "This field is required"),
 });
 
 export const BillingInformationForm = ({
@@ -51,7 +53,11 @@ export const BillingInformationForm = ({
   };
 
   const onSubmit = (data: any) => {
-    const temp = {...data,chargeForCancelledOrDelayedFlight:chargeCancelled}
+    const temp = {
+      ...data,
+      chargeForCancelledOrDelayedFlight: chargeCancelled,
+      licenses: "yeah",
+    };
     onNext(temp);
   };
   return (
@@ -104,7 +110,7 @@ export const BillingInformationForm = ({
               name={name}
               value={value}
               onChange={onChange}
-              data={["Sedan", "SUV","Crossover","Wagon"]}
+              data={["Sedan", "SUV", "Crossover", "Wagon"]}
               label="Choose Car Type"
               className="w-full"
               error={errors.carType?.message?.toString()}
@@ -122,7 +128,7 @@ export const BillingInformationForm = ({
       />
 
       <Flex gap={10} className="mt-5">
-      <Controller
+        <Controller
           control={control}
           name="airportType"
           render={({ field: { name, value, onChange } }) => (
@@ -134,11 +140,6 @@ export const BillingInformationForm = ({
               label="Airport Type"
               className="w-full"
               error={errors.carType?.message?.toString()}
-              style={{
-                options:{
-                  background:"transparent"
-                }
-              }}
             />
           )}
         />
@@ -167,7 +168,7 @@ export const BillingInformationForm = ({
       />
 
       <Group justify="flex-end" gap={10} className="mt-10">
-        <Button color="white" className="text-black" onClick={onPrev} >
+        <Button color="white" className="text-black" onClick={onPrev}>
           Prev
         </Button>
         <Button
