@@ -8,7 +8,11 @@ export const Breadcrumb = ({links}:any) => {
     </Anchor>
   ));
   return (
-    <Box className="bg-primary-900 px-5 py-10">
+    <Box className="bg-primary-900 px-5 py-10" style={{
+      backgroundImage: `url(/form-bg.svg)`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       <Breadcrumbs separator={<p className="text-white text-3xl">|</p>} separatorMargin="md" mt="xs">
         {items}
       </Breadcrumbs>

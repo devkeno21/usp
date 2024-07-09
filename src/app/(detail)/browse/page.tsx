@@ -38,8 +38,8 @@ export default function Browse() {
       />
 
       <Flex gap={10} className="p-5">
-        <Box className="w-1/3 px-10">
-          <Box className="shadow-xl p-5">
+        <Box className="w-1/3 px-10 bg-white">
+          
             <Flex justify="space-between">
               <p className="font-semibold text-xl">Filter By</p>
               <p className="text-sm text-slate-500 flex gap-2 items-center">
@@ -132,7 +132,7 @@ export default function Browse() {
             </Accordion>
 
             <Button className="mt-10" color={theme.colors.secondary[9]} fullWidth size="xl">Filter</Button>
-          </Box>
+          
         </Box>
         <Box className="w-2/3 grid grid-cols-2 gap-5">
           {fleet.slice(0,4).map((car, index) => (

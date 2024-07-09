@@ -177,7 +177,7 @@ export const CompanyInformationForm = ({
         />
         <div className="w-full"></div>
       </Flex>
-      <Flex gap={10} className="mt-5">
+      {/* <Flex gap={10} className="mt-5">
         <TextInput
           className="w-full"
           label="Dispatch Contact"
@@ -251,7 +251,7 @@ export const CompanyInformationForm = ({
           {...register("accountingEmail")}
           error={errors.accountingEmail?.message?.toString()}
         />
-      </Flex>
+      </Flex> */}
 
       <Group justify="flex-end" gap={10} className="mt-10">
         <Button color="white" className="text-black" onClick={onPrev} disabled>
