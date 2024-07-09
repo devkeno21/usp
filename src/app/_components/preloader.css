@@ -1,0 +1,65 @@
+.preloader {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+
+/* .preloader {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: #FFF;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+} */
+
+.preloader-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    height: 50vh;
+    overflow: hidden;
+    background-color: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+
+.preloader-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 55;
+    height: 50vh;
+    overflow: hidden;
+    background-color: #010101;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+
+.preloader .texts-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    width: 300px;
+    font-size: 20px;
+    font-weight: 800;
+    overflow: hidden;
+    color: #FFF;
+}

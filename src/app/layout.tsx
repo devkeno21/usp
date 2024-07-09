@@ -7,6 +7,7 @@ import "./globals.css";
 
 import RootStyleRegistry from "./mantine";
 import { Notifications } from "@mantine/notifications";
+import Preloader from "./_components/preloader"
 
 
 export const metadata: Metadata = {
@@ -32,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={montserrat.className}><RootStyleRegistry><Notifications/>{children}</RootStyleRegistry></body>
+      <body className={montserrat.className}><Preloader/><RootStyleRegistry><Notifications/>{children}</RootStyleRegistry></body>
     </html>
   );
 }
