@@ -32,7 +32,7 @@ export const fleet = [
     title: "Mercedes E Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Executive Sedan",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car3.src,
     features: [
       "Exceptional design and innovative technology ",
@@ -44,7 +44,7 @@ export const fleet = [
     title: "Mercedes Benz S-Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Luxury Sedan",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car4.src,
     features: [
       "Ultimate comfort, elegantly designed, and exceptional",
@@ -56,7 +56,7 @@ export const fleet = [
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Luxury Sedan",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car4.src,
     features: [
       "Full-size SUV that offers high-end features",
@@ -68,7 +68,7 @@ export const fleet = [
     title: "Range Rover Vogue",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car5.src,
     features: [
       "Providing immense space with a power recline",
@@ -80,7 +80,7 @@ export const fleet = [
     title: "Executive Eco Sedan (Tesla Models)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car6.src,
     features: [
       "Zero-emission electric",
@@ -92,7 +92,7 @@ export const fleet = [
     title: "Executive Eco SUV (Tesla Model X)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car7.src,
     features: [
       "One of the safest SUV's ever",
@@ -104,7 +104,7 @@ export const fleet = [
     title: "Executive Minibus (Mercedes Sprinter)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car8.src,
     features: [
       "Transporting more prominent groups",
@@ -116,11 +116,9 @@ export const fleet = [
     title: "Executive Coach",
     titleDesc: "33/43/53/70 Passenger Coaches",
     fleetType: "LUXURY",
-    price: "$81,895",
+    price: "$28.45",
     imageUrl: Car9.src,
     features: [
-      "Travel in luxury and arrive in style",
-      "Available in varying passenger sizes",
       "Travel in luxury and arrive in style",
       "Available in varying passenger sizes",
     ],
