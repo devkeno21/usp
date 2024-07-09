@@ -88,6 +88,12 @@ export default function Contact() {
                   error={errors?.message?.message}
                   minRows={4}
                   autosize
+                  styles={{
+                    input:{
+                      color:"black",
+                      border:"1px solid rgba(28, 25, 23, 0.25)"
+                    }
+                  }}
                 />
                 <Button rightSection={<IconArrowRight/>} color={theme.colors.secondary[9]} className="w-fit mx-auto">Submit</Button>
               </Stack>
