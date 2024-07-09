@@ -5,6 +5,7 @@ import Client2 from "./client-2.png";
 import Client3 from "./client-3.jpg";
 import Client4 from "./client-4.png";
 import Client5 from "./client-5.png";
+import Wave from "../services/Vector.svg"
 
 const clientsList = [
   {
@@ -28,7 +29,14 @@ export default function Clients() {
   const theme = useMantineTheme();
 
   return (
-    <Flex className="h-[65dvh] flex-col justify-around">
+    <Flex
+      className="h-[65dvh] flex-col justify-around"
+      style={{
+        backgroundImage: `url(${Wave.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           Our Esteemed Clients
@@ -48,7 +56,7 @@ export default function Clients() {
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
-              opacity: "0.3"
+              opacity: "0.3",
             }}
           ></Box>
         ))}

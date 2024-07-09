@@ -1,4 +1,4 @@
-import { Montserrat } from "next/font/google";
+import { centuryFont } from "../utils/century";
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import "@mantine/dropzone/styles.css";
@@ -16,15 +16,8 @@ export const metadata: Metadata = {
   description: "USP Transportation",
   icons: {
     icon: "/usp-logo-white.png",
-  },
+  }
 };
-
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Arial", "sans-serif"],
-});
 
 export default function RootLayout({
   children,
@@ -33,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={montserrat.className}>
+      <body className={centuryFont.className}>
         <Providers>
           <Preloader />
           <RootStyleRegistry>

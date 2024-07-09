@@ -33,8 +33,8 @@ const data = [
         label: "info@usptransportation.com",
         link: "mailto:info@usptransportation.com",
       },
-      { label: "+251963258741", link: "#" },
-      { label: "+251963258742", link: "#" },
+      { label: "202 265 00101208 9th Street, NW Washington DC, 20001", link: "#" },
+      { label: "202 265 0010", link: "#" },
     ],
   },
 ];

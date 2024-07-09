@@ -12,22 +12,23 @@ import {
 import { Carousel } from "@mantine/carousel";
 import Car1 from "./car-1.png";
 import Car2 from "./car-2.png";
-import Car3 from "./car-3.jpeg";
-import Car4 from "./car-4.jpeg";
-import Car5 from "./car-5.jpeg";
-import Car6 from "./car-6.jpg";
-import Car7 from "./car-7.jpg";
-import Car8 from "./car-8.jpg";
-import Car9 from "./car-9.jpeg";
+import Car3 from "./car-3.png";
+import Car4 from "./car-4.png";
+import Car5 from "./car-5.png";
+import Car6 from "./car-6.png";
+import Car7 from "./car-7.png";
+import Car8 from "./car-8.png";
+import Car9 from "./car-9.png";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useHover, useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
+import Wave from "../services/Vector.svg"
 
 export const fleet = [
   {
-    id:1,
+    id: 1,
     title: "Mercedes E Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Executive Sedan",
@@ -39,7 +40,7 @@ export const fleet = [
     ],
   },
   {
-    id:2,
+    id: 2,
     title: "Mercedes Benz S-Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Luxury Sedan",
@@ -51,19 +52,19 @@ export const fleet = [
     ],
   },
   {
-    id:3,
+    id: 3,
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
+    fleetType: "Luxury Sedan",
     price: "$81,895",
-    imageUrl: Car1.src,
+    imageUrl: Car4.src,
     features: [
       "Full-size SUV that offers high-end features",
       "Semi-aniline leather seats",
     ],
   },
   {
-    id:4,
+    id: 4,
     title: "Range Rover Vogue",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -75,7 +76,7 @@ export const fleet = [
     ],
   },
   {
-    id:5,
+    id: 5,
     title: "Executive Eco Sedan (Tesla Models)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -87,7 +88,7 @@ export const fleet = [
     ],
   },
   {
-    id:6,
+    id: 6,
     title: "Executive Eco SUV (Tesla Model X)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -99,7 +100,7 @@ export const fleet = [
     ],
   },
   {
-    id:7,
+    id: 7,
     title: "Executive Minibus (Mercedes Sprinter)",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
@@ -111,13 +112,15 @@ export const fleet = [
     ],
   },
   {
-    id:7,
+    id: 7,
     title: "Executive Coach",
     titleDesc: "33/43/53/70 Passenger Coaches",
     fleetType: "LUXURY",
     price: "$81,895",
     imageUrl: Car9.src,
     features: [
+      "Travel in luxury and arrive in style",
+      "Available in varying passenger sizes",
       "Travel in luxury and arrive in style",
       "Available in varying passenger sizes",
     ],
@@ -129,10 +132,18 @@ export default function Fleet() {
   const theme = useMantineTheme();
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const autoplay2 = useRef(Autoplay({ delay: isMobile ? 3000 : 1500 }));
-  const router  = useRouter()
+  const router = useRouter();
 
   return (
-    <Stack className="min-h-[100dvh] justify-around" id="fleets">
+    <Stack
+      className="min-h-[100dvh] justify-around"
+      id="fleets"
+      style={{
+        backgroundImage: `url(${Wave.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR FLEET
@@ -168,9 +179,7 @@ export default function Fleet() {
           <Carousel.Slide key={index}>
             <Box className="relative h-full w-full">
               <Box className="h-full w-full absolute top-0">
-                <Stack
-                  className="h-full items-center gap-2 bg-red-800  hover:opacity-0"
-                >
+                <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">
                   <Box
                     className="w-[100%] h-[100%]"
                     style={{
@@ -196,7 +205,7 @@ export default function Fleet() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
-                      onClick={()=>router.push(car.id.toString())}
+                      onClick={() => router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -263,7 +272,7 @@ export default function Fleet() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
-                          onClick={()=>router.push(car.id.toString())}
+                          onClick={() => router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
@@ -302,9 +311,7 @@ export default function Fleet() {
           <Carousel.Slide key={index}>
             <Box className="relative h-full w-full">
               <Box className="h-full w-full absolute top-0">
-                <Stack
-                  className="h-full items-center gap-2 bg-red-800  hover:opacity-0"
-                >
+                <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">
                   <Box
                     className="w-[100%] h-[100%]"
                     style={{
@@ -330,7 +337,7 @@ export default function Fleet() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
-                      onClick={()=>router.push(car.id.toString())}
+                      onClick={() => router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -397,7 +404,7 @@ export default function Fleet() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
-                          onClick={()=>router.push(car.id.toString())}
+                          onClick={() => router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
@@ -415,7 +422,7 @@ export default function Fleet() {
         rightSection={<IconArrowRight />}
         className="w-fit mx-auto"
         color={theme.colors.secondary[9]}
-        onClick={()=>router.push('/browse')}
+        onClick={() => router.push("/browse")}
       >
         BROWSE THROUGH ALL FLEETS
       </Button>

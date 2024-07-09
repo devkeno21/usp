@@ -9,11 +9,20 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import CarBg from "./car-bg.png";
+import Wave from "../services/Vector.svg"
 
 export default function About() {
   const theme = useMantineTheme();
   return (
-    <Box id="about" className="w-full h-[75dvh] relative mt-[100dvh]">
+    <Box
+      id="about"
+      className="w-full h-[75dvh] relative mt-[100dvh]"
+      style={{
+        backgroundImage: `url(${Wave.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Flex className="w-full h-full justify-center items-center absolute top-0">
         <Box
           className="w-full md:w-2/3 h-[100dvh]"
