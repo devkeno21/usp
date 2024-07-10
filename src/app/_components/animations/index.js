@@ -26,7 +26,7 @@ export const preLoaderAnim = () => {
         duration: 1.5,
         // width: "0vw",
         // height: "0vh",
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+        clipPath: "circle(50.0% at 50% 50%)",
         // ease: "Power3.easeOut",
       },
       "-=2"
@@ -35,17 +35,38 @@ export const preLoaderAnim = () => {
       ".preloader-top",
       {
         duration: 1.5,
-        width: "0vw",
+        // width: "0vw",
         // height: "0dvw",
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%);",
+        clipPath: "circle(50.0% at 50% 50%)",
         // ease: "Power3.easeOut",
       },
       "-=2"
     )
     .to(
-      ".preloader",
+      ".preloader-image",
       {
         duration: 1.5,
+        width: "28rem",
+        height: "12rem"
+        // clipPath: "circle(50.0% at 50% 50%)",
+        // ease: "Power3.easeOut",
+      },
+      "-=2"
+    )
+    .to(
+      ".preloader-logo",
+      {
+        duration: 0.1,
+        width: "0vw",
+        height: "0dvw",
+        // clipPath: "circle(50.0% at 50% 50%)",
+        // ease: "Power3.easeOut",
+      },
+    )
+    .to(
+      ".preloader",
+      {
+        duration: 2.5,
         height: "0vh",
         ease: "Power3.easeOut",
       },
@@ -55,10 +76,10 @@ export const preLoaderAnim = () => {
       ".preloader-bottom",
       {
         duration: 1.5,
-        // width: "0dvw",
-        // height: "0vh",
-        clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-        ease: "Power3.easeOut",
+        // width: "100dvw",
+        // height: "100vh",
+        clipPath: "circle(50.0% at 50% 50%)",
+        ease: "Power3.inOut",
       },
       "-=2"
     )

@@ -10,7 +10,7 @@ export default function Preloader() {
   }, []);
   return (
     <div className="preloader" style={{backgroundColor: "#9A8E84"}}>
-      <div
+      {/* <div
         className="preloader-top"
         style={{
           width: "100dvw",
@@ -19,7 +19,7 @@ export default function Preloader() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          clipPath: "polygon(0 0, 50% 0, 50% 100%, 0% 100%)",
+          clipPath: "circle(50.0% at 50% 50%)",
         }}
       >
         <div className="w-fit h-fit" style={{zIndex: "2"}}>
@@ -29,7 +29,7 @@ export default function Preloader() {
             style={{ width: "28rem", height: "12rem" }}
           />
         </div>
-      </div>
+      </div> */}
       {/* <div
         className="preloader-bottom"
         style={{
@@ -58,14 +58,15 @@ export default function Preloader() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          clipPath: "polygon(100% 0, 50% 0, 50% 100%, 100% 100%)",
+          clipPath: "circle(0% at 50% 50%)",
         }}
       >
-        <div className="w-fit h-fit" style={{zIndex: "2"}}>
+        <div className="w-fit h-fit preloader-logo" style={{zIndex: "2"}}>
           <img
             src={logo.src}
             alt="Logo"
-            style={{ width: "28rem", height: "12rem" }}
+            className="preloader-image"
+            // style={{ width: "28rem", height: "12rem" }}
           />
         </div>
         
