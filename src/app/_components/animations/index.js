@@ -19,28 +19,15 @@ export const preLoaderAnim = () => {
       css: { overflowY: "scroll" },
       ease: "power3.inOut",
     })
-  
     .to(
       ".preloader-top",
       {
-        duration: 1.5,
+        duration: 1,
         // width: "0vw",
-        // height: "0vh",
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
-        // ease: "Power3.easeOut",
-      },
-      "-=2"
-    )
-    .to(
-      ".preloader-top",
-      {
-        duration: 1.5,
-        width: "0vw",
         // height: "0dvw",
-        clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%);",
-        // ease: "Power3.easeOut",
+        opacity: 0,
+        ease: "Power3.easeOut",
       },
-      "-=2"
     )
     .to(
       ".preloader",
@@ -57,33 +44,29 @@ export const preLoaderAnim = () => {
         duration: 1.5,
         // width: "0dvw",
         // height: "0vh",
-        clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+        clipPath: "circle(50% at 50% 50%)",
         ease: "Power3.easeOut",
       },
       "-=2"
     )
-    // .to(".preloader", {
-    //   duration: 1.5,
-    //   css: { display: "none" },
-    // })
-    // .to(".preloader-top", {
-    //   duration: 0,
-    //   css: { display: "none" },
-    // })
-    // .to(".preloader-bottom", {
-    //   duration: 0,
-    //   css: { display: "none" },
-    // })
-    // ;
+    .to(
+      ".logo",
+      {
+        duration: 1.5,
+        width: "50rem",
+        height: "24rem",
+        ease: "Power3.easeOut",
+      },
+      "-=2"
+    )
+    .to(
+      ".preloader-bottom",
+      {
+        duration: 2,
+        // width: "0dvw",
+        // height: "0vh",
+        opacity: 0,
+        ease: "Power3.easeOut",
+      },
+    )
 };
-
-// export const mobileLanding = () => {
-//   window.innerWidth < 763 &&
-//     tl.from(".landing__main2", {
-//       duration: 1,
-//       delay: 0,
-//       opacity: 0,
-//       y: 80,
-//       ease: "expo.easeOut",
-//     });
-// };

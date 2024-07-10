@@ -31,12 +31,12 @@ export default function Clients() {
           className="w-[45%] p-1 mx-auto"
         ></Box>
       </Flex>
-      <Flex className="gap-4 w-[35%] mx-auto justify-center">
+      <Flex className="gap-4 md:w-[60%] w-[90%] mx-auto justify-center">
         <Marquee gradient={true} className="gap-4">
           {clientsList.map((client, index) => (
             <Box
               key={index}
-              className="w-[100px] h-[100px] bg-gray-100 ml-12"
+              className="w-[200px] h-[150px] ml-24"
               style={{
                 backgroundImage: `url(${client.imageUrl})`,
                 backgroundSize: "contain",
