@@ -23,7 +23,7 @@ const data = [
     links: [
       { label: "Terms and Conditions", link: "#" },
       { label: "Refund Policy", link: "#" },
-      { label: "Carrers", link: "#" },
+      { label: "Careers", link: "#" },
     ],
   },
   {
@@ -67,9 +67,6 @@ export function Footer() {
       <Container className={classes.inner}>
         <div className={classes.logo}>
           <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Reimaging Excellence
-          </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
