@@ -1,6 +1,6 @@
 "use client";
 import { Box, Flex, Text, useMantineTheme } from "@mantine/core";
-import Client3 from "./client-3.jpg";
+import Client3 from "./client-3.png";
 import Client4 from "./client-4.png";
 import Client5 from "./client-5.png";
 import Marquee from "react-fast-marquee";

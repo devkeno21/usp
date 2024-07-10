@@ -27,19 +27,6 @@ export const fleet = [
       ],
     },
     {
-      id: 2,
-      title: "Mercedes Benz S-Class",
-      titleDesc: "Luxury Seating for up to 6",
-      fleetType: "Luxury Sedan",
-      price: "$150",
-      imageUrl: Car3.src,
-      bgUrl: Car3Bg.src,
-      features: [
-        "Ultimate comfort, elegantly designed, and exceptional",
-        "Luxuriously equipped with exquisite, comfortable leather massage seats",
-      ],
-    },
-    {
       id: 3,
       title: "Escalade ESV Luxury SUV",
       titleDesc: "Luxury Seating for up to 6",
@@ -67,7 +54,7 @@ export const fleet = [
     },
     {
       id: 5,
-      title: "Executive Eco Sedan (Tesla Models)",
+      title: "Executive Eco Sedan (Tesla Model S)",
       titleDesc: "Luxury Seating for up to 6",
       fleetType: "LUXURY",
       price: "$28.45",

@@ -20,6 +20,7 @@ import { fleet } from "./fleet";
 
 
 
+
 export default function Fleet() {
   const autoplay1 = useRef(Autoplay({ delay: 2000 }));
   const theme = useMantineTheme();
