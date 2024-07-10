@@ -17,6 +17,9 @@ import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import { fleet } from "./fleet";
+import LeftArrow from "./left-arrow.png"
+import RightArrow from "./right-arrow.png"
+import Image from "next/image";
 
 
 
@@ -55,12 +58,14 @@ export default function Fleet() {
         onMouseLeave={autoplay2.current.reset}
         nextControlIcon={
           <ActionIcon color="#1B234C" variant="filled">
-            <IconArrowRight size={20} stroke="sm"/>
+            {/* <IconArrowRight size={20} stroke="sm"/> */}
+            <Image src={RightArrow.src} width={15} height={15} alt="right"/>
           </ActionIcon>
         }
         previousControlIcon={
-          <ActionIcon color="#1B234C" variant="filled">
-            <IconArrowLeft size={20} stroke="sm"/>
+          <ActionIcon color="#1B234C" variant="filled" >
+            {/* <IconArrowLeft size={20} stroke="sm" fill="#1B234C"  /> */}
+            <Image src={LeftArrow.src} width={15} height={15} alt="left"/>
           </ActionIcon>
         }
       >
