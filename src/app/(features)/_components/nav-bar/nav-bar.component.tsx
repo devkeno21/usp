@@ -17,6 +17,8 @@ import {
   ScrollArea,
   rem,
   useMantineTheme,
+  Stack,
+  Flex,
 } from "@mantine/core";
 import USPLogo from "./usp-logo-white.png";
 import { useDisclosure } from "@mantine/hooks";
@@ -100,7 +102,7 @@ export function NavBar() {
         <Group justify="space-between" h="100%">
           <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
 
-          <Group h="100%" gap={6} visibleFrom="sm">
+          <Group h="100%" gap={12} visibleFrom="sm">
             <a href="#about" className={classes.link}>
               About
             </a>
@@ -116,7 +118,9 @@ export function NavBar() {
           </Group>
 
           <Group visibleFrom="sm">
-            <Button color={theme.colors.secondary[9]}><a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a></Button>
+            <Button color={theme.colors.secondary[9]}>
+              <a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a>
+            </Button>
             <Button onClick={() => router.push("/vip")}>VIP Program</Button>
           </Group>
 
@@ -140,25 +144,34 @@ export function NavBar() {
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
+          <Stack>
+            <Stack  className="mx-auto">
+            <a href="#" className={classes.link}>
+              Home
+            </a>
 
-          <a href="#" className={classes.link}>
-            Home
-          </a>
+            <Collapse in={linksOpened}>{links}</Collapse>
+            
+              <a href="#about" className={`text-black `}>
+                About
+              </a>
+              <a href="#services" className={`text-black `}>
+                Services
+              </a>
+              <a href="#fleets" className={`text-black `}>
+                Fleets
+              </a>
+              <a href="#contact" className={`text-black `}>
+                Contact
+              </a>
+            <Divider my="sm" />
+            </Stack>
 
-          <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
-
-          <Divider my="sm" />
-
-          <Group justify="center" grow pb="xl" px="md">
-            <Button color={theme.colors.secondary[9]}>Book Now</Button>
-            <Button onClick={()=>router.push('/vip')}>VIP Program</Button>
-          </Group>
+            <Flex className="mx-auto gap-2 flex-wrap" >
+              <Button color={theme.colors.secondary[9]}>Book Now</Button>
+              <Button onClick={() => router.push("/vip")}>VIP Program</Button>
+            </Flex>
+          </Stack>
         </ScrollArea>
       </Drawer>
     </Box>
