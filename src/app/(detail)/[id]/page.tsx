@@ -124,10 +124,12 @@ export default function DetailFleet() {
               </Group>
             </Flex>
 
-            <p className="my-5 text-justify text-slate-500">
+            {/* <p className="my-5 text-justify text-slate-500"   dangerouslySetInnerHTML={{ __html: car.description.replace(/\n/g, '<br>') }}
+            >
               {car.description}
-            </p>
-            <Button fullWidth color={theme.colors.secondary[9]} size="xl">
+            </p> */}
+            <FormatedText text={car.description}/>
+            <Button fullWidth color={theme.colors.secondary[9]} size="xl" component="a" href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">
               Book
             </Button>
           </Box>
@@ -279,3 +281,13 @@ export default function DetailFleet() {
     </div>
   );
 }
+
+
+const FormatedText = ({ text }:{text:string}) => {
+  return (
+    <p
+      className="my-5 text-justify text-slate-500"
+      dangerouslySetInnerHTML={{ __html: text.replace(/\n/g, '<br>') }}
+    ></p>
+  );
+};

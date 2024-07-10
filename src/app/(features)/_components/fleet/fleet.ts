@@ -48,25 +48,35 @@ import Sprinter5 from "./gallery/sprinter/sprinter-5.jpg";
 import Sprinter6 from "./gallery/sprinter/sprinter-6.png";
 import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
 
-import Eclass1 from "./gallery/e-class/eclass1.jpeg";
-import Eclass2 from "./gallery/e-class/eclass2.jpeg";
-import Eclass3 from "./gallery/e-class/eclass3.jpeg";
-import Eclass4 from "./gallery/e-class/eclass4.jpeg";
+import Eclass1 from "./gallery/e-class/eclass1.jpg";
+import Eclass2 from "./gallery/e-class/eclass2.jpg";
+import Eclass3 from "./gallery/e-class/eclass3.jpg";
+import Eclass4 from "./gallery/e-class/eclass4.jpg";
+import Eclass5 from "./gallery/e-class/eclass5.jpg";
+import Eclass6 from "./gallery/e-class/eclass6.jpg";
+import Eclass7 from "./gallery/e-class/eclass7.jpg";
 
 export const fleet = [
   {
     id: 1,
     title: "Mercedes E Class",
     brand: "Mercedes",
-    description:
-      "Indulge in the epitome of luxury with the Maybach Executive Sedan. Designed for the discerning traveler, this vehicle offers opulent interiors, state-of-the-art technology, and a whisper-quiet ride. Whether for business or pleasure, the Maybach ensures an extraordinary travel experience.",
+    description: `The Mercedes E-Class combines exceptional design and innovative technology to provide a seamless journey. Perfect for any executive, this modern vehicle works with comprehensive and intelligent technology to enhance your trip, whether it be to a business meeting or a sporting event. Get there effortlessly with our Mercedes E-Class sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.`,
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "Executive Sedan",
     price: "$150",
     imageUrl: Car4.src,
     bgUrl: Car3Bg.src,
-    gallery: [Eclass1.src, Eclass2.src, Eclass3.src, Eclass4.src],
+    gallery: [
+      Eclass1.src,
+      Eclass2.src,
+      Eclass3.src,
+      Eclass4.src,
+      Eclass5.src,
+      Eclass6.src,
+      Eclass7.src,
+    ],
     features: [
       "Exceptional design and innovative technology ",
       "Perfect for any executive",
@@ -77,7 +87,7 @@ export const fleet = [
     title: "Escalade ESV Luxury SUV",
     brand: "Cadilac",
     description:
-      "The Escalade ESV Luxury SUV combines bold design with exceptional comfort and performance. With its spacious interior, premium materials, and advanced technology, the Escalade offers a commanding presence on the road, perfect for family trips, business travel, and special occasions.",
+      "The Escalade is a luxury full-size SUV that offers high-end features, a plush ride, and powerful engine options.  The Escalade’s interior boasts luxury amenities such as semi-aniline leather seats, aluminum speaker grilles, adjustable interior ambient lighting, and a curved OLED digital dashboard that houses both the driver’s gauge cluster and infotainment system. The SUV also offers advanced technology features like Super Cruise adaptive cruise control, which enables hands-free driving, and an augmented reality navigation system. Apple CarPlay/Android Auto integration and a Wi-Fi hotspot are also standard.",
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "Luxury Sedan",
@@ -102,7 +112,7 @@ export const fleet = [
     title: "Range Rover Vogue",
     brand: "Range Rover",
     description:
-      "The Range Rover Vogue combines luxury with rugged capability, making it the perfect choice for both city driving and off-road adventures. With its plush interiors, advanced features, and powerful performance, the Vogue offers a refined and versatile driving experience.",
+      "When you require the ultimate luxury SUV, look no further than our Range Rover Vogue. Providing immense space with a power recline and heated leather rear seats, the panoramic roof delivers excellent natural light to the vehicle. Also available with a long-wheelbase option for extra comfort.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "LUXURY",
@@ -128,7 +138,7 @@ export const fleet = [
     title: "Executive Eco Sedan (Tesla Model S)",
     brand: "Tesla",
     description:
-      "Experience the future of driving with the Tesla Model S. This electric sedan offers exceptional performance, cutting-edge technology, and a sleek design. Enjoy the benefits of zero emissions, impressive acceleration, and an unparalleled driving experience with the Model S.",
+      "Enter the eco fleet; the zero-emission electric Tesla Model S sets an industry standard for performance and safety. Tesla's all-electric power train delivers unparalleled execution in all weather conditions. Do your bit for the environment without compromising style by traveling in the world's first-ever premium all-electric sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "LUXURY",
@@ -153,7 +163,7 @@ export const fleet = [
     title: "Executive Eco SUV (Tesla Model X)",
     brand: "Tesla",
     description:
-      "The Tesla Model X is the ultimate electric SUV, offering remarkable performance, innovative technology, and striking design. With its falcon-wing doors, spacious interior, and advanced safety features, the Model X is perfect for families and tech enthusiasts alike.",
+      "The Tesla Model X is deemed one of the safest SUV's ever. Built from the ground up as an electric vehicle, the body, chassis, restraints, and battery technology provide a very low probability of occupant injury. The Tesla X is a zero-emission, all-electric vehicle without compromising performance, speed, or comfort.\n\n*Includes 15% discount  \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations between 22:00 pm and 06:00 am will only be effective from 06:00 am.\n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "LUXURY",
@@ -179,7 +189,7 @@ export const fleet = [
     title: "Executive Minibus (Mercedes Sprinter)",
     brand: "Marcedes",
     description:
-      "The Mercedes Sprinter is the ideal vehicle for group travel and transport, offering ample space and comfort. With its flexible seating arrangements, advanced safety features, and reliable performance, the Sprinter is perfect for corporate outings, airport transfers, and road trips.",
+      "You can maintain comfort and luxury, even when transporting more prominent groups. Our Mercedes Sprinter enables you to travel easily with executive-style leather seating, ample space, and a safe, comfortable ride, providing a pleasant commute for you and your colleagues/friends. Perfect for more significant group events and functions. Get to your destination conveniently and restfully with our Mercedes Sprinter.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "LUXURY",
@@ -204,7 +214,7 @@ export const fleet = [
     title: "Executive Coach",
     brand: "Executive Coach",
     description:
-      "Our passenger coaches, available in various sizes to accommodate 33/43/52/70 passengers, provide the ultimate group travel experience. Each coach is equipped with spacious seating, climate control, and modern amenities to ensure a comfortable and enjoyable ride for all passengers, ideal for corporate events, tours, and large gatherings.",
+      "Travel in luxury and arrive in style on board one of our executive coaches, available in varying passenger sizes, ranging from 19 to 57 passenger vehicles. With immaculate interior features, including a rear lounge area, kitchen facilities, color lighting, and hostess service available on board (on selected coaches); these coaches are the pinnacle of excellence, sophistication, and the perfect start to your event.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am.\n \nPlease get in touch with us for further details.",
     titleDesc: "33/43/53/70 Passenger Coaches",
     seats: 70,
     fleetType: "LUXURY",
