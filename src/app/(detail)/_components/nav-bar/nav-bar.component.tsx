@@ -32,6 +32,7 @@ import {
 import classes from "./nav-bar.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const mockdata = [
   {
@@ -110,9 +111,9 @@ export function NavBar() {
             <a href="#" className={classes.link}>
               Fleets
             </a>
-            <a href="#" className={classes.link}>
+            <Link href="/affiliates" className={classes.link}>
             Affiliates
-            </a>
+            </Link>
             <a href="#" className={classes.link}>
               Contact
             </a>
