@@ -302,11 +302,11 @@ const FormatedText = ({ text }: { text: string }) => {
   const [firstPart, secondPart] = text.split(/\n(.*)/s, 2);
 
   return (
-    <p className="my-5 text-justify text-slate-500">
+    <p className="my-5 text-justify text-black">
       <span dangerouslySetInnerHTML={{ __html: firstPart.replace(/\n/g, "<br>") }}></span>
       {secondPart && (
         <span
-          className="italic text-xs"
+          className="italic text-xs font-semibold"
           dangerouslySetInnerHTML={{ __html: "<br>" + secondPart.replace(/\n/g, "<br>") }}
         ></span>
       )}
