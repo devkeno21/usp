@@ -6,7 +6,7 @@ const tl= gsap.timeline();
 // Preloader Animation
 export const preLoaderAnim = () => {
   tl.to("body", {
-    duration: 0.8,
+    duration: 2,
     css: { overflowY: "hidden" },
     ease: "power3.inOut",
   })
@@ -15,14 +15,14 @@ export const preLoaderAnim = () => {
       css: { overflowY: "hidden", height: "unset" },
     })
     .to("body", {
-      duration: 2,
+      duration: 1,
       css: { overflowY: "scroll" },
       ease: "power3.inOut",
     })
     .to(
       ".preloader-top",
       {
-        duration: 1,
+        duration: 0.8,
         // width: "0vw",
         // height: "0dvw",
         clipPath: "circle(0% at 50% 50%)",
@@ -49,14 +49,14 @@ export const preLoaderAnim = () => {
         clipPath: "circle(100% at 50% 50%)",
         ease: "Power3.easeOut",
       },
-      "-=2"
+      "-=1"
     )
     .to(
       ".logo",
       {
         duration: 1.5,
-        width: "50rem",
-        height: "24rem",
+        width: "",
+        height: "",
         ease: "Power3.easeOut",
       },
       "-=2"
@@ -64,11 +64,11 @@ export const preLoaderAnim = () => {
     .to(
       ".preloader-bottom",
       {
-        duration: 0.5,
+        duration: 1.5,
         opacity: 0,
         clipPath: "circle(0% at 50% 50%)",
         ease: "Power3.easeOut",
       },
-      "+=2"
+      "+=3"
     )
 };

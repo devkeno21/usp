@@ -1,15 +1,16 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import "./preloader.css";
 import { preLoaderAnim } from "./animations/index";
 import logo from "./car-1.png";
+import Trans from "./transparent-bg.png"
 
 export default function Preloader() {
   useEffect(() => {
     preLoaderAnim();
   }, []);
   return (
-    <div className="preloader" style={{backgroundColor: "#9A8E84"}}>
+    <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
         className="preloader-top"
         style={{
@@ -20,7 +21,31 @@ export default function Preloader() {
           justifyContent: "center",
         }}
       >
-       
+         <div className="w-fit h-fit" style={{ zIndex: "2" }}>
+            <img
+              src={logo.src}
+              alt="Logo"
+              className="logo"
+              style={{ width: "14rem", height: "6rem" }}
+            />
+          </div>
+        <div
+          className="preloader-bottom"
+          style={{
+            width: "100dvw",
+            height: "100dvh",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: "auto",
+            clipPath: "circle(0% at 50% 50%)",
+            backgroundImage: `url(${Trans.src})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+         
+        </div>
       </div>
       {/* <div
         className="preloader-bottom"
@@ -42,28 +67,6 @@ export default function Preloader() {
           />
         </div>
       </div> */}
-      <div
-        className="preloader-bottom"
-        style={{
-          width: "100dvw",
-          height: "100dvh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          margin: "auto",
-          clipPath: "circle(0% at 50% 50%)",
-        }}
-      >
-        <div className="w-fit h-fit" style={{zIndex: "2"}}>
-          <img
-            src={logo.src}
-            alt="Logo"
-            className="logo"
-            style={{ width: "28rem", height: "12rem" }}
-          />
-        </div>
-        
-      </div>
     </div>
   );
 }
