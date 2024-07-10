@@ -15,7 +15,6 @@ export default function Preloader() {
         style={{
           width: "100dvw",
           height: "100dvh",
-          border: "10px solid black",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
