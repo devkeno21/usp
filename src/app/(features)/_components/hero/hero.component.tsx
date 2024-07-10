@@ -37,7 +37,7 @@ export default function HeroSection() {
               <Text
                 tt="uppercase"
                 className="text-white text-xs md:text-xl text-center"
-                fw={"bold"}
+              
               >
                 Embark on unforgettable journeys where luxury and elegance
                 accompany every step of your adventure.
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 color={theme.colors.secondary[9]}
                 className="w-fit mx-auto"
               >
-                View More
+                <a href="https://book.mylimobiz.com/v4/uspholdings">Get Instant Quote</a>
               </Button>
             </Stack>
           </Box>
