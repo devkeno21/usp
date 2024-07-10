@@ -42,7 +42,7 @@ export default function Clients() {
                 backgroundSize: "contain",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
-                opacity: "0.3",
+                opacity: "0.8",
               }}
             ></Box>
           ))}
