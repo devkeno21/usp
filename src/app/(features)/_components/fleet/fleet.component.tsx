@@ -13,18 +13,21 @@ import { Carousel } from "@mantine/carousel";
 import Car1 from "./car-1.png";
 import Car2 from "./car-2.png";
 import Car3 from "./car-3.png";
+import Car3Bg from "./e-bg.png";
 import Car4 from "./car-4.png";
 import Car5 from "./car-5.png";
+import Car5Bg from "./rover-bg.png";
 import Car6 from "./car-6.png";
+import Car6Bg from "./s-bg.png";
 import Car7 from "./car-7.png";
+import Car7Bg from "./x-bg.png";
 import Car8 from "./car-8.png";
 import Car9 from "./car-9.png";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
-import { useHover, useMediaQuery } from "@mantine/hooks";
+import { useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
-import Wave from "../services/Vector.svg"
 
 export const fleet = [
   {
@@ -32,8 +35,9 @@ export const fleet = [
     title: "Mercedes E Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Executive Sedan",
-    price: "$28.45",
-    imageUrl: Car3.src,
+    price: "$150",
+    imageUrl: Car4.src,
+    bgUrl: Car3Bg.src,
     features: [
       "Exceptional design and innovative technology ",
       "Perfect for any executive",
@@ -44,8 +48,9 @@ export const fleet = [
     title: "Mercedes Benz S-Class",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Luxury Sedan",
-    price: "$28.45",
-    imageUrl: Car4.src,
+    price: "$150",
+    imageUrl: Car3.src,
+    bgUrl: Car3Bg.src,
     features: [
       "Ultimate comfort, elegantly designed, and exceptional",
       "Luxuriously equipped with exquisite, comfortable leather massage seats",
@@ -56,8 +61,9 @@ export const fleet = [
     title: "Escalade ESV Luxury SUV",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "Luxury Sedan",
-    price: "$28.45",
-    imageUrl: Car4.src,
+    price: "$125",
+    imageUrl: Car1.src,
+    bgUrl: Car2.src,
     features: [
       "Full-size SUV that offers high-end features",
       "Semi-aniline leather seats",
@@ -68,8 +74,9 @@ export const fleet = [
     title: "Range Rover Vogue",
     titleDesc: "Luxury Seating for up to 6",
     fleetType: "LUXURY",
-    price: "$28.45",
+    price: "$150",
     imageUrl: Car5.src,
+    bgUrl: Car5Bg.src,
     features: [
       "Providing immense space with a power recline",
       "heated leather rear seats",
@@ -82,6 +89,7 @@ export const fleet = [
     fleetType: "LUXURY",
     price: "$28.45",
     imageUrl: Car6.src,
+    bgUrl: Car6Bg.src,
     features: [
       "Zero-emission electric",
       "Unparalleled execution in all weather conditions",
@@ -94,6 +102,7 @@ export const fleet = [
     fleetType: "LUXURY",
     price: "$28.45",
     imageUrl: Car7.src,
+    bgUrl: Car7Bg.src,
     features: [
       "One of the safest SUV's ever",
       "Zero-emission, all-electric vehicle ",
@@ -106,6 +115,7 @@ export const fleet = [
     fleetType: "LUXURY",
     price: "$28.45",
     imageUrl: Car8.src,
+    bgUrl: Car8.src,
     features: [
       "Transporting more prominent groups",
       "Executive-style leather seating, ample space",
@@ -116,8 +126,9 @@ export const fleet = [
     title: "Executive Coach",
     titleDesc: "33/43/53/70 Passenger Coaches",
     fleetType: "LUXURY",
-    price: "$28.45",
+    price: "$345",
     imageUrl: Car9.src,
+    bgUrl: Car9.src,
     features: [
       "Travel in luxury and arrive in style",
       "Available in varying passenger sizes",
@@ -146,138 +157,6 @@ export default function Fleet() {
           className="w-[45%] p-1 mx-auto"
         ></Box>
       </Flex>
-      {/* <Carousel
-        slideSize={isMobile ? "80%" : "30%"}
-        height={300}
-        // withIndicators
-        slideGap="xl"
-        controlsOffset="xs"
-        controlSize={27}
-        loop
-        plugins={[autoplay1?.current]}
-        onMouseEnter={autoplay1.current.stop}
-        onMouseLeave={autoplay1.current.reset}
-        nextControlIcon={
-          <ActionIcon>
-            <IconArrowRight />
-          </ActionIcon>
-        }
-        previousControlIcon={
-          <ActionIcon>
-            <IconArrowLeft />
-          </ActionIcon>
-        }
-      >
-        {fleet.map((car, index) => (
-          <Carousel.Slide key={index}>
-            <Box className="relative h-full w-full">
-              <Box className="h-full w-full absolute top-0">
-                <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">
-                  <Box
-                    className="w-[100%] h-[100%]"
-                    style={{
-                      backgroundImage: `url(${car.imageUrl})`,
-                      backgroundSize: "contain",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                    }}
-                  />
-
-                  <Flex className="flex-col gap-1">
-                    <Text fz="xl" tt="capitalize" c="white">
-                      {car.title}
-                    </Text>
-                    <Text c="white" className="text-center">
-                      {car.titleDesc}
-                    </Text>
-                  </Flex>
-
-                  <Box>
-                    <Button
-                      size="xs"
-                      color={theme.colors.primary[9]}
-                      className="m-4"
-                      rightSection={<IconArrowRight />}
-                      onClick={() => router.push(car.id.toString())}
-                    >
-                      View Details
-                    </Button>
-                  </Box>
-                </Stack>
-              </Box>
-              <Box className="h-full w-full absolute top-0">
-                <Stack className="h-full items-center gap-2 bg-primary-900 opacity-0 hover:opacity-100">
-                  <Box
-                    className="w-[100%] h-[100%] absolute top-0"
-                    style={{
-                      backgroundImage: `url(${Car2.src})`,
-                      backgroundSize: "contain",
-                      backgroundPosition: "center",
-                      backgroundRepeat: "no-repeat",
-                      opacity: 0.2,
-                    }}
-                  />
-                  <Box className="h-full absolute top-0">
-                    <Stack className="h-full items-center justify-evenly">
-                      <Flex className="flex-col gap-1">
-                        <Text
-                          fz="xl"
-                          tt="capitalize"
-                          c="white"
-                          className="text-center"
-                        >
-                          {car.title}
-                        </Text>
-                        <Text c="white" className="text-center">
-                          {car.titleDesc}
-                        </Text>
-                        <Text tt="capitalize" c="white" className="text-center">
-                          {car.fleetType}
-                        </Text>
-                        <Text c="white" className="text-center">
-                          Starting from: {car?.price}
-                        </Text>
-                        <Flex className="flex-col gap-2  p-4">
-                          <Text tt="capitalize" c="white">
-                            Key features
-                          </Text>
-                          <Box size={300}>
-                            <ol className="text-white">
-                              {car.features.map((feature, index) => (
-                                <Flex
-                                  key={index}
-                                  className="items-center gap-2"
-                                >
-                                  <IconPoint color="white" fill="white" />
-                                  <li key={index}>
-                                    <Text className="font-semibold" c="white">
-                                      {feature}
-                                    </Text>
-                                  </li>
-                                </Flex>
-                              ))}
-                            </ol>
-                          </Box>
-                        </Flex>
-                      </Flex>
-                      <Box>
-                        <Button
-                          size="xs"
-                          color={theme.colors.secondary[9]}
-                          rightSection={<IconArrowRight />}
-                          onClick={() => router.push(car.id.toString())}
-                        >
-                          View Details
-                        </Button>
-                      </Box>
-                    </Stack>
-                  </Box>
-                </Stack>
-              </Box>
-            </Box>
-          </Carousel.Slide>
-        ))}
-      </Carousel> */}
       <Carousel
         slideSize={isMobile ? "80%" : "30%"}
         initialSlide={6}
@@ -291,12 +170,12 @@ export default function Fleet() {
         onMouseLeave={autoplay2.current.reset}
         nextControlIcon={
           <ActionIcon>
-            <IconArrowRight />
+            <IconArrowRight size={20} stroke="sm"/>
           </ActionIcon>
         }
         previousControlIcon={
           <ActionIcon>
-            <IconArrowLeft />
+            <IconArrowLeft size={20} stroke="sm"/>
           </ActionIcon>
         }
       >
@@ -342,7 +221,7 @@ export default function Fleet() {
                   <Box
                     className="w-[100%] h-[100%] absolute top-0"
                     style={{
-                      backgroundImage: `url(${Car2.src})`,
+                      backgroundImage: `url(${car.bgUrl})`,
                       backgroundSize: "contain",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
