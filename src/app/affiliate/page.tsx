@@ -92,7 +92,7 @@ export default function Affiliate() {
         </Button>
 
         <Flex>
-          <div className="w-1/4 mt-24">
+          <div className="w-1/4 mt-24 hidden md:block">
             <Stepper
               active={active}
               orientation="vertical"
@@ -125,7 +125,7 @@ export default function Affiliate() {
               />
             </Stepper>
           </div>
-          <div className="w-3/4 overflow-y-auto h-[84vh] py-5 px-14">
+          <div className="w-full md:w-3/4 overflow-y-auto h-full md:h-[84vh] py-5 px-14">
             {active == 0 && (
               <div>
                 <CompanyInformationForm

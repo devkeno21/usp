@@ -64,7 +64,7 @@ export const CompanyInformationForm = ({
     };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">Company Information</p>
+      <p className="md:text-2xl text-lg">Company Information</p>
 
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Company Name" withAsterisk  {...register("name")}

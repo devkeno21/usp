@@ -35,7 +35,7 @@ export const DebitPaymentInformationForm = ({onNext,onPrev}:{  onNext: (data: an
     };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">PAYMENT INFORMATION</p>
+      <p className="md:text-2xl text-lg">PAYMENT INFORMATION</p>
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Direct Debit Account Name" withAsterisk {...register("name")}
           error={errors.name?.message?.toString()}/>

@@ -33,7 +33,7 @@ export const MonthlyPaymentInformationForm = ({onNext,onPrev}:{  onNext: (data: 
   
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">PAYMENT INFORMATION</p>
+      <p className="md:text-2xl text-lg">PAYMENT INFORMATION</p>
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Accounts/Invoice Contact Name" withAsterisk  {...register("name")}
           error={errors.name?.message?.toString()}/>

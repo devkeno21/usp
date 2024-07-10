@@ -47,7 +47,7 @@ export const GeneralInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">General Information</p>
+      <p className="md:text-2xl text-lg">General Information</p>
 
       <Textarea
         label="Do You Provide Ground Transportation 24/7. If No Please State Your Availability?"

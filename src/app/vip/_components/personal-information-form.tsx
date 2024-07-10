@@ -46,7 +46,7 @@ export const PersonalInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">PERSONAL INFORMATION</p>
+      <p className="md:text-2xl text-lg">PERSONAL INFORMATION</p>
 
       <Flex gap={10} className="mt-5">
         <TextInput

@@ -47,7 +47,7 @@ export const FleetInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">Fleet Information</p>
+      <p className="md:text-2xl text-lg">Fleet Information</p>
       <Flex gap={10} className="mt-5">
         <TextInput
           label="Average Fleet Age"

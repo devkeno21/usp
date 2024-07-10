@@ -64,7 +64,7 @@ export const BillingInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">Billing Information</p>
+      <p className="md:text-2xl text-lg">Billing Information</p>
 
       <Flex gap={10} className="mt-5">
         <Box className="w-full mt-1">

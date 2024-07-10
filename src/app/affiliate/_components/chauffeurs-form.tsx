@@ -45,7 +45,7 @@ export const ChauffeursInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">Chauffeurs Information</p>
+      <p className="md:text-2xl text-lg">Chauffeurs Information</p>
 
       <Flex gap={10} className="mt-5" align={"end"}>
         <TextInput

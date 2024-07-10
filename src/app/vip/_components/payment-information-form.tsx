@@ -55,7 +55,7 @@ export const PaymentInformationForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">PAYMENT INFORMATION</p>
+      <p className="md:text-2xl text-lg">PAYMENT INFORMATION</p>
       <p className="text-xs font-normal text-gray-400 mt-5">
         Select Your Payment Method:
         <span className="text-white font-semibold">

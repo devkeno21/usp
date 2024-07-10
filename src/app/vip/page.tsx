@@ -60,7 +60,7 @@ export default function VIP() {
         </Button>
 
         <Flex>
-          <div className="w-1/4 mt-24">
+          <div className="w-1/4 mt-24 hidden md:block">
             <Stepper
               active={active}
               orientation="vertical"
@@ -81,7 +81,7 @@ export default function VIP() {
               />
             </Stepper>
           </div>
-          <div className="w-3/4 overflow-y-auto h-[84vh] py-5 px-14">
+          <div className="md:w-3/4 w-full overflow-y-auto h-full md:h-[84vh] py-5 px-14">
             {active == 0 && (
               <div>
                 <ButtonGroup className="p-5 bg-secondary-900 bg-opacity-20 border border-secondary-900 w-fit rounded mb-5">

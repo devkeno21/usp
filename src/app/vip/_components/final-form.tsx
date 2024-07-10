@@ -40,7 +40,7 @@ export const FinalForm = ({
   };
   return (
     <div className=" text-white font-semibold">
-      <p className="text-2xl">FINAL STEPS</p>
+      <p className="md:text-2xl text-lg">FINAL STEPS</p>
 
       <Flex gap={10} className="mt-5">
         <TextInput
