@@ -1,5 +1,5 @@
 "use client";
-import { Text, Container, ActionIcon, Group, rem, Flex, Stack } from "@mantine/core";
+import { Text, Container, ActionIcon, Group, rem, Flex, Stack, Divider } from "@mantine/core";
 import {
   IconBrandTwitter,
   IconBrandYoutube,
@@ -64,12 +64,13 @@ export function Footer() {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
+      <div className={`${classes.inner} md:px-24`}>
         <div className={classes.logo}>
           <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
         </div>
         <div className={classes.groups}>{groups}</div>
-      </Container>
+      </div>
+      <Divider w={"90%"} className="mx-auto mt-4" />
       <Flex hiddenFrom="md"  className="flex-col p-6 gap-10">
         {data.map((group, index) => (
           <Flex key={index} gap="md">
@@ -94,7 +95,7 @@ export function Footer() {
           </Flex>
         ))}
       </Flex>
-      <Container className={classes.afterFooter}>
+      <Container className={`${classes.afterFooter} md:ml-20`}>
         <Text c="dimmed" size="sm">
           © {now.getFullYear()} USP Transportation. All rights reserved.
         </Text>

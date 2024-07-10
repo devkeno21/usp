@@ -44,7 +44,8 @@
     z-index: 55;
     height: 50vh;
     overflow: hidden;
-    background-color: #FFF;
+    background-color: transparent;
+    
     display: flex;
     justify-content: center;
     align-items: flex-start;

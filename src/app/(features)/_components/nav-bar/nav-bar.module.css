@@ -2,14 +2,15 @@
     height: 3.75rem;
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
+    margin-top: 1rem;
   }
   
   .link {
     display: flex;
     align-items: center;
     height: 100%;
-    padding-left: var(--mantine-spacing-md);
-    padding-right: var(--mantine-spacing-md);
+    padding-left: 3rem;
+    padding-right: 3rem;
     text-decoration: none;
     color: light-dark(var(--mantine-color-white), var(--mantine-color-black));
     font-weight: 500;
