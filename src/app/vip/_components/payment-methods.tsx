@@ -16,7 +16,7 @@ export const PaymentMethods = ({ paymentMethod, setPaymentMethod,hideDirect=fals
         }
         onClick={()=>setPaymentMethod("credit")}
       >
-        Credit/Debit Card
+        Credit Card
       </Button>
       <Button
         className={
