@@ -68,6 +68,7 @@ export const fleet = [
     price: "$150",
     imageUrl: Car4.src,
     bgUrl: Car3Bg.src,
+    videoUrl:"_YZV22g_CZg",
     gallery: [
       Eclass1.src,
       Eclass2.src,
@@ -94,6 +95,7 @@ export const fleet = [
     price: "$125",
     imageUrl: Car1.src,
     bgUrl: Car2.src,
+    videoUrl:"lTVEkHfUKLk",
     gallery: [
       Escalade1.src,
       Escalade2.src,
@@ -119,6 +121,7 @@ export const fleet = [
     price: "$150",
     imageUrl: Car5.src,
     bgUrl: Car5Bg.src,
+    videoUrl:"SBQlKwZnIFA",
     gallery: [
       RangeRover1.src,
       RangeRover2.src,
@@ -145,6 +148,7 @@ export const fleet = [
     price: "$28.45",
     imageUrl: Car6.src,
     bgUrl: Car6Bg.src,
+    videoUrl:"-TSRWxqWSkk",
     gallery: [
       Models1.src,
       Models2.src,
@@ -170,6 +174,7 @@ export const fleet = [
     price: "$28.45",
     imageUrl: Car7.src,
     bgUrl: Car7Bg.src,
+    videoUrl:"LLZtGpduhas",
     gallery: [
       //   Modelx3.src,
       Modelx1.src,
@@ -196,6 +201,7 @@ export const fleet = [
     price: "$28.45",
     imageUrl: Car8.src,
     bgUrl: Car8.src,
+    videoUrl:"BxAVmcpXIqo",
     gallery: [
       Sprinter1.src,
       Sprinter2.src,
@@ -221,6 +227,7 @@ export const fleet = [
     price: "$345",
     imageUrl: Car9.src,
     bgUrl: Car9.src,
+    videoUrl:"mScks7rqtwM",
     gallery: [Car9.src],
     features: [
       "Travel in luxury and arrive in style",

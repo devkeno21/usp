@@ -17,6 +17,8 @@ import {
   IconPoint,
   IconStar,
 } from "@tabler/icons-react";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { SUV } from "./_components/suv";
 import { Seats } from "./_components/seats";
 import { Carousel } from "@mantine/carousel";
@@ -29,16 +31,16 @@ import { useParams, useRouter } from "next/navigation";
 import whiteCar from "./white-car.png";
 import { fleet } from "@/app/(features)/_components/fleet/fleet";
 
-
-
 export default function DetailFleet() {
   const theme = useMantineTheme();
   const autoplay1 = useRef(Autoplay({ delay: 2000 }));
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const router = useRouter();
-  const {id} = useParams();
+  const { id } = useParams();
   const car = fleet.filter((car) => car.id == parseInt(id as string))[0];
-  const [selectedImage,setSelectedImage] = useState(car.gallery[0]);
+  const [selectedImage, setSelectedImage] = useState(car.videoUrl);
+
+  console.log({car})
   return (
     <div>
       <Breadcrumb
@@ -57,30 +59,42 @@ export default function DetailFleet() {
           backgroundPosition: "center",
         }}
       >
-        <Flex gap={10}>
+        <Box className="flex gap-10 flex-col md:flex-row">
           <Box className="w-full">
             <Stack className="h-full">
-              <Box
-                className="h-[80%]"
-                style={{
-                  backgroundImage: `url(${selectedImage})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-              {/* <video
-                // width="320"
-                height="240"
-                controls
-                preload="none"
-                className="h-[80%]"
-              >
-                <source src="/videos/escalade-vid.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video> */}
+              {car.videoUrl === selectedImage ? (
+                <Box >
+                  <LiteYouTubeEmbed
+                    id={car.videoUrl}
+                    title={car.title}
+                  />
+
+                </Box>
+              ) : (
+                <Box
+                  className="h-[80%]"
+                  style={{
+                    backgroundImage: `url(${selectedImage})`,
+                    backgroundSize: "contain",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                />
+              )}
+
               <Box className="h-[20%]">
                 <Flex className="gap-4 h-[100%]">
+                  <Box
+                    className="w-1/4 cursor-pointer"
+                    style={{
+                      backgroundImage: `url(https://img.youtube.com/vi/${car.videoUrl}/0.jpg)`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      backgroundRepeat: "no-repeat",
+                      opacity: car.videoUrl === selectedImage ? 1 : 0.6,
+                    }}
+                    onClick={() => setSelectedImage(car.videoUrl)}
+                  />
                   {car.gallery.map((img, index) => (
                     <Box
                       key={index}
@@ -123,17 +137,19 @@ export default function DetailFleet() {
                 <p className="font-semibold">{car.seats} Seats</p>
               </Group>
             </Flex>
-
-            {/* <p className="my-5 text-justify text-slate-500"   dangerouslySetInnerHTML={{ __html: car.description.replace(/\n/g, '<br>') }}
+            <FormatedText text={car.description} />
+            <Button
+              fullWidth
+              color={theme.colors.secondary[9]}
+              size="xl"
+              component="a"
+              href="https://book.mylimobiz.com/v4/uspholdings"
+              target="_blank"
             >
-              {car.description}
-            </p> */}
-            <FormatedText text={car.description}/>
-            <Button fullWidth color={theme.colors.secondary[9]} size="xl" component="a" href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">
               Book
             </Button>
           </Box>
-        </Flex>
+        </Box>
 
         <Box className="mt-5">
           <p className="font-semibold text-3xl my-10">Similar Cars</p>
@@ -282,12 +298,18 @@ export default function DetailFleet() {
   );
 }
 
+const FormatedText = ({ text }: { text: string }) => {
+  const [firstPart, secondPart] = text.split(/\n(.*)/s, 2);
 
-const FormatedText = ({ text }:{text:string}) => {
   return (
-    <p
-      className="my-5 text-justify text-slate-500"
-      dangerouslySetInnerHTML={{ __html: text.replace(/\n/g, '<br>') }}
-    ></p>
+    <p className="my-5 text-justify text-slate-500">
+      <span dangerouslySetInnerHTML={{ __html: firstPart.replace(/\n/g, "<br>") }}></span>
+      {secondPart && (
+        <span
+          className="italic text-xs"
+          dangerouslySetInnerHTML={{ __html: "<br>" + secondPart.replace(/\n/g, "<br>") }}
+        ></span>
+      )}
+    </p>
   );
 };
