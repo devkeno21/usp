@@ -1,3 +1,4 @@
+import { Carousel } from "@mantine/carousel";
 import {
     MantineProvider,
     createTheme,
@@ -147,6 +148,11 @@ import {
       ActionIcon: {
         styles: {
           root: { border: "0px solid #1B234C" },
+        },
+      },
+      Carousel: {
+        styles: {
+          control: { border: "0px solid #1B234C" },
         },
       },
       Select: {
