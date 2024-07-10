@@ -8,7 +8,7 @@ import Car6 from "./car-6.png";
 import Car6Bg from "./s-bg.png";
 import Car7 from "./car-7.png";
 import Car7Bg from "./x-bg.png";
-import Car8 from "./car-8.png";
+import Car8 from "./sprinter.png";
 import Car9 from "./car-9.png";
 
 import Modelx1 from "./gallery/model-x/model-x1.jpg";
