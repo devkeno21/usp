@@ -42,7 +42,7 @@ export const preLoaderAnim = () => {
     .to(
       ".preloader-bottom",
       {
-        duration: 1.5,
+        duration: 1,
         width: "100dvw",
         height: "100vh",
         overflow: "hidden",
@@ -55,11 +55,11 @@ export const preLoaderAnim = () => {
       ".logo",
       {
         duration: 1.5,
-        width: "",
-        height: "",
-        ease: "Power3.easeOut",
+        width: "54rem",
+        height: "24rem",
+        ease: "Power3.fadeOut",
       },
-      "-=2"
+      "-=3"
     )
     .to(
       ".preloader-bottom",
