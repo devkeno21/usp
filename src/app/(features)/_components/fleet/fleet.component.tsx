@@ -54,12 +54,12 @@ export default function Fleet() {
         onMouseEnter={autoplay2.current.stop}
         onMouseLeave={autoplay2.current.reset}
         nextControlIcon={
-          <ActionIcon color="#1B234C" >
+          <ActionIcon color="#1B234C" variant="filled">
             <IconArrowRight size={20} stroke="sm"/>
           </ActionIcon>
         }
         previousControlIcon={
-          <ActionIcon color="#1B234C">
+          <ActionIcon color="#1B234C" variant="filled">
             <IconArrowLeft size={20} stroke="sm"/>
           </ActionIcon>
         }
