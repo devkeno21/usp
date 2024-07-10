@@ -97,7 +97,7 @@ export function NavBar() {
   ));
 
   return (
-    <Box className="bg-transparent z-10 relative">
+    <Box className="bg-transparent z-20 relative">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
@@ -122,7 +122,7 @@ export function NavBar() {
 
           <Group visibleFrom="sm">
             <Button color={theme.colors.secondary[9]}>
-              <a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a>
+              <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Book Now</a>
             </Button>
             <Button onClick={() => router.push("/vip")}>VIP Program</Button>
           </Group>

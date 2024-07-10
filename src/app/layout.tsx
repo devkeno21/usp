@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   }
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,7 +29,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={centuryFont.className}>
         <Providers>
-          <Preloader />
+          
           <RootStyleRegistry>
             <Notifications />
             {children}

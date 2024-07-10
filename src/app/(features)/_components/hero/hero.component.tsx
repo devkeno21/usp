@@ -17,7 +17,7 @@ export default function HeroSection() {
       }}
     >
       <Box
-        className="w-full h-[100dvh] relative z-0"
+        className="w-full h-[100dvh] relative z-10"
         style={{
           backgroundImage: `url(${HeroCar.src})`,
           backgroundSize: "cover",
@@ -46,7 +46,7 @@ export default function HeroSection() {
                 color={theme.colors.secondary[9]}
                 className="w-fit mx-auto"
               >
-                <a href="https://book.mylimobiz.com/v4/uspholdings">Get Instant Quote</a>
+                <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Get Instant Quote</a>
               </Button>
             </Stack>
           </Box>

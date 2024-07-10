@@ -1,10 +1,11 @@
+
 import gsap from "gsap";
 // Declare a general timeline to use in all the animation functions.
 
-const tl= gsap.timeline();
+const tl = gsap.timeline();
 
 // Preloader Animation
-export const preLoaderAnim = () => {
+export const preLoaderAnimMob = () => {
   tl.to("body", {
     duration: 2,
     css: { overflowY: "hidden" },
@@ -19,16 +20,13 @@ export const preLoaderAnim = () => {
       css: { overflowY: "scroll" },
       ease: "power3.inOut",
     })
-    .to(
-      ".preloader-top",
-      {
-        duration: 0.8,
-        // width: "0vw",
-        // height: "0dvw",
-        clipPath: "circle(0% at 50% 50%)",
-        ease: "Power3.easeOut",
-      },
-    )
+    .to(".preloader-top", {
+      duration: 0.8,
+      // width: "0vw",
+      // height: "0dvw",
+      clipPath: "circle(0% at 50% 50%)",
+      ease: "Power3.easeOut",
+    })
     .to(
       ".preloader",
       {
@@ -55,8 +53,8 @@ export const preLoaderAnim = () => {
       ".logo",
       {
         duration: 1.5,
-        width:  "54rem", 
-        height: "24rem", 
+        width: "28rem",
+        height: "12rem",
         ease: "Power3.fadeOut",
       },
       "-=3"
@@ -80,5 +78,5 @@ export const preLoaderAnim = () => {
         ease: "Power3.easeOut",
       },
       "+=1"
-    )
+    );
 };

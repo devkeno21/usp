@@ -2,13 +2,19 @@
 import React, { useEffect } from "react";
 import "./preloader.css";
 import { preLoaderAnim } from "./animations/index";
+import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
-import Trans from "./transparent-bg.png"
+import Trans from "./deskBg.png";
+import TransMob from "./mobileBg.png";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Preloader() {
+  const matches = useMediaQuery("(max-width: 40em)", true, {
+    getInitialValueInEffect: false,
+  });
   useEffect(() => {
-    preLoaderAnim();
-  }, []);
+    matches ? preLoaderAnimMob() : preLoaderAnim();
+  }, [matches]);
   return (
     <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
@@ -21,14 +27,14 @@ export default function Preloader() {
           justifyContent: "center",
         }}
       >
-         <div className="w-fit h-fit" style={{ zIndex: "2" }}>
-            <img
-              src={logo.src}
-              alt="Logo"
-              className="logo"
-              style={{ width: "0rem", height: "0rem" }}
-            />
-          </div>
+        <div className="w-fit h-fit" style={{ zIndex: "100" }}>
+          <img
+            src={logo.src}
+            alt="Logo"
+            className="logo"
+            style={{ width: "0rem", height: "0rem" }}
+          />
+        </div>
         <div
           className="preloader-bottom"
           style={{
@@ -39,13 +45,15 @@ export default function Preloader() {
             justifyContent: "center",
             margin: "auto",
             clipPath: "circle(0% at 50% 50%)",
-            backgroundImage: `url(${Trans.src})`,
+            backgroundImage:
+              matches
+                ? `url(${TransMob.src})`
+                : `url(${Trans.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            zIndex: "50",
           }}
-        >
-         
-        </div>
+        ></div>
       </div>
       {/* <div
         className="preloader-bottom"

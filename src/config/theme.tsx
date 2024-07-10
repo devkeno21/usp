@@ -5,6 +5,7 @@ import {
     MantineThemeOverride,
     CSSVariablesResolver,
     Textarea,
+    ActionIcon,
   } from "@mantine/core";
   
   const primaryColor: MantineColorsTuple = [
@@ -141,6 +142,11 @@ import {
       NumberInput: {
         defaultProps: {
           size: "sm",
+        },
+      },
+      ActionIcon: {
+        styles: {
+          root: { border: "0px solid #1B234C" },
         },
       },
       Select: {

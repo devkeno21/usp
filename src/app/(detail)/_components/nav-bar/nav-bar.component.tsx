@@ -99,28 +99,28 @@ export function NavBar() {
     <Box className="bg-transparent z-10 relative py-5">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
+          <Image src={USPLogo.src} alt="USP-Logo" className="cursor-pointer" width={150} height={150} onClick={() => router.push("/")}/>
 
-          <Group h="100%" gap={6} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+          {/* <Group h="100%" gap={6} visibleFrom="sm">
+            <a href="#about" className={classes.link}>
               About
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#services" className={classes.link}>
               Services
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#fleets" className={classes.link}>
               Fleets
             </a>
-            <Link href="/affiliates" className={classes.link}>
+            <a href="#affiliates" className={classes.link}>
             Affiliates
-            </Link>
-            <a href="#" className={classes.link}>
+            </a>
+            <a href="#contact" className={classes.link}>
               Contact
             </a>
-          </Group>
+          </Group> */}
 
           <Group visibleFrom="sm">
-            <Button color={theme.colors.secondary[9]}>Book Now</Button>
+            <Button color={theme.colors.secondary[9]}> <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Book Now</a></Button>
             <Button onClick={() => router.push("/vip")}>VIP Program</Button>
           </Group>
 
