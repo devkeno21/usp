@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const personalInfoSchema = z.object({
-  businessName: z.string().min(1, "Business name is required"),
-  businessAddress: z.string().min(1, "Business address is required"),
+  name: z.string().min(1, "Business name is required"),
+  address: z.string().min(1, "Business address is required"),
   city: z.string().min(1, "City is required"),
   state: z.string().min(1, "State is required"),
   zipCode: z.string().min(1, "Zip Code is required"),
@@ -41,7 +41,8 @@ export const PersonalInformationForm = ({
 
   const onSubmit = (data: any) => {
     console.log({ data });
-    onNext(data);
+    const temp = {...data,paymentMethod}
+    onNext(temp);
   };
   return (
     <div className=" text-white font-semibold">
@@ -52,15 +53,15 @@ export const PersonalInformationForm = ({
           className="w-full"
           label="Name"
           withAsterisk
-          {...register("businessName")}
-          error={errors.businessName?.message?.toString()}
+          {...register("name")}
+          error={errors.name?.message?.toString()}
         />
         <TextInput
           className="w-full"
           label="Address"
           withAsterisk
-          {...register("businessAddress")}
-          error={errors.businessAddress?.message?.toString()}
+          {...register("address")}
+          error={errors.address?.message?.toString()}
         />
       </Flex>
       <Flex gap={10} className="mt-5">

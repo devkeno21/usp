@@ -9,7 +9,7 @@ import { Controller, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const companyInfoSchema = z.object({
-  businessName: z.string().min(1, "Business name is required"),
+  name: z.string().min(1, "Business name is required"),
   businessAddress: z.string().min(1, "Business address is required"),
   address: z.string().min(1, "Address is required"),
   zipCode: z.string().min(1, "Zip Code is required"),
@@ -23,13 +23,6 @@ const companyInfoSchema = z.object({
   reservationContact: z.string().min(1, "Reservation contact is required"),
   reservationPhoneNumber: z.string().min(1, "Phone number is required"),
   reservationEmail: z.string().min(1, "Email is required"),
-  // openingHours: z.date({ required_error: "Opening hours is required" }),
-  // dispatchContact: z.string().min(1, "Dispatch contact is required"),
-  // dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
-  // dispatchEmail: z.string().min(1, "Email number is required"),
-  // accountingContact: z.string().min(1, "Accounting contact is required"),
-  // accountingPhoneNumber: z.string().min(1, "Phone number is required"),
-  // accountingEmail: z.string().min(1, "Email number is required"),
 });
 
 export const CompanyInformationForm = ({
@@ -66,8 +59,8 @@ export const CompanyInformationForm = ({
       <p className="text-2xl">COMPANY INFORMATION</p>
 
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Business Name" withAsterisk  {...register("businessName")}
-          error={errors.businessName?.message?.toString()}/>
+        <TextInput className="w-full" label="Business Name" withAsterisk  {...register("name")}
+          error={errors.name?.message?.toString()}/>
         <TextInput className="w-full" label="Business Address" withAsterisk  {...register("businessAddress")}
           error={errors.businessAddress?.message?.toString()}/>
       </Flex>

@@ -13,8 +13,6 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { Breadcrumb } from "../_components/breadcrumb/breadcrumb.component";
-import Car1 from "../../(features)/_components/fleet/car-1.png";
-import Car2 from "../../(features)/_components/fleet/car-2.png";
 import {
   IconArrowRight,
   IconPoint,
@@ -23,7 +21,7 @@ import {
 } from "@tabler/icons-react";
 import { Accordion } from "@mantine/core";
 import { useRouter } from "next/navigation";
-import { fleet } from "@/app/(features)/_components/fleet/fleet.component";
+import { fleet } from "@/app/(features)/_components/fleet/fleet";
 
 export default function Browse() {
   const theme = useMantineTheme();
@@ -176,7 +174,7 @@ export default function Browse() {
                   <Box
                     className="w-[100%] h-[100%] absolute top-0"
                     style={{
-                      backgroundImage: `url(${Car2.src})`,
+                      backgroundImage: `url(${car.bgUrl})`,
                       backgroundSize: "contain",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",

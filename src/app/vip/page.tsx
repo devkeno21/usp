@@ -10,7 +10,7 @@ import { FinalForm } from "./_components/final-form";
 import { CompanyInformationForm } from "./_components/company-information-form";
 import { MonthlyPaymentInformationForm } from "./_components/monthly-payment-information";
 import { DebitPaymentInformationForm } from "./_components/debit-payment-method";
-import Wave from "../(features)/_components/services/Vector.svg"
+import Wave from "../(features)/_components/services/Vector.svg";
 
 export default function VIP() {
   const router = useRouter();
@@ -20,17 +20,35 @@ export default function VIP() {
     "credit" | "monthly" | "debit"
   >("credit");
 
+  const [personalInfo, setPersonalInfo] = useState<any>({});
+  const [companyInfo, setCompanyInfo] = useState<any>({});
+  const [reservationInfo, setReservationInfo] = useState<any>({});
+
   const onNext = (data: any) => {
-    console.log({ upperData: data });
-    setActive(active + 1);
+    if (active === 0 && type === "Individual") {
+      setPersonalInfo(data);
+      setActive(active + 1);
+    } else if (active === 0 && type === "Company") {
+      setCompanyInfo(data);
+      setReservationInfo({
+        phoneNumber: data.phoneNumber,
+        email: data.email,
+        contactName: data.contactName,
+      });
+      setActive(active + 1);
+    } else if (active === 1) {
+    }
   };
 
   return (
-    <div className="bg-primary-900 min-h-screen text-white" style={{
-      backgroundImage: `url(${Wave.src})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}>
+    <div
+      className="bg-primary-900 min-h-screen text-white"
+      style={{
+        backgroundImage: `url(${Wave.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="container mx-auto py-10">
         <Button
           onClick={() => router.back()}
@@ -107,16 +125,24 @@ export default function VIP() {
             )}
             {active == 1 && (
               <div>
-                {paymentMethod === "credit" && <PaymentInformationForm onPrev={() => setActive(active - 1)}
-                    onNext={onNext}/>}
+                {paymentMethod === "credit" && (
+                  <PaymentInformationForm
+                    onPrev={() => setActive(active - 1)}
+                    onNext={onNext}
+                  />
+                )}
                 {paymentMethod === "monthly" && (
                   <MonthlyPaymentInformationForm
                     onPrev={() => setActive(active - 1)}
                     onNext={onNext}
                   />
                 )}
-                {paymentMethod === "debit" && <DebitPaymentInformationForm onPrev={() => setActive(active - 1)}
-                    onNext={onNext}/>}
+                {paymentMethod === "debit" && (
+                  <DebitPaymentInformationForm
+                    onPrev={() => setActive(active - 1)}
+                    onNext={onNext}
+                  />
+                )}
               </div>
             )}
             {active == 2 && (

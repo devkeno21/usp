@@ -20,127 +20,24 @@ import {
 import { SUV } from "./_components/suv";
 import { Seats } from "./_components/seats";
 import { Carousel } from "@mantine/carousel";
-import Car1 from "../../(features)/_components/fleet/car-1.png";
-import Car2 from "../../(features)/_components/fleet/car-2.png";
-import Car3 from "../../(features)/_components/fleet/car-3.png";
-import Car4 from "../../(features)/_components/fleet/car-4.png";
-import Car5 from "../../(features)/_components/fleet/car-5.png";
-import Car6 from "../../(features)/_components/fleet/car-6.png";
-import Car7 from "../../(features)/_components/fleet/car-7.png";
-import Car8 from "../../(features)/_components/fleet/car-8.png";
-import Car9 from "../../(features)/_components/fleet/car-9.png";
-import Wave from "../../(features)/_components/services/Vector.svg"
+import Wave from "../../(features)/_components/services/Vector.svg";
 
 import { useMediaQuery } from "@mantine/hooks";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import whiteCar from "./white-car.png";
+import { fleet } from "@/app/(features)/_components/fleet/fleet";
 
-const fleet = [
-  {
-    id: 1,
-    title: "Mercedes E Class",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "Executive Sedan",
-    price: "$81,895",
-    imageUrl: Car3.src,
-    features: [
-      "Exceptional design and innovative technology ",
-      "Perfect for any executive",
-    ],
-  },
-  {
-    id: 2,
-    title: "Mercedes Benz S-Class",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "Luxury Sedan",
-    price: "$81,895",
-    imageUrl: Car4.src,
-    features: [
-      "Ultimate comfort, elegantly designed, and exceptional",
-      "Luxuriously equipped with exquisite, comfortable leather massage seats",
-    ],
-  },
-  {
-    id: 3,
-    title: "Escalade ESV Luxury SUV",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car1.src,
-    features: [
-      "Full-size SUV that offers high-end features",
-      "Semi-aniline leather seats",
-    ],
-  },
-  {
-    id: 4,
-    title: "Range Rover Vogue",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car5.src,
-    features: [
-      "Providing immense space with a power recline",
-      "heated leather rear seats",
-    ],
-  },
-  {
-    id: 5,
-    title: "Executive Eco Sedan (Tesla Models)",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car6.src,
-    features: [
-      "Zero-emission electric",
-      "Unparalleled execution in all weather conditions",
-    ],
-  },
-  {
-    id: 6,
-    title: "Executive Eco SUV (Tesla Model X)",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car7.src,
-    features: [
-      "One of the safest SUV's ever",
-      "Zero-emission, all-electric vehicle ",
-    ],
-  },
-  {
-    id: 7,
-    title: "Executive Minibus (Mercedes Sprinter)",
-    titleDesc: "Luxury Seating for up to 6",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car8.src,
-    features: [
-      "Transporting more prominent groups",
-      "Executive-style leather seating, ample space",
-    ],
-  },
-  {
-    id: 7,
-    title: "Executive Coach",
-    titleDesc: "33/43/53/70 Passenger Coaches",
-    fleetType: "LUXURY",
-    price: "$81,895",
-    imageUrl: Car9.src,
-    features: [
-      "Travel in luxury and arrive in style",
-      "Available in varying passenger sizes",
-    ],
-  },
-];
+
 
 export default function DetailFleet() {
   const theme = useMantineTheme();
   const autoplay1 = useRef(Autoplay({ delay: 2000 }));
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
   const router = useRouter();
+  const {id} = useParams();
+  const car = fleet.filter((car) => car.id == parseInt(id as string))[0];
   return (
     <div>
       <Breadcrumb
@@ -203,9 +100,9 @@ export default function DetailFleet() {
           <Box className="w-full px-10">
             <p className="font-semibold text-xl text-slate-500">Cadilac</p>
             <Flex justify="space-between" align="center">
-              <p className="font-semibold text-2xl">Escalade ESV Luxury SUV</p>
+              <p className="font-semibold text-2xl">{car.title}</p>
               <p className="font-semibold text-secondary-900">
-                $28.45 <span className="font-normal">/hr</span>
+                {car.price} <span className="font-normal">/hr</span>
               </p>
             </Flex>
 
@@ -217,7 +114,7 @@ export default function DetailFleet() {
               <Group gap={4}>
                 <SUV />
 
-                <p className="font-semibold">SUV</p>
+                <p className="font-semibold">{car.fleetType}</p>
               </Group>
               <Group gap={4}>
                 <Seats />
@@ -309,7 +206,7 @@ export default function DetailFleet() {
                       <Box
                         className="w-[100%] h-[100%] absolute top-0"
                         style={{
-                          backgroundImage: `url(${Car2.src})`,
+                          backgroundImage: `url(${car.bgUrl})`,
                           backgroundSize: "contain",
                           backgroundPosition: "center",
                           backgroundRepeat: "no-repeat",
