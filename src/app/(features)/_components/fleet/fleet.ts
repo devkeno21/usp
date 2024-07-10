@@ -43,7 +43,6 @@ import Escalade6 from "./gallery/escalade/escalade-6.png";
 
 import Sprinter1 from "./gallery/sprinter/sprinter-1.jpg";
 import Sprinter2 from "./gallery/sprinter/sprinter-2.jpeg";
-import Sprinter3 from "./gallery/sprinter/sprinter-3.jpeg";
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
 import Sprinter5 from "./gallery/sprinter/sprinter-5.jpg";
 import Sprinter6 from "./gallery/sprinter/sprinter-6.png";
@@ -190,7 +189,6 @@ export const fleet = [
     gallery: [
       Sprinter1.src,
       Sprinter2.src,
-      Sprinter3.src,
       Sprinter4.src,
       Sprinter5.src,
       Sprinter6.src,
