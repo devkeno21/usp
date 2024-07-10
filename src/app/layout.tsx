@@ -28,7 +28,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={centuryFont.className}>
         <Providers>
-          <Preloader />
+          {typeof window !== "undefined" && <Preloader />}
           <RootStyleRegistry>
             <Notifications />
             {children}
