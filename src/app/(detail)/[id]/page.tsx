@@ -100,7 +100,7 @@ export default function DetailFleet() {
             </Stack>
           </Box>
           <Box className="w-full px-10">
-            <p className="font-semibold text-xl text-slate-500">Cadilac</p>
+            <p className="font-semibold text-xl text-slate-500">{car.brand}</p>
             <Flex justify="space-between" align="center">
               <p className="font-semibold text-2xl">{car.title}</p>
               <p className="font-semibold text-secondary-900">
@@ -125,16 +125,7 @@ export default function DetailFleet() {
             </Flex>
 
             <p className="my-5 text-justify text-slate-500">
-              The Escalade is a luxury full-size SUV that offers high-end
-              features, a plush ride, and powerful engine options. The
-              Escalade’s interior boasts luxury amenities such as semi-aniline
-              leather seats, aluminum speaker grilles, adjustable interior
-              ambient lighting, and a curved OLED digital dashboard that houses
-              both the driver’s gauge cluster and infotainment system. The SUV
-              also offers advanced technology features like Super Cruise
-              adaptive cruise control, which enables hands-free driving, and an
-              augmented reality navigation system. Apple CarPlay/Android Auto
-              integration and a Wi-Fi hotspot are also standard.
+              {car.description}
             </p>
             <Button fullWidth color={theme.colors.secondary[9]} size="xl">
               Book
