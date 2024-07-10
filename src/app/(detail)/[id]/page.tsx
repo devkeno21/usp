@@ -23,7 +23,7 @@ import { Carousel } from "@mantine/carousel";
 import Wave from "../../(features)/_components/services/Vector.svg";
 
 import { useMediaQuery } from "@mantine/hooks";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { useParams, useRouter } from "next/navigation";
 import whiteCar from "./white-car.png";
@@ -38,13 +38,14 @@ export default function DetailFleet() {
   const router = useRouter();
   const {id} = useParams();
   const car = fleet.filter((car) => car.id == parseInt(id as string))[0];
+  const [selectedImage,setSelectedImage] = useState(car.gallery[0]);
   return (
     <div>
       <Breadcrumb
         links={[
           { title: "Home", href: "/" },
           { title: "All Fleets", href: "/browse" },
-          { title: "Escalade ESV Luxury SUV", href: "#" },
+          { title: car.title, href: "#" },
         ]}
       />
 
@@ -59,16 +60,16 @@ export default function DetailFleet() {
         <Flex gap={10}>
           <Box className="w-full">
             <Stack className="h-full">
-              {/* <Box
+              <Box
                 className="h-[80%]"
                 style={{
-                  backgroundImage: `url(${whiteCar.src})`,
-                  backgroundSize: "cover",
+                  backgroundImage: `url(${selectedImage})`,
+                  backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
                 }}
-              /> */}
-              <video
+              />
+              {/* <video
                 // width="320"
                 height="240"
                 controls
@@ -77,20 +78,21 @@ export default function DetailFleet() {
               >
                 <source src="/videos/escalade-vid.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
-              </video>
+              </video> */}
               <Box className="h-[20%]">
                 <Flex className="gap-4 h-[100%]">
-                  {[1, 2, 3, 4].map((_, index) => (
+                  {car.gallery.map((img, index) => (
                     <Box
                       key={index}
                       className="w-1/4 cursor-pointer"
                       style={{
-                        backgroundImage: `url(${whiteCar.src})`,
+                        backgroundImage: `url(${img})`,
                         backgroundSize: "cover",
                         backgroundPosition: "center",
                         backgroundRepeat: "no-repeat",
-                        opacity: index === 0 ? 1 : 0.4,
+                        opacity: img === selectedImage ? 1 : 0.6,
                       }}
+                      onClick={() => setSelectedImage(img)}
                     />
                   ))}
                 </Flex>
@@ -118,7 +120,7 @@ export default function DetailFleet() {
               </Group>
               <Group gap={4}>
                 <Seats />
-                <p className="font-semibold">6 Seats</p>
+                <p className="font-semibold">{car.seats} Seats</p>
               </Group>
             </Flex>
 
