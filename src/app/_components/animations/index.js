@@ -55,8 +55,8 @@ export const preLoaderAnim = () => {
       ".logo",
       {
         duration: 1.5,
-        width: "54rem",
-        height: "24rem",
+        width: window.innerWidth < 768 ? "28rem" : "54rem", 
+        height: window.innerWidth < 768 ? "12rem" : "24rem", 
         ease: "Power3.fadeOut",
       },
       "-=3"

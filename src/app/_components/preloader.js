@@ -3,7 +3,8 @@ import React, { useEffect } from "react";
 import "./preloader.css";
 import { preLoaderAnim } from "./animations/index";
 import logo from "./car-1.png";
-import Trans from "./transparent-bg.png"
+import Trans from "./deskBg.png"
+import TransMob from "./mobileBg.png"
 
 export default function Preloader() {
   useEffect(() => {
@@ -39,7 +40,7 @@ export default function Preloader() {
             justifyContent: "center",
             margin: "auto",
             clipPath: "circle(0% at 50% 50%)",
-            backgroundImage: `url(${Trans.src})`,
+            backgroundImage: window.innerWidth < 768 ? `url(${TransMob.src})`:  `url(${Trans.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             zIndex: "50"
