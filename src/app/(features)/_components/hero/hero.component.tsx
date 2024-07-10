@@ -17,7 +17,7 @@ export default function HeroSection() {
       }}
     >
       <Box
-        className="w-full h-[100dvh] relative z-0"
+        className="w-full h-[100dvh] relative z-10"
         style={{
           backgroundImage: `url(${HeroCar.src})`,
           backgroundSize: "cover",

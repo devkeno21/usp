@@ -97,7 +97,7 @@ export function NavBar() {
   ));
 
   return (
-    <Box className="bg-transparent z-10 relative">
+    <Box className="bg-transparent z-20 relative">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
           <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
