@@ -1,10 +1,8 @@
 "use client";
 import { Button, Flex, Group, TextInput } from "@mantine/core";
 import { PaymentMethods } from "./payment-methods";
-import { DateInput, DateTimePicker } from "@mantine/dates";
-import dayjs from "dayjs";
 import { z } from "zod";
-import { Controller, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 const personalInfoSchema = z.object({
@@ -15,22 +13,6 @@ const personalInfoSchema = z.object({
   zipCode: z.string().min(1, "Zip Code is required"),
   primaryEmail: z.string().min(1, "Email is required").email("Invalid Email Address"),
   primaryPhoneNumber: z.string().min(1, "Phone number is required"),
-  // manager: z.string().min(1, "Manager is required"),
-  // managerEmail: z
-  //   .string()
-  //   .min(1, "Email is required")
-  //   .email("Invalid Email Address"),
-  // managerPhoneNumber: z.string().min(1, "Phone number is required"),
-  // reservationContact: z.string().min(1, "Reservation contact is required"),
-  // reservationPhoneNumber: z.string().min(1, "Phone number is required"),
-  // reservationEmail: z.string().min(1, "Email is required"),
-  // openingHours: z.date({ required_error: "Opening hours is required" }),
-  // dispatchContact: z.string().min(1, "Dispatch contact is required"),
-  // dispatchPhoneNumber: z.string().min(1, "Phone number is required"),
-  // dispatchEmail: z.string().min(1, "Email number is required"),
-  // accountingContact: z.string().min(1, "Accounting contact is required"),
-  // accountingPhoneNumber: z.string().min(1, "Phone number is required"),
-  // accountingEmail: z.string().min(1, "Email number is required"),
 });
 
 export const PersonalInformationForm = ({
@@ -124,33 +106,6 @@ export const PersonalInformationForm = ({
         />
         <div className="w-full"></div>
       </Flex>
-      {/* <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Manager"
-          withAsterisk
-          {...register("manager")}
-          error={errors.manager?.message?.toString()}
-        />
-        <TextInput
-          className="w-full"
-          label="Email"
-          withAsterisk
-          {...register("managerEmail")}
-          error={errors.managerEmail?.message?.toString()}
-        />
-      </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput
-          className="w-full"
-          label="Phone Number"
-          type="number"
-          withAsterisk
-          {...register("managerPhoneNumber")}
-          error={errors.managerPhoneNumber?.message?.toString()}
-        />
-        <div className="w-full"></div>
-      </Flex> */}
 
       <PaymentMethods
         paymentMethod={paymentMethod}

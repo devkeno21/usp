@@ -7,6 +7,7 @@ import { z } from "zod";
 import { VisaLogo } from "./visa-svg";
 import { MasterCardLogo } from "./master-card-svg";
 import { AmericaExpress } from "./america-express-svg";
+import { useState } from "react";
 
 const paymentInfoSchema = z.object({
   cardName: z.string().min(1, "Card name is required"),
@@ -42,6 +43,7 @@ export const PaymentInformationForm = ({
   } = useForm({
     resolver: zodResolver(paymentInfoSchema),
   });
+  const [paymentMethod,setPaymentMethod] = useState<"Visa"|"Master Card" | "America Express">("Visa")
 
   const onError = (err: any) => {
     console.log({ err });
@@ -63,9 +65,17 @@ export const PaymentInformationForm = ({
 
       </p>
         <Flex className="mt-5" gap={20} align="center">
+          <div className={paymentMethod == "Visa" ? "border border-dashed border-secondary-900 p-2 border-2" : ""} onClick={()=>setPaymentMethod("Visa")}>
           <VisaLogo/>
+          </div>
+          <div className={paymentMethod == "Master Card" ? "border border-dashed border-secondary-900 p-2 border-2 " : ""} onClick={()=>setPaymentMethod("Master Card")}>
+
           <MasterCardLogo/>
+          </div>
+          <div className={paymentMethod == "America Express" ? "border border-dashed border-secondary-900 p-2 border-2" : ""} onClick={()=>setPaymentMethod("America Express")}>
           <AmericaExpress/>
+
+          </div>
         </Flex>
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Name on Card" withAsterisk {...register("cardName")}

@@ -2,8 +2,8 @@ export const VisaLogo = () => {
   return (
     <div className="cursor-pointer">
     <svg
-      width="126"
-      height="41"
+      width="94"
+      height="30"
       viewBox="0 0 126 41"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

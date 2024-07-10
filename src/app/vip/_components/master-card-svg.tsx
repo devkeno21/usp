@@ -2,8 +2,8 @@ export const MasterCardLogo = () => {
   return (
     <div className="cursor-pointer">
       <svg
-        width="91"
-        height="71"
+        width="67"
+        height="52"
         viewBox="0 0 91 71"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

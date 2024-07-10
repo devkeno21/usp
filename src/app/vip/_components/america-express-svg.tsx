@@ -2,8 +2,8 @@ export const AmericaExpress = () => {
   return (
     <div className="cursor-pointer">
     <svg
-      width="104"
-      height="90"
+      width="78"
+      height="67"
       viewBox="0 0 104 104"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
