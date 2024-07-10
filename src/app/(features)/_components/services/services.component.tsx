@@ -10,6 +10,7 @@ import {
 } from "@tabler/icons-react";
 import classes from "./service.module.css";
 import React from "react";
+import Wave from "./Vector.svg"
 
 const services = [
   {
@@ -54,8 +55,11 @@ export default function Services() {
   const theme = useMantineTheme();
 
   return (
-    <Stack id="services" className="min-h-[100dvh] justify-evenly items-center">
-      <Flex className="justify-center mx-auto flex-col gap-2">
+    <Stack
+      id="services"
+      className="min-h-[100dvh] justify-evenly items-center "
+    >
+      <Flex className="justify-center mx-auto flex-col gap-2 mt-8">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR SERVICES
         </Text>

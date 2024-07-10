@@ -1,13 +1,21 @@
-"use client"
+"use client";
 import { Box, Button, Stack, Text, useMantineTheme } from "@mantine/core";
 import React from "react";
 import HeroCar from "./hero-car.jpg";
+import Wave from "../services/Vector.svg"
 
 export default function HeroSection() {
   const theme = useMantineTheme();
 
   return (
-    <Box className="w-full min-h-[100dvh] absolute top-0">
+    <Box
+      className="w-full min-h-[100dvh] absolute top-0"
+      style={{
+        backgroundImage: `url(${Wave.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <Box
         className="w-full h-[100dvh] relative z-0"
         style={{
@@ -31,9 +39,15 @@ export default function HeroSection() {
                 className="text-white text-xs md:text-xl text-center"
                 fw={"bold"}
               >
-                Embark on unforgettable journeys where luxury and elegance accompany every step of your adventure.
+                Embark on unforgettable journeys where luxury and elegance
+                accompany every step of your adventure.
               </Text>
-              <Button color={theme.colors.secondary[9]} className="w-fit mx-auto">View More</Button>
+              <Button
+                color={theme.colors.secondary[9]}
+                className="w-fit mx-auto"
+              >
+                View More
+              </Button>
             </Stack>
           </Box>
         </Box>
