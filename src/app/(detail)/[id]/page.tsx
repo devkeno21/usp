@@ -11,6 +11,8 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { Breadcrumb } from "../_components/breadcrumb/breadcrumb.component";
+import YouTube from "react-youtube";
+
 import {
   IconArrowLeft,
   IconArrowRight,
@@ -40,7 +42,7 @@ export default function DetailFleet() {
   const car = fleet.filter((car) => car.id == parseInt(id as string))[0];
   const [selectedImage, setSelectedImage] = useState(car.videoUrl);
 
-  console.log({car})
+  console.log({ car });
   return (
     <div>
       <Breadcrumb
@@ -63,12 +65,26 @@ export default function DetailFleet() {
           <Box className="w-full">
             <Stack className="h-full">
               {car.videoUrl === selectedImage ? (
-                <Box >
-                  <LiteYouTubeEmbed
+                <Box className="h-[80%]">
+                  {/* <LiteYouTubeEmbed
                     id={car.videoUrl}
                     title={car.title}
-                  />
+                    playerClass="h-full top-0 left-0"
+                    wrapperClass="h-full absolute"
+                  /> */}
 
+                  <YouTube
+                    videoId={car.videoUrl}
+                    // id={string}
+                    className="h-full w-full"
+                    opts={{
+                      height: "100%",
+                      width: "100%",
+                      playerVars: {
+                        // autoplay: 1,
+                      },
+                    }}
+                  />
                 </Box>
               ) : (
                 <Box
@@ -303,11 +319,15 @@ const FormatedText = ({ text }: { text: string }) => {
 
   return (
     <p className="my-5 text-justify text-black">
-      <span dangerouslySetInnerHTML={{ __html: firstPart.replace(/\n/g, "<br>") }}></span>
+      <span
+        dangerouslySetInnerHTML={{ __html: firstPart.replace(/\n/g, "<br>") }}
+      ></span>
       {secondPart && (
         <span
           className="italic text-xs font-semibold"
-          dangerouslySetInnerHTML={{ __html: "<br>" + secondPart.replace(/\n/g, "<br>") }}
+          dangerouslySetInnerHTML={{
+            __html: "<br>" + secondPart.replace(/\n/g, "<br>"),
+          }}
         ></span>
       )}
     </p>
