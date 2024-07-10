@@ -17,12 +17,9 @@ import { IconArrowLeft, IconArrowRight, IconPoint } from "@tabler/icons-react";
 import { useMediaQuery } from "@mantine/hooks";
 import { useRouter } from "next/navigation";
 import { fleet } from "./fleet";
-import LeftArrow from "./left-arrow.png"
-import RightArrow from "./right-arrow.png"
+import LeftArrow from "./left-arrow.png";
+import RightArrow from "./right-arrow.png";
 import Image from "next/image";
-
-
-
 
 export default function Fleet() {
   const autoplay1 = useRef(Autoplay({ delay: 2000 }));
@@ -32,10 +29,7 @@ export default function Fleet() {
   const router = useRouter();
 
   return (
-    <Stack
-      className="min-h-[100dvh] justify-around"
-      id="fleets"
-    >
+    <Stack className="min-h-[100dvh] justify-around" id="fleets">
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR FLEET
@@ -57,16 +51,14 @@ export default function Fleet() {
         onMouseEnter={autoplay2.current.stop}
         onMouseLeave={autoplay2.current.reset}
         nextControlIcon={
-          <ActionIcon color="#1B234C" variant="filled">
-            {/* <IconArrowRight size={20} stroke="sm"/> */}
-            <Image src={RightArrow.src} width={15} height={15} alt="right"/>
-          </ActionIcon>
+          <Flex className="w-8 h-8 rounded-md items-center justify-center bg-primary-900">
+            <IconArrowRight size={20} stroke="sm" color="white" />
+          </Flex>
         }
         previousControlIcon={
-          <ActionIcon color="#1B234C" variant="filled" >
-            {/* <IconArrowLeft size={20} stroke="sm" fill="#1B234C"  /> */}
-            <Image src={LeftArrow.src} width={15} height={15} alt="left"/>
-          </ActionIcon>
+          <Flex className="w-8 h-8 rounded-md items-center justify-center bg-primary-900">
+            <IconArrowLeft size={20} stroke="sm" color="white" />
+          </Flex>
         }
       >
         {fleet.map((car, index) => (
