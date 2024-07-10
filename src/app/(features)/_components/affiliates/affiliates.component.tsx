@@ -1,8 +1,7 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
-import BlackCar from "./black-car-4.png";
+import CarBg from "./carBg.png";
 import { useRouter } from "next/navigation";
-import Wave from "../services/Vector.svg"
 
 export default function Affiliates() {
   const theme = useMantineTheme();
@@ -23,7 +22,7 @@ export default function Affiliates() {
         <Box
           className="w-3/5 hidden md:flex min-h-[50dvh] md:min-h-[65dvh]"
           style={{
-            backgroundImage: `url(${BlackCar.src})`,
+            backgroundImage: `url(${CarBg.src})`,
             backgroundSize: "contain",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
@@ -33,7 +32,7 @@ export default function Affiliates() {
           <Box
             className="w-full md:hidden h-[70dvh]"
             style={{
-              backgroundImage: `url(${BlackCar.src})`,
+              backgroundImage: `url(${CarBg.src})`,
               backgroundSize: "contain",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
