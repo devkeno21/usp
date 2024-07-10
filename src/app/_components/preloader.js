@@ -50,7 +50,8 @@ export default function Preloader() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          clipPath: "circle(0.4% at 50% 50%)",
+          margin: "auto",
+          clipPath: "circle(0% at 50% 50%)",
         }}
       >
         <div className="w-fit h-fit" style={{zIndex: "2"}}>
