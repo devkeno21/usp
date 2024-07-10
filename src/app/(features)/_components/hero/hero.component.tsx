@@ -46,7 +46,7 @@ export default function HeroSection() {
                 color={theme.colors.secondary[9]}
                 className="w-fit mx-auto"
               >
-                <a href="https://book.mylimobiz.com/v4/uspholdings">Get Instant Quote</a>
+                <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Get Instant Quote</a>
               </Button>
             </Stack>
           </Box>
