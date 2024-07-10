@@ -13,7 +13,7 @@ export default function Landing() {
   return (
     <Stack>
       <HeroSection />
-      <Box className="relative">
+      <Box className="relative z-0">
         <About />
         <Clients/>
         <Fleet/>
