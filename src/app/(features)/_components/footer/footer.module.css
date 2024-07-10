@@ -51,7 +51,7 @@
   .link {
     display: block;
     color: "white";
-    font-size: var(--mantine-font-size-sm);
+    font-size: var(--mantine-font-size-md);
     padding-top: 0.188rem;
     padding-bottom: 0.188rem;
     
@@ -59,7 +59,7 @@
   }
   
   .title {
-    font-size: var(--mantine-font-size-lg);
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: calc(var(--mantine-spacing-xs) / 2);
     color: white;

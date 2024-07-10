@@ -26,7 +26,7 @@ export default function Preloader() {
               src={logo.src}
               alt="Logo"
               className="logo"
-              style={{ width: "14rem", height: "6rem" }}
+              style={{ width: "0rem", height: "0rem" }}
             />
           </div>
         <div

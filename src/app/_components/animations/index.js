@@ -57,9 +57,9 @@ export const preLoaderAnim = () => {
         duration: 1.5,
         width: "54rem",
         height: "24rem",
-        ease: "Power3.easeOut",
+        ease: "Power3.fadeOut",
       },
-      "-=2"
+      "-=3"
     )
     .to(
       ".preloader-bottom",

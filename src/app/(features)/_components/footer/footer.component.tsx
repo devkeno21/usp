@@ -8,14 +8,16 @@ import {
 import USPLogo from "../nav-bar/usp-logo-white.png";
 import classes from "./footer.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const data = [
   {
     title: "Explore",
     links: [
-      { label: "About", link: "#" },
-      { label: "Services", link: "#" },
-      { label: "Fleets", link: "#" },
+      { label: "About", link: "#about" },
+      { label: "Services", link: "#services" },
+      { label: "Fleets", link: "#fleets" },
+      { label: "Affiliates", link: "#affiliates" },
     ],
   },
   {
@@ -66,11 +68,10 @@ export function Footer() {
     <footer className={classes.footer}>
       <div className={`${classes.inner} md:px-24`}>
         <div className={classes.logo}>
-          <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
+          <Image src={USPLogo.src} alt="USP-Logo" width={200} height={200} />
         </div>
         <div className={classes.groups}>{groups}</div>
       </div>
-      <Divider w={"90%"} className="mx-auto mt-4" />
       <Flex hiddenFrom="md"  className="flex-col p-6 gap-10">
         {data.map((group, index) => (
           <Flex key={index} gap="md">
@@ -80,52 +81,50 @@ export function Footer() {
               </Text>
               <Flex className="gap-6 flex-wrap">
               {group.links.map((link, index) => (
-                <Text
+                <Link
                   key={index}
-                  component="a"
                   href={link.link}
-                  onClick={(event) => event.preventDefault()}
                   className={classes.link}
                 >
                   {link.label}
-                </Text>
+                </Link>
               ))}
               </Flex>
             </Stack>
           </Flex>
         ))}
       </Flex>
-      <Container className={`${classes.afterFooter} md:ml-20`}>
+      <Flex className={`${classes.afterFooter} md:ml-20`}>
         <Text c="dimmed" size="sm">
           © {now.getFullYear()} USP Transportation. All rights reserved.
         </Text>
 
         <Group
           gap={0}
-          className={classes.social}
+          className={`ml-auto ${classes.social} mr-10`}
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="white" variant="subtle">
             <IconBrandTwitter
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="white" variant="subtle">
             <IconBrandYoutube
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="white" variant="subtle">
             <IconBrandInstagram
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
           </ActionIcon>
         </Group>
-      </Container>
+      </Flex>
     </footer>
   );
 }

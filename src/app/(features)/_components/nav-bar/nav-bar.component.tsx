@@ -100,7 +100,7 @@ export function NavBar() {
     <Box className="bg-transparent z-10 relative">
       <header className={classes.header}>
         <Group justify="space-between" h="100%">
-          <Image src={USPLogo.src} alt="USP-Logo" width={100} height={100} />
+          <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
 
           <Group h="100%" gap={12} visibleFrom="sm">
             <a href="#about" className={classes.link}>
@@ -111,6 +111,9 @@ export function NavBar() {
             </a>
             <a href="#fleets" className={classes.link}>
               Fleets
+            </a>
+            <a href="#affiliates" className={classes.link}>
+              Affiliates
             </a>
             <a href="#contact" className={classes.link}>
               Contact
@@ -145,13 +148,13 @@ export function NavBar() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
           <Stack>
-            <Stack  className="mx-auto">
-            <a href="#" className={classes.link}>
-              Home
-            </a>
+            <Stack className="mx-auto">
+              <a href="#" className={classes.link}>
+                Home
+              </a>
 
-            <Collapse in={linksOpened}>{links}</Collapse>
-            
+              <Collapse in={linksOpened}>{links}</Collapse>
+
               <a href="#about" className={`text-black `}>
                 About
               </a>
@@ -161,14 +164,20 @@ export function NavBar() {
               <a href="#fleets" className={`text-black `}>
                 Fleets
               </a>
+              <a href="#affiliates" className={classes.link}>
+                Affiliates
+              </a>
               <a href="#contact" className={`text-black `}>
                 Contact
               </a>
-            <Divider my="sm" />
+              <Divider my="sm" />
             </Stack>
 
-            <Flex className="mx-auto gap-2 flex-wrap" >
-              <Button color={theme.colors.secondary[9]}>Book Now</Button>
+            <Flex className="mx-auto gap-2 flex-wrap">
+              <Button color={theme.colors.secondary[9]}>
+                {" "}
+                <a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a>
+              </Button>
               <Button onClick={() => router.push("/vip")}>VIP Program</Button>
             </Flex>
           </Stack>

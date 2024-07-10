@@ -8,7 +8,7 @@ export default function Affiliates() {
   const router = useRouter();
 
   return (
-    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4">
+    <Stack className="min-h-[65dvh] md:min-h-[80dvh] gap-4" id="affiliates">
       <Flex className="justify-center mx-auto flex-col gap-2">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           OUR AFFILIATES
