@@ -21,7 +21,7 @@ export default function Preloader() {
           justifyContent: "center",
         }}
       >
-         <div className="w-fit h-fit" style={{ zIndex: "2" }}>
+         <div className="w-fit h-fit" style={{ zIndex: "100" }}>
             <img
               src={logo.src}
               alt="Logo"
@@ -42,6 +42,7 @@ export default function Preloader() {
             backgroundImage: `url(${Trans.src})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            zIndex: "50"
           }}
         >
          

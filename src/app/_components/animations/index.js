@@ -42,14 +42,14 @@ export const preLoaderAnim = () => {
     .to(
       ".preloader-bottom",
       {
-        duration: 1,
+        duration: 1.8,
         width: "100dvw",
         height: "100vh",
         overflow: "hidden",
         clipPath: "circle(100% at 50% 50%)",
         ease: "Power3.easeOut",
       },
-      "-=1"
+      "-=2"
     )
     .to(
       ".logo",
@@ -62,13 +62,23 @@ export const preLoaderAnim = () => {
       "-=3"
     )
     .to(
+      ".logo",
+      {
+        duration: 0.2,
+        opacity: 0,
+        clipPath: "circle(0% at 50% 50%)",
+        ease: "Power3.fadeOut",
+      },
+      "-=1.7"
+    )
+    .to(
       ".preloader-bottom",
       {
-        duration: 1.5,
+        duration: 0.2,
         opacity: 0,
         clipPath: "circle(0% at 50% 50%)",
         ease: "Power3.easeOut",
       },
-      "+=3"
+      "+=1"
     )
 };
