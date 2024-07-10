@@ -2,14 +2,19 @@
 import React, { useEffect } from "react";
 import "./preloader.css";
 import { preLoaderAnim } from "./animations/index";
+import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
 import Trans from "./deskBg.png";
 import TransMob from "./mobileBg.png";
+import { useMediaQuery } from "@mantine/hooks";
 
 export default function Preloader() {
+  const matches = useMediaQuery("(max-width: 40em)", true, {
+    getInitialValueInEffect: false,
+  });
   useEffect(() => {
-    if (window !== undefined) preLoaderAnim();
-  }, [window]);
+    matches ? preLoaderAnimMob() : preLoaderAnim();
+  }, [matches]);
   return (
     <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
@@ -41,7 +46,7 @@ export default function Preloader() {
             margin: "auto",
             clipPath: "circle(0% at 50% 50%)",
             backgroundImage:
-              window.innerWidth < 768
+              matches
                 ? `url(${TransMob.src})`
                 : `url(${Trans.src})`,
             backgroundSize: "cover",
