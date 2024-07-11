@@ -20,7 +20,7 @@ export default function Affiliates() {
       </Flex>
       <Flex className="min-h-[50dvh] md:min-h-[65dvh] items-center relative">
         <Box
-          className="w-3/5 hidden md:flex min-h-[50dvh] md:min-h-[65dvh]"
+          className="w-3/5 hidden md:flex min-h-[50dvh] md:min-h-[65dvh] md:-ml-32"
           style={{
             backgroundImage: `url(${CarBg.src})`,
             backgroundSize: "contain",
@@ -40,15 +40,15 @@ export default function Affiliates() {
             }}
           ></Box>
         </Flex>
-        <Stack className="md:w-2/5 md:-ml-8 p-6">
-          <Text className="text-justify font-semibold">
+        <Stack className="md:w-2/5 md:ml-8 p-6">
+          <Text className="text-justify font-semibold md:text-lg">
             Join our Affiliate Program and become an affiliated driver, gaining
             exclusive access to a network of high-class individuals. By
             partnering with us, you&apos;ll have the opportunity to connect with
             a sophisticated clientele, enhancing your professional reputation
             and earning potential.
           </Text>
-          <Text className="text-justify font-semibold">
+          <Text className="text-justify font-semibold md:text-lg">
             Sign up today to embark on your journey as an affiliated driver.
             Experience the benefits of driving for a premium market and elevate
             your career to new heights.

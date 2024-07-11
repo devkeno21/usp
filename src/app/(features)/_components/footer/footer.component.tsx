@@ -4,6 +4,7 @@ import {
   IconBrandTwitter,
   IconBrandYoutube,
   IconBrandInstagram,
+  IconBrandLinkedin,
 } from "@tabler/icons-react";
 import USPLogo from "../nav-bar/usp-logo-white.png";
 import classes from "./footer.module.css";
@@ -106,22 +107,20 @@ export function Footer() {
           wrap="nowrap"
         >
           <ActionIcon size="lg" color="white" variant="subtle">
-            <IconBrandTwitter
+            <a href="https://linkedin.com/usp-transportation" target="_blank">
+            <IconBrandLinkedin
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
+            </a>
           </ActionIcon>
           <ActionIcon size="lg" color="white" variant="subtle">
-            <IconBrandYoutube
-              style={{ width: rem(18), height: rem(18) }}
-              stroke={1.5}
-            />
-          </ActionIcon>
-          <ActionIcon size="lg" color="white" variant="subtle">
+            <a href="https://instagram.com/usp_transportation/" target="_blank">
             <IconBrandInstagram
               style={{ width: rem(18), height: rem(18) }}
               stroke={1.5}
             />
+            </a>
           </ActionIcon>
         </Group>
       </Flex>
