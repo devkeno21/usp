@@ -24,11 +24,6 @@ import { useRouter } from "next/navigation";
 import { fleet } from "@/app/(features)/_components/fleet/fleet";
 import { Metadata } from "next";
 
-export const metadata:Metadata ={
-  title:"Our Luxury Fleet | USP Transportation",
-  description:"Explore USP Transportation's premium fleet of luxury vehicles. From Cadillac Escalades to Mercedes-Benz sedans, find the perfect ride for your needs.",
-  keywords: ['USP', 'transportation', 'luxury', 'car', 'service'],
-}
 
 export default function Browse() {
   const theme = useMantineTheme();
