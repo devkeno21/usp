@@ -14,6 +14,13 @@ export const metadata:Metadata ={
   title:"USP Transportation - Luxury Car Service & VIP Transportation",
   description:"Experience ultimate comfort and style with USP Transportation. We offer premium car services, airport transfers, and VIP transportation solutions. Book your luxury ride today!",
   keywords: ['USP', 'transportation', 'luxury', 'car', 'service'],
+  openGraph:{
+    title: 'USP Transportation - Luxury Car Service & VIP Transportation',
+    description: 'Experience ultimate comfort and style with USP Transportation. We offer premium car services, airport transfers, and VIP transportation solutions. Book your luxury ride today!',
+    url: '/',
+    type: 'website',
+    images:['/blue-usp-logo.png'],
+  }
 }
 
 export default function Landing() {
