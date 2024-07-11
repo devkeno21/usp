@@ -10,7 +10,6 @@ import {
 } from "@tabler/icons-react";
 import classes from "./service.module.css";
 import React from "react";
-import Wave from "./Vector.svg"
 
 const services = [
   {
@@ -68,28 +67,42 @@ export default function Services() {
           className="w-[45%] p-1 mx-auto"
         ></Box>
       </Flex>
-      <Flex wrap={"wrap"} className="gap-4 p-6 mx-auto hidden md:flex">
+      <Flex wrap={"wrap"} className="gap-4 p-6 mx-auto hidden md:flex w-full">
         {services.map((service, index) => (
-          <Paper
-            key={index}
-            withBorder
-            className="rounded-md w-[calc(33.33%-1rem)] h-[180px] p-4 bg-primary-900"
-          >
-            <Flex key={index} className="flex-col gap-2 my">
-              <Flex className="gap-4">
-                <service.icon size={25} color="white" />
-                <Text
-                  tt="uppercase"
-                  className="text-xl font-semibold text-white"
-                >
-                  {service.title}
-                </Text>
-              </Flex>
-              <Text className="text-sm text-white text-justify">
-                {service.description}
-              </Text>
-            </Flex>
-          </Paper>
+          <Box key={index} className="relative w-[calc(33.33%-1rem)] h-[180px]">
+            <Box className="h-full w-full absolute top-0 hover:opacity-0 cursor-pointer">
+              <Paper
+                withBorder
+                className="rounded-md p-4 w-full h-full bg-primary-900 "
+              >
+                <Flex key={index} className="flex-col gap-2 items-center justify-center h-full">
+                  <Flex className="gap-4 items-center">
+                    <service.icon size={35} color="white" />
+                    <Text
+                      tt="uppercase"
+                      className="text-3xl font-semibold text-white"
+                    >
+                      {service.title}
+                    </Text>
+                  </Flex>
+                
+                </Flex>
+              </Paper>
+            </Box>
+            <Box className="h-full w-full absolute top-0 opacity-0 hover:opacity-100 cursor-pointer">
+              <Paper
+                withBorder
+                className="rounded-md p-4 w-full h-full bg-primary-900 "
+              >
+                <Flex key={index} className="flex-col gap-2 text-center justify-center h-full">
+                  
+                  <Text className="text-md text-white text-justify">
+                    {service.description}
+                  </Text>
+                </Flex>
+              </Paper>
+            </Box>
+          </Box>
         ))}
       </Flex>
       <div className={`${classes.container} md:hidden text-white`}>
