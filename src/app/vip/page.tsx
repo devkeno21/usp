@@ -13,6 +13,13 @@ import { DebitPaymentInformationForm } from "./_components/debit-payment-method"
 import Wave from "../(features)/_components/services/Vector.svg";
 import { useJoinVipMutation } from "@/state/api/usp.api";
 import { notifications } from "@mantine/notifications";
+import { Metadata } from "next";
+
+export const metadata:Metadata ={
+  title:"VIP Transportation Program | Exclusive Luxury Services",
+  description:"Join USP Transportation's VIP Program for premium benefits, priority booking, and personalised luxury transportation services. Elevate your travel experience today.",
+  keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"vip"],
+}
 
 export default function VIP() {
   const router = useRouter();

@@ -12,6 +12,13 @@ import { FleetInformationForm } from "./_components/fleet-form";
 import { BillingInformationForm } from "./_components/billing-form";
 import { useJoinAffiliateMutation } from "@/state/api/usp.api";
 import { notifications } from "@mantine/notifications";
+import { Metadata } from "next";
+
+export const metadata:Metadata ={
+  title:"Join Our Affiliate Program | Partnership Opportunities",
+  description:"Sign up for our affiliate program. Earn rewards by promoting our products/services. Easy registration process.",
+  keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"affiliate"],
+}
 
 export default function Affiliate() {
   const router = useRouter();
