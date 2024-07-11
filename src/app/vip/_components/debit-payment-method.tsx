@@ -42,10 +42,6 @@ export const DebitPaymentInformationForm = ({onNext,onPrev}:{  onNext: (data: an
         <TextInput className="w-full" label="Account Number" withAsterisk type="number" {...register("accountNumber")}
           error={errors.accountNumber?.message?.toString()}/>
       </Flex>
-      <Flex gap={10} className="mt-5">
-        <TextInput className="w-full"  withAsterisk />
-        <div className="w-full"></div>
-      </Flex>
    
       <Flex gap={10} className="mt-5">
         <TextInput className="w-full" label="Sort Code" withAsterisk {...register("sortCode")}

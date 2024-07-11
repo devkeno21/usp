@@ -11,6 +11,8 @@ import { CompanyInformationForm } from "./_components/company-information-form";
 import { MonthlyPaymentInformationForm } from "./_components/monthly-payment-information";
 import { DebitPaymentInformationForm } from "./_components/debit-payment-method";
 import Wave from "../(features)/_components/services/Vector.svg";
+import { useJoinVipMutation } from "@/state/api/usp.api";
+import { notifications } from "@mantine/notifications";
 
 export default function VIP() {
   const router = useRouter();
@@ -20,23 +22,103 @@ export default function VIP() {
     "credit" | "monthly" | "debit"
   >("credit");
 
+  const [createVip, { isLoading }] = useJoinVipMutation();
+
   const [personalInfo, setPersonalInfo] = useState<any>({});
   const [companyInfo, setCompanyInfo] = useState<any>({});
   const [reservationInfo, setReservationInfo] = useState<any>({});
+  const [paymentInfo, setPaymentInfo] = useState<any>({});
+  const [monthlyInvoice, setMonthlyInvoice] = useState<any>({});
+  const [directDebt, setDirectDebt] = useState<any>({});
+  const [personalPaymentDetail, setPersonalPaymentDetail] = useState<any>({});
 
   const onNext = (data: any) => {
     if (active === 0 && type === "Individual") {
-      setPersonalInfo(data);
+      setPersonalInfo({ ...data, paymentMethod: paymentMethod.toUpperCase() });
       setActive(active + 1);
     } else if (active === 0 && type === "Company") {
-      setCompanyInfo(data);
+      setCompanyInfo({
+        ...data,
+        paymentMethod: paymentMethod.toUpperCase(),
+        address: [data.address],
+        bookingContact: {
+          name: data.bookingContactName,
+          email: data.email,
+          phoneNumber: data.phoneNumber,
+        },
+      });
       setReservationInfo({
         phoneNumber: data.phoneNumber,
         email: data.email,
         contactName: data.contactName,
       });
       setActive(active + 1);
-    } else if (active === 1) {
+    } else if (active === 1 && paymentMethod === "credit") {
+      setPaymentInfo({
+        ...data,
+        billingAddress: [data.billingAddress],
+      });
+      setActive(active + 1);
+    } else if (active === 1 && paymentMethod === "monthly") {
+      setMonthlyInvoice(data);
+      setActive(active + 1);
+    } else if (active === 1 && paymentMethod === "debit") {
+      setDirectDebt(data);
+      setActive(active + 1);
+    } else if (active === 2) {
+      setPersonalPaymentDetail(data);
+      onSubmit();
+    }
+  };
+
+  const onSubmit = async () => {
+    const rawData =
+      type === "Individual"
+        ? paymentMethod === "credit"
+          ? {
+              personalInfo,
+              paymentInfo,
+            }
+          : {
+              personalInfo,
+              monthlyInvoice,
+            }
+        : paymentMethod === "credit"
+          ? {
+              companyInfo,
+              reservationInfo,
+              paymentInfo,
+            }
+          : paymentMethod === "debit"
+            ? {
+                companyInfo,
+                reservationInfo,
+                directDebt,
+              }
+            : {
+                companyInfo,
+                reservationInfo,
+                monthlyInvoice,
+              };
+    try {
+      await createVip({
+        ...rawData,
+        personalPaymentDetail,
+        type: type.toUpperCase(),
+      }).unwrap();
+      notifications.show({
+        title: "Success",
+        message: "Form submitted successfully",
+        color: "green",
+      });
+      router.push("/");
+    } catch {
+      notifications.show({
+        title: "Error",
+        message:
+          "An error occurred while joining the affiliate program. Please try again later.",
+        color: "red",
+      });
     }
   };
 
@@ -146,7 +228,11 @@ export default function VIP() {
               </div>
             )}
             {active == 2 && (
-              <FinalForm onPrev={() => setActive(active - 1)} onNext={onNext} />
+              <FinalForm
+                onPrev={() => setActive(active - 1)}
+                onNext={onNext}
+                isLoading={isLoading}
+              />
             )}
           </div>
         </Flex>

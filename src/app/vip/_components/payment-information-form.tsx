@@ -10,7 +10,7 @@ import { AmericaExpress } from "./america-express-svg";
 import { useState } from "react";
 
 const paymentInfoSchema = z.object({
-  cardName: z.string().min(1, "Card name is required"),
+  nameOnCard: z.string().min(1, "Card name is required"),
   businessName: z.string().min(1, "Business name is required"),
   billingAddress: z.string().min(1, "Billing address is required"),
   zipCode: z.string().min(1, "Zip code is required"),
@@ -50,8 +50,7 @@ export const PaymentInformationForm = ({
   };
 
   const onSubmit = (data: any) => {
-    console.log({ data });
-    onNext(data);
+    onNext({...data,creditCard:paymentMethod});
   };
   return (
     <div className=" text-white font-semibold">
@@ -78,8 +77,8 @@ export const PaymentInformationForm = ({
           </div>
         </Flex>
       <Flex gap={10} className="mt-5">
-        <TextInput className="w-full" label="Name on Card" withAsterisk {...register("cardName")}
-          error={errors.cardName?.message?.toString()}/>
+        <TextInput className="w-full" label="Name on Card" withAsterisk {...register("nameOnCard")}
+          error={errors.nameOnCard?.message?.toString()}/>
         <TextInput className="w-full" label="Business Name" withAsterisk {...register("businessName")}
           error={errors.businessName?.message?.toString()}/>
       </Flex>
