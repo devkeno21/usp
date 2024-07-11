@@ -116,7 +116,7 @@ export default function VIP() {
       notifications.show({
         title: "Error",
         message:
-          "An error occurred while joining the affiliate program. Please try again later.",
+          "An error occurred while submitting the form. Please try again later.",
         color: "red",
       });
     }
