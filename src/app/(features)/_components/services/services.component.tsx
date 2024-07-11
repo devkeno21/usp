@@ -94,17 +94,9 @@ export default function Services() {
                 withBorder
                 className="rounded-md p-4 w-full h-full bg-primary-900 "
               >
-                <Flex key={index} className="flex-col gap-2 my">
-                  <Flex className="gap-4">
-                    <service.icon size={25} color="white" />
-                    <Text
-                      tt="uppercase"
-                      className="text-xl font-semibold text-white"
-                    >
-                      {service.title}
-                    </Text>
-                  </Flex>
-                  <Text className="text-sm text-white text-justify">
+                <Flex key={index} className="flex-col gap-2 text-center justify-center h-full">
+                  
+                  <Text className="text-md text-white text-justify">
                     {service.description}
                   </Text>
                 </Flex>
