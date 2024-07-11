@@ -85,7 +85,7 @@ export default function Affiliate() {
         <Button
           onClick={() => router.back()}
           leftSection={<IconArrowLeft />}
-          className="text-2xl text-white hover:text-white"
+          className="text-md sm:text-lg md:text-2xl text-white hover:text-white"
           variant="subtle"
         >
           Join our Affiliate Program
