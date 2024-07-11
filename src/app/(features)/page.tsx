@@ -8,6 +8,13 @@ import Services from "./_components/services/services.component";
 import Affiliates from "./_components/affiliates/affiliates.component";
 import Contact from "./_components/contact/contact.component";
 import Subscribe from "./_components/subscribe/subscribe.component";
+import { Metadata } from "next";
+
+export const metadata:Metadata ={
+  title:"USP Transportation - Luxury Car Service & VIP Transportation",
+  description:"Experience ultimate comfort and style with USP Transportation. We offer premium car services, airport transfers, and VIP transportation solutions. Book your luxury ride today!",
+  keywords: ['USP', 'transportation', 'luxury', 'car', 'service'],
+}
 
 export default function Landing() {
   return (
