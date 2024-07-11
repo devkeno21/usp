@@ -133,7 +133,7 @@ export default function Browse() {
           
         </Box>
         <Box className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {fleet.slice(0,4).map((car, index) => (
+          {fleet.map((car, index) => (
             <Box className="relative w-full" key={index} h={300}>
               <Box className="h-full w-full absolute top-0">
                 <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">
