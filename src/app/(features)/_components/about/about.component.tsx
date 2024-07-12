@@ -18,7 +18,7 @@ export default function About() {
 
     <Stack
       className="min-h-[65dvh] md:min-h-[80dvh] gap-4 relative p-8 pt-16"
-      id="affiliates"
+      id="about"
       style={{
         backgroundImage: `url(${CarBg.src})`,
         backgroundSize: "cover",
