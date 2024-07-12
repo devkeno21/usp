@@ -28,9 +28,9 @@ export default function Landing() {
     <Stack>
       <HeroSection />
       <Box className="relative z-0">
-        <About />
         <Clients/>
         <Fleet/>
+        <About />
         <Services/>
         <Affiliates/>
         <Contact/>
