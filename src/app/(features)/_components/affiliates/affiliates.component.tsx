@@ -1,6 +1,6 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
-import CarBg from "./carBg.jpg";
+import CarBg from "./carBg.png";
 import { useRouter } from "next/navigation";
 
 export default function Affiliates() {
@@ -13,13 +13,13 @@ export default function Affiliates() {
       id="affiliates"
     >
       <Box
-        className="w-full h-[100%] absolute bottom-0 z-8"
+        className="md:hidden w-full h-[100%] absolute bottom-0 z-8"
         style={{
-          background: "linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.3254551820728291) 93%)"
+          background: "linear-gradient(90deg, rgba(0,0,0,1) 45%, rgba(0,0,0,0.3254551820728291) 93%)"
         }}
       />
       <Box
-        className="w-3/5 h-[100%] absolute bottom-0 right-0 -z-10"
+        className="w-full h-[100%] absolute bottom-0 right-0 -z-10"
         style={{
           backgroundImage: `url(${CarBg.src})`,
           backgroundSize: "cover",
