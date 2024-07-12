@@ -61,7 +61,7 @@ export default function Affiliates() {
             }}
           ></Box> */}
         </Flex>
-        <Stack className="md:w-2/5 md:ml-8 p-6">
+        <Stack className="md:w-2/5 md:ml-4 p-6">
           <Text className="text-justify text-white font-semibold md:text-lg">
             Join our Affiliate Program and become an affiliated driver, gaining
             exclusive access to a network of high-class individuals. By

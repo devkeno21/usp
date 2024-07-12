@@ -96,7 +96,7 @@ export function Footer() {
         ))}
       </Flex>
       <Flex className={`${classes.afterFooter} md:ml-20`}>
-        <Text c="dimmed" size="sm">
+        <Text size="sm">
           © {now.getFullYear()} USP Transportation. All rights reserved.
         </Text>
 
@@ -106,10 +106,10 @@ export function Footer() {
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon size="lg" color="white" variant="subtle">
+          <ActionIcon size="lg" color="white" variant="subtle" className="rounded-md">
             <a href="https://linkedin.com/usp-transportation" target="_blank">
             <IconBrandLinkedin
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
             />
             </a>
@@ -117,7 +117,7 @@ export function Footer() {
           <ActionIcon size="lg" color="white" variant="subtle">
             <a href="https://instagram.com/usp_transportation/" target="_blank">
             <IconBrandInstagram
-              style={{ width: rem(18), height: rem(18) }}
+              style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
             />
             </a>

@@ -33,10 +33,13 @@ export default function HeroSection() {
             >
               Discover the World of Ultimate Comfort and Style
             </Text>
-            <Flex className="mb-8 items-center flex-col gap-4">
+           
+          </Stack>
+          <Flex className="gap-4 mr-auto  text-center bg-black py-2">
+            <Flex className="w-4/5 ml-auto justify-between items-center">
               <Text
                 tt="uppercase"
-                className="text-white text-xs md:text-xl text-center"
+                className="text-white text-xs md:text-xl w-2/3"
               >
                 Embark on unforgettable journeys where luxury and elegance
                 accompany every step of your adventure.
@@ -44,7 +47,7 @@ export default function HeroSection() {
               
               <Button
                 color={theme.colors.secondary[9]}
-                className="md:absolute md:right-2"
+                className="justify-end mr-8"
               >
                 <a
                   href="https://book.mylimobiz.com/v4/uspholdings"
@@ -53,8 +56,8 @@ export default function HeroSection() {
                   Get Instant Quote
                 </a>
               </Button>
+              </Flex>
             </Flex>
-          </Stack>
         </Box>
       </Box>
     </Box>
