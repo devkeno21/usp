@@ -35,7 +35,7 @@ export default function RefundPolicy() {
           <Box
             className="w-full flex justify-center items-center"
           >
-            <Image height={600} width={600} src={Bg.src} alt="car"/>
+            <Image height={700} width={700} src={Bg.src} alt="car"/>
           </Box>
           <Box className="w-full flex flex-col justify-center">
             <p>
