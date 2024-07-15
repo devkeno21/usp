@@ -10,15 +10,17 @@ import USPLogo from "../nav-bar/usp-logo-white.png";
 import classes from "./footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import Linkedin from './linkedin.svg'
+import Instagram from './instagram.svg'
 
 const data = [
   {
     title: "Explore",
     links: [
-      { label: "About", link: "#about" },
-      { label: "Services", link: "#services" },
-      { label: "Fleets", link: "#fleets" },
-      { label: "Affiliates", link: "#affiliates" },
+      { label: "About", link: "/#about" },
+      { label: "Services", link: "/#services" },
+      { label: "Fleets", link: "/#fleets" },
+      { label: "Affiliates", link: "/#affiliates" },
     ],
   },
   {
@@ -51,7 +53,7 @@ export function Footer() {
         className={classes.link}
         component="a"
         href={link.link}
-        onClick={(event) => event.preventDefault()}
+        // onClick={(event) => event.preventDefault()}
       >
         {link.label}
       </Text>
@@ -101,25 +103,27 @@ export function Footer() {
         </Text>
 
         <Group
-          gap={0}
+          gap={10}
           className={`ml-auto ${classes.social} mr-10`}
           justify="flex-end"
           wrap="nowrap"
         >
-          <ActionIcon size="lg" color="white" variant="subtle" className="rounded-md">
+          <ActionIcon size="lg" color="white" variant="light" className="rounded-md" >
             <a href="https://linkedin.com/usp-transportation" target="_blank">
-            <IconBrandLinkedin
+            {/* <IconBrandLinkedin
               style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
-            />
+            /> */}
+            <Image height={20} width={20} alt="linkedin" src={Linkedin.src}/>
             </a>
           </ActionIcon>
-          <ActionIcon size="lg" color="white" variant="subtle">
+          <ActionIcon size="lg" color="white" variant="light">
             <a href="https://instagram.com/usp_transportation/" target="_blank">
-            <IconBrandInstagram
+            {/* <IconBrandInstagram
               style={{ width: rem(24), height: rem(24) }}
               stroke={1.5}
-            />
+            /> */}
+            <Image height={20} width={20} alt="linkedin" src={Instagram.src}/>
             </a>
           </ActionIcon>
         </Group>

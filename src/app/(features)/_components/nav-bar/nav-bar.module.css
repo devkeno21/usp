@@ -13,7 +13,7 @@
     padding-right: 3rem;
     text-decoration: none;
     color: light-dark(var(--mantine-color-white), var(--mantine-color-black));
-    font-weight: 500;
+    font-weight: 700;
     font-size: var(--mantine-font-size-md);
   
     @media (max-width: 0.75rem) {
