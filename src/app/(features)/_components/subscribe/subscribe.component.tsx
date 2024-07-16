@@ -33,10 +33,10 @@ export default function Subscribe() {
               >
                 Sign up and never miss a deal again
               </Text>
-              <Text className="text-white text-xs md:text-xl" fw={"bold"}>
+              {/* <Text className="text-white text-xs md:text-xl" fw={"bold"}>
                 We present popular vehicles that are rented by customers to
                 maximize your comfort on long trips.
-              </Text>
+              </Text> */}
               <Flex>
                 <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2" variant="filled"/>
                 <Button color={theme.colors.secondary[9]}>SUBSCRIBE</Button>
