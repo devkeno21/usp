@@ -7,7 +7,7 @@ import Client6 from "./client-6.jpg";
 import Client7 from "./client-7.png";
 import Client8 from "./client-8.png";
 import Client9 from "./client-9.jpg";
-import Client10 from "./client-10.svg";
+import Client10 from "./client-10.png";
 import Marquee from "react-fast-marquee";
 
 const clientsList = [

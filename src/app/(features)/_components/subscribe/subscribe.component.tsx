@@ -24,8 +24,8 @@ export default function Subscribe() {
         }}
       >
         <Box className="w-full h-[70dvh] bg-black bg-opacity-50 top-0 relative z-3">
-          <Box className="flex min-h-full items-center">
-            <Stack className="w-full md:w-1/2 gap-6 p-6 md:ml-24">
+          <Box className="flex min-h-full items-center w-full">
+            <Stack className="w-full md:w-1/2 gap-6 p-6 pl-2 ml-auto text-left">
               <Text
                 tt="uppercase"
                 className="text-white text-xl md:text-6xl "
