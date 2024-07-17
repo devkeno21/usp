@@ -4,6 +4,7 @@ import {
   ActionIcon,
   Box,
   Flex,
+  ScrollArea,
   Stack,
   Text,
   useMantineTheme,
@@ -150,85 +151,26 @@ export default function TermsAndConditions() {
             className="w-[15%] md:w-[5%] p-1"
           ></Box>
         </Flex>
-        <Flex className="min-h-[50dvh] md:min-h-[65dvh] items-center relative p-4">
-          <Carousel
-            className="md:w-5/12 w-full p-10"
-            withControls
-            controlsOffset={1}
-            previousControlIcon={
-              <ActionIcon color="white">
-                <IconArrowLeft color="black" />
-              </ActionIcon>
-            }
-            nextControlIcon={
-              <ActionIcon color="white">
-                <IconArrowRight color="black" />
-              </ActionIcon>
-            }
-            loop
-          >
-            <Carousel.Slide>
-              <Stack gap={5}>
-                {terms.slice(0, 6).map((term) => (
-                  <Text
-                    key={term.id}
-                    className="text-justify font-semibold text-md md:text-lg text-white"
-                  >
-                    {term.id}. {term.title}
-                  </Text>
-                ))}
-              </Stack>
-            </Carousel.Slide>
-            <Carousel.Slide>
-                <Stack gap={5}>
-                  {terms.slice(6, 9).map((term) => (
-                    <Text
-                    key={term.id}
-                    className="text-justify font-semibold text-md md:text-lg text-white"
-                  >
-                    {term.id}. {term.title}
-                  </Text>
-                  ))}
-                </Stack>
-            </Carousel.Slide>
-            <Carousel.Slide>
-                <Stack gap={5}>
-                  {terms.slice(9, 13).map((term) => (
-                    <Text
-                    key={term.id}
-                    className="text-justify font-semibold text-md md:text-lg text-white"
-                  >
-                    {term.id}. {term.title}
-                  </Text>
-                  ))}
-                </Stack>
-            </Carousel.Slide>
-            <Carousel.Slide>
-                <Stack gap={5}>
-                  {terms.slice(13, 17).map((term) => (
-                    <Text
-                    key={term.id}
-                    className="text-justify font-semibold text-md md:text-lg text-white"
-                  >
-                    {term.id}. {term.title}
-                  </Text>
-                  ))}
-                </Stack>
-            </Carousel.Slide>
-            <Carousel.Slide>
-                <Stack gap={5}>
-                  {terms.slice(17, ).map((term) => (
-                    <Text
-                    key={term.id}
-                    className="text-justify font-semibold text-md md:text-lg text-white"
-                  >
-                    {term.id}. {term.title}
-                  </Text>
-                  ))}
-                </Stack>
-            </Carousel.Slide>
-          </Carousel>
-        </Flex>
+        <ScrollArea
+          h={250}
+          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-10 w-1/2"
+          styles={{
+            thumb: {
+              backgroundColor: "white",
+            },
+          }}
+        >
+          <Stack gap={5}>
+            {terms.map((term) => (
+              <Text
+                key={term.id}
+                className="text-justify font-semibold text-md md:text-lg text-white"
+              >
+                {term.id}. {term.title}
+              </Text>
+            ))}
+          </Stack>
+        </ScrollArea>
       </Stack>
       <Footer />
     </>
