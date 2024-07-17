@@ -9,7 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
-import SubscribeCar from "./subscribe-2.jpeg";
+import SubscribeCar from "./subscribe-2.png";
 
 export default function Subscribe() {
   const theme = useMantineTheme();
@@ -23,13 +23,12 @@ export default function Subscribe() {
           backgroundPosition: "center",
         }}
       >
-        <Box className="w-full h-[70dvh] bg-black bg-opacity-50 top-0 relative z-3">
+        <Box className="w-full h-[70dvh] bg-black bg-opacity-30 top-0 relative z-3">
           <Box className="flex min-h-full  w-full">
-            <Stack className="w-full md:w-1/2 gap-6  ml-auto p-2">
+            <Stack className="w-full md:w-1/2 md:gap-6 ml-auto p-2">
               <Text
                 tt="uppercase"
-                className="text-white text-xl md:text-6xl text-end"
-                fw={"bold"}
+                className="text-white text-xl md:text-4xl text-end"
               >
                 Sign up and never miss a deal again
               </Text>
@@ -38,8 +37,8 @@ export default function Subscribe() {
                 maximize your comfort on long trips.
               </Text> */}
               <Flex>
-                <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2 ml-auto" variant="filled"/>
-                <Button color={theme.colors.secondary[9]}>SUBSCRIBE</Button>
+                <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2 md:w-1/3 ml-auto" variant="filled" size="md"/>
+                <Button color={theme.colors.secondary[9]} size="md">SUBSCRIBE</Button>
               </Flex>
             </Stack>
           </Box>

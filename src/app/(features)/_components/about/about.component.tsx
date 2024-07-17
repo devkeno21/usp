@@ -17,7 +17,7 @@ export default function About() {
     // <Box id="about" className="w-full h-[75dvh] relative mt-[100dvh]">
 
     <Stack
-      className="min-h-[65dvh] md:min-h-[80dvh] gap-4 relative p-8 pt-16"
+      className="min-h-[75dvh] md:min-h-[90dvh] gap-4 relative p-8 pt-16 justify-center"
       id="about"
       style={{
         backgroundImage: `url(${CarBg.src})`,
@@ -25,7 +25,7 @@ export default function About() {
         backgroundPosition: "center",
       }}
     >
-      <Flex className="justify-center  flex-col gap-2 text-white ml-6">
+      <Flex className="justify-center flex-col gap-2 text-white ml-6">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           About USP
         </Text>
@@ -34,8 +34,7 @@ export default function About() {
           className="w-[15%] md:w-[5%] p-1"
         ></Box>
       </Flex>
-      <Flex className="min-h-[50dvh] md:min-h-[65dvh] items-center relative">
-        <Stack className="md:w-2/5  p-6">
+        <Stack className="md:w-2/5 pt-4 p-6">
           <Text className="text-justify font-semibold text-md md:text-lg text-white">
             In 2008, USP Holdings expanded its corporate mission and engaged in
             shuttle bus and limousine services. Our transportation mission is to
@@ -56,20 +55,6 @@ export default function About() {
             </a>
           </Button>
         </Stack>
-        
-        {/* <Flex className="w-full h-full justify-center items-center absolute top-0">
-          <Box
-            className="w-full md:hidden h-[70dvh]"
-            style={{
-              backgroundImage: `url(${CarBg.src})`,
-              backgroundSize: "contain",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              opacity: 0.2,
-            }}
-          ></Box>
-        </Flex> */}
-      </Flex>
     </Stack>
     // </Box>
   );

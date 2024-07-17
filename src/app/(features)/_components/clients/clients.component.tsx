@@ -15,16 +15,18 @@ const clientsList = [
     imageUrl: Client3.src,
   },
   {
+    imageUrl: Client7.src,
+  },
+  {
     imageUrl: Client4.src,
   },
+
   {
     imageUrl: Client5.src,
   },
+
   {
     imageUrl: Client6.src,
-  },
-  {
-    imageUrl: Client7.src,
   },
   {
     imageUrl: Client8.src,
@@ -32,6 +34,7 @@ const clientsList = [
   {
     imageUrl: Client9.src,
   },
+
   {
     imageUrl: Client10.src,
   },
