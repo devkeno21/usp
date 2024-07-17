@@ -35,8 +35,8 @@ export default function HeroSection() {
             </Text>
            
           </Stack>
-          <Flex className="gap-4 mr-auto  text-center bg-black py-2">
-            <Flex className="w-4/5 ml-auto justify-between items-center">
+          <Flex className="gap-4 md:mr-auto mx-auto text-center bg-black py-2">
+            <Flex className="md:w-4/5 gap-2 ml-auto justify-between items-center flex-col md:flex-row">
               <Text
                 tt="uppercase"
                 className="text-white text-xs md:text-xl w-2/3"
@@ -47,7 +47,7 @@ export default function HeroSection() {
               
               <Button
                 color={theme.colors.secondary[9]}
-                className="justify-end mr-8"
+                className="md:justify-end md:mr-8"
               >
                 <a
                   href="https://book.mylimobiz.com/v4/uspholdings"

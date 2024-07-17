@@ -228,6 +228,11 @@ import {
           },
         },
       },
+      Accordion : {
+        styles: {
+         
+        },
+      },
     },
   };
   

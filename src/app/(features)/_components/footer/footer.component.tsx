@@ -26,9 +26,9 @@ const data = [
   {
     title: "Information",
     links: [
-      { label: "Terms and Conditions", link: "#" },
+      { label: "Terms and Conditions", link: "/terms" },
       { label: "Refund Policy", link: "/refund-policy" },
-      { label: "Careers", link: "#" },
+      { label: "FAQ", link: "/faq" },
     ],
   },
   {
