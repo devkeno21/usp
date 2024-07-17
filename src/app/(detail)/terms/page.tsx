@@ -122,7 +122,7 @@ export default function TermsAndConditions() {
       <Breadcrumb
         links={[
           { title: "Home", href: "/" },
-          { title: "Terms of Service", href: "#" },
+          { title: "Terms and conditions", href: "#" },
         ]}
       />
 
@@ -144,7 +144,7 @@ export default function TermsAndConditions() {
         />
         <Flex className="justify-center  flex-col gap-2 text-white ml-12 z-10">
           <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
-            Terms of Service
+            Terms and conditions
           </Text>
           <Box
             bg={theme.colors.secondary[9]}
