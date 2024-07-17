@@ -24,11 +24,11 @@ export default function Subscribe() {
         }}
       >
         <Box className="w-full h-[70dvh] bg-black bg-opacity-50 top-0 relative z-3">
-          <Box className="flex min-h-full items-center w-full">
-            <Stack className="w-full md:w-1/2 gap-6 p-6 pl-2 ml-auto text-left">
+          <Box className="flex min-h-full  w-full">
+            <Stack className="w-full md:w-1/2 gap-6  ml-auto p-2">
               <Text
                 tt="uppercase"
-                className="text-white text-xl md:text-6xl "
+                className="text-white text-xl md:text-6xl text-end"
                 fw={"bold"}
               >
                 Sign up and never miss a deal again
@@ -38,7 +38,7 @@ export default function Subscribe() {
                 maximize your comfort on long trips.
               </Text> */}
               <Flex>
-                <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2" variant="filled"/>
+                <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2 ml-auto" variant="filled"/>
                 <Button color={theme.colors.secondary[9]}>SUBSCRIBE</Button>
               </Flex>
             </Stack>
