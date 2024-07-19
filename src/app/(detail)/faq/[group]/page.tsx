@@ -168,12 +168,13 @@ export default function DetailFaq() {
               "linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(0,0,0,0.3254551820728291) 73%)",
           }}
         />
+       
         <Box className="p-8 md:p-6 md:pl-12">
         <ScrollArea h={250} className="min-h-[50dvh] md:w-1/2 text-white" styles={{thumb: { backgroundColor: "white"}}}>
           <Stack className="gap-4">
             {selectedGroup?.items.map((item) => (
               <Stack key={item.id}>
-                <Text td="underline" className="font-semibold text-xl" >
+                <Text  className="font-semibold text-xl" >
                   {item?.question}
                 </Text>
                 <Text className="text-lg">{item?.answer}</Text>

@@ -8,7 +8,7 @@ export default function FAQLayout({ children }: { children: React.ReactNode }) {
       <Breadcrumb
         links={[
           { title: "Home", href: "/" },
-          { title: "FAQ", href: "#" },
+          { title: "FAQ", href: "/faq" },
         ]}
       />
       {children}

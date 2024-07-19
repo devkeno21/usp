@@ -27,25 +27,25 @@ import Link from "next/link";
 const faqGroups = [
   {
     title: "Account Information",
-    description: "",
+    description: "Learn more about your account & what it entails",
     detailUrl: "account",
     icon: IconUserCircle,
   },
   {
     title: "Special Assistance",
-    description: "",
+    description: "Learn more about our special need",
     detailUrl: "special",
     icon: IconDisabled,
   },
   {
     title: "Policies",
-    description: "",
+    description: "Learn more about our policies and procedures",
     detailUrl: "policies",
     icon: IconFileCheck,
   },
   {
     title: "Reservation",
-    description: "",
+    description: "Learn more on how to book your vehicle ",
     detailUrl: "reservation",
     icon: IconBookmarkFilled,
   },
@@ -63,11 +63,11 @@ export default function TermsAndConditions() {
             className="w-[calc(50%-1rem)] md:w-[calc(25%-0.5rem)] h-[80%] flex-col gap-2 bg-primary-900 text-white p-4 justify-center"
           >
             <group.icon size={28} />
-            <Text tt="capitalize" className="font-semibold text-xl">
+            <Text tt="capitalize" className="font-semibold text-2xl">
               {group.title}
             </Text>
-            <Text tt="capitalize" className="">
-              {group.title}
+            <Text tt="capitalize" className="text-xl">
+              {group.description}
             </Text>
 
             <Link href={`/faq/${group.detailUrl}`}>
