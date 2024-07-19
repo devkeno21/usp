@@ -1,20 +1,16 @@
 "use client";
 
 import {
-  ActionIcon,
   Box,
   Flex,
   ScrollArea,
   Stack,
   Text,
-  useMantineTheme,
+  useMantineTheme
 } from "@mantine/core";
 import { Breadcrumb } from "../_components/breadcrumb/breadcrumb.component";
 import { Footer } from "@/app/(features)/_components/footer/footer.component";
-import Bg from "./bg.png";
-import Image from "next/image";
-import { Carousel } from "@mantine/carousel";
-import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import Bg from "./bg-5.jpg";
 
 const terms = [
   {
@@ -139,7 +135,7 @@ export default function TermsAndConditions() {
           className=" w-full h-[100%] absolute bottom-0 z-8"
           style={{
             background:
-              "linear-gradient(90deg, rgba(0,0,0,1) 30%, rgba(0,0,0,0.3254551820728291) 93%)",
+              "linear-gradient(90deg, rgba(0,0,0,1) 15%, rgba(0,0,0,0.3254551820728291) 23%)",
           }}
         />
         <Flex className="justify-center  flex-col gap-2 text-white ml-12 z-10">
