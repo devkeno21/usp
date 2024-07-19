@@ -1,20 +1,11 @@
 "use client";
 
 import {
-  Accordion,
-  Box,
-  Button,
   Flex,
   Stack,
-  Text,
-  Title,
-  useMantineTheme,
+  Text
 } from "@mantine/core";
-import { Breadcrumb } from "../_components/breadcrumb/breadcrumb.component";
-import { Footer } from "@/app/(features)/_components/footer/footer.component";
-import Bg from "./bg.png";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import Bg from "./bg.jpg";
 import {
   IconArrowRight,
   IconBookmarkFilled,
