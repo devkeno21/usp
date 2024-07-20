@@ -8,11 +8,11 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useParams } from "next/navigation";
-import Bg1 from "../bg-1.jpg";
-import Bg2 from "../bg-2.jpg";
-import Bg3 from "../bg-3.jpg";
-import Bg4 from "../bg-4.jpg";
-import Bg5 from "/bg-5.jpg";
+import Bg1 from "../bg-1.svg";
+import Bg2 from "../bg-2.svg";
+import Bg3 from "../bg-5.svg";
+import Bg4 from "../bg-4.svg";
+import Bg5 from "/bg-3.svg";
 
 const faqContent = [
   {
@@ -171,7 +171,7 @@ export default function DetailFaq() {
        
         <Box className="p-8 md:p-6 md:pl-12">
         <ScrollArea h={250} className="min-h-[50dvh] md:w-1/2 text-white" styles={{thumb: { backgroundColor: "white"}}}>
-          <Stack className="gap-4">
+          <Stack className="gap-4 p-4">
             {selectedGroup?.items.map((item) => (
               <Stack key={item.id}>
                 <Text  className="font-semibold text-xl" >
