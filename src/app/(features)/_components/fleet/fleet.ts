@@ -56,6 +56,15 @@ import Eclass5 from "./gallery/e-class/eclass5.jpg";
 import Eclass6 from "./gallery/e-class/eclass6.jpg";
 import Eclass7 from "./gallery/e-class/eclass7.jpg";
 
+import SBg from "./ms-bg.png"
+import Sclass from "./gallery/s-class/s-class.png"
+import Sclass1 from "./gallery/s-class/s-class1.jpeg";
+import Sclass2 from "./gallery/s-class/s-class2.jpeg";
+import Sclass3 from "./gallery/s-class/s-class3.jpg";
+import Sclass4 from "./gallery/s-class/s-class4.jpg";
+import Sclass5 from "./gallery/s-class/s-class5.jpeg";
+import Sclass6 from "./gallery/s-class/s-class6.jpeg";
+
 export const fleet = [
   {
     id: 1,
@@ -160,6 +169,32 @@ export const fleet = [
     features: [
       "Zero-emission electric",
       "Unparalleled execution in all weather conditions",
+    ],
+  },
+  {
+    id: 9,
+    title: "Mercedes-Benz S-Class",
+    brand: "Mercedes",
+    description:
+      "Ultimate comfort, elegantly designed, and exceptional chauffeur vehicle.  luxuriously equipped with exquisite, comfortable leather massage seats and rear entertainment screens\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
+    titleDesc: "Luxury Seating for up to 5",
+    seats: 5,
+    fleetType: "LUXURY",
+    price: "$95",
+    imageUrl: Sclass.src,
+    bgUrl: SBg.src,
+    videoUrl:"-4zsY28t76k",
+    gallery: [
+      Sclass1.src,
+      Sclass2.src,
+      Sclass3.src,
+      Sclass4.src,
+      Sclass5.src,
+      Sclass6.src,
+    ],
+    features: [
+      "Highly advanced air suspension ",
+      "Complimentary Wi-Fi and refreshments",
     ],
   },
   {

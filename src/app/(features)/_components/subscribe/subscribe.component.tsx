@@ -10,6 +10,7 @@ import {
 } from "@mantine/core";
 import React from "react";
 import SubscribeCar from "./subscribe-2.png";
+import classes from "./subscribe.module.css"
 
 export default function Subscribe() {
   const theme = useMantineTheme();
@@ -37,8 +38,16 @@ export default function Subscribe() {
                 maximize your comfort on long trips.
               </Text> */}
               <Flex>
-                <TextInput placeholder="Enter Email Address" className="bg-transparent w-1/2 md:w-1/3 ml-auto" styles={{ input: { color: "white", textDecorationColor: "white", border: "1px solid white"}, root: {color: "white"}}} variant="filled" size="md"/>
-                <Button color={theme.colors.secondary[9]} size="md">SUBSCRIBE</Button>
+                <TextInput
+                  placeholder="Enter Email Address"
+                  className="bg-transparent w-1/2 md:w-1/3 ml-auto"
+                  classNames={{input: classes.textInput}}
+                  variant="filled"
+                  size="md"
+                />
+                <Button color={theme.colors.secondary[9]} size="md">
+                  SUBSCRIBE
+                </Button>
               </Flex>
             </Stack>
           </Box>
