@@ -9,8 +9,8 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: clamp(0.2rem, 3vw, 3rem);
+    padding-right: clamp(0.2rem, 3vw, 3rem);
     text-decoration: none;
     color: light-dark(var(--mantine-color-white), var(--mantine-color-black));
     font-weight: 700;

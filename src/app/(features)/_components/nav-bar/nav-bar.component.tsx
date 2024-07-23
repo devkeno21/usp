@@ -102,7 +102,7 @@ export function NavBar() {
         <Group justify="space-between" h="100%">
           <Image src={USPLogo.src} alt="USP-Logo" width={150} height={150} />
 
-          <Group h="100%" gap={12} visibleFrom="sm">
+          <Group h="100%"  visibleFrom="lg" >
             <a href="#about" className={classes.link}>
               About
             </a>
@@ -120,7 +120,7 @@ export function NavBar() {
             </a>
           </Group>
 
-          <Group visibleFrom="sm">
+          <Group visibleFrom="lg">
             <Button color={theme.colors.secondary[9]}>
               <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Book Now</a>
             </Button>
@@ -130,7 +130,7 @@ export function NavBar() {
           <Burger
             opened={drawerOpened}
             onClick={toggleDrawer}
-            hiddenFrom="sm"
+            hiddenFrom="lg"
             color="white"
           />
         </Group>
@@ -142,7 +142,7 @@ export function NavBar() {
         size="100%"
         padding="md"
         title="Navigation"
-        hiddenFrom="sm"
+        hiddenFrom="lg"
         zIndex={1000000}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
