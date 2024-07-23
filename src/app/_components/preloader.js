@@ -49,7 +49,7 @@ export default function Preloader() {
               matches
                 ? `url(${TransMob.src})`
                 : `url(${Trans.src})`,
-            backgroundSize: "cover",
+            backgroundSize: "contain",
             backgroundPosition: "center",
             zIndex: "50",
           }}
