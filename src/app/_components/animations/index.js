@@ -75,7 +75,7 @@ export const preLoaderAnim = () => {
       ".preloader-bottom",
       {
         duration: 0.2,
-        opacity: 0,
+        opacity: 0.5,
         clipPath: "circle(0% at 50% 50%)",
         ease: "Power3.easeOut",
       },
