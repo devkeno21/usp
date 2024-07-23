@@ -164,7 +164,7 @@ export function NavBar() {
               <a href="#fleets" className={`text-black `}>
                 Fleets
               </a>
-              <a href="#affiliates" className={classes.link}>
+              <a href="#affiliates" className={`text-black`}>
                 Affiliates
               </a>
               <a href="#contact" className={`text-black `}>
@@ -176,7 +176,7 @@ export function NavBar() {
             <Flex className="mx-auto gap-2 flex-wrap">
               <Button color={theme.colors.secondary[9]}>
                 {" "}
-                <a href="https://book.mylimobiz.com/v4/uspholdings">Book Now</a>
+                <a href="https://book.mylimobiz.com/v4/uspholdings" target="_blank">Book Now</a>
               </Button>
               <Button onClick={() => router.push("/vip")}>VIP Program</Button>
             </Flex>

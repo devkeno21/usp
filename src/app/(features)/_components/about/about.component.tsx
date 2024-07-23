@@ -32,7 +32,7 @@ export default function About() {
             "linear-gradient(90deg, rgba(0,0,0,1) 45%, rgba(0,0,0,0.3254551820728291) 93%)",
         }}
       />
-      <Flex className="justify-center flex-col gap-2 text-white ml-6 relative z-8">
+      <Flex className="justify-center flex-col gap-2 text-white md:ml-6 ml-4 relative z-8">
         <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
           About USP
         </Text>
@@ -41,7 +41,7 @@ export default function About() {
           className="w-[15%] md:w-[5%] p-1"
         ></Box>
       </Flex>
-        <Stack className="md:w-2/5 pt-4 p-6 relative z-8">
+        <Stack className="md:w-2/5 pt-4 p-4 md:p-6 relative z-8">
           <Text className="text-justify font-semibold text-md md:text-lg text-white">
             In 2008, USP Holdings expanded its corporate mission and engaged in
             shuttle bus and limousine services. Our transportation mission is to

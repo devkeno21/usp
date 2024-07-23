@@ -76,8 +76,8 @@ export default function Fleet() {
                     }}
                   />
 
-                  <Flex className="flex-col gap-1">
-                    <Text fz="xl" tt="capitalize" c="white">
+                  <Flex className="flex-col gap-1 ">
+                    <Text fz="xl" tt="capitalize" c="white" className="text-center">
                       {car.title}
                     </Text>
                     <Text c="white" className="text-center">

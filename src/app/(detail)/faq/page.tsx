@@ -51,7 +51,7 @@ export default function TermsAndConditions() {
         {faqGroups.map((group) => (
           <Flex
             key={group.title}
-            className="w-[calc(50%-1rem)] md:w-[calc(25%-0.5rem)] h-[80%] flex-col gap-2 bg-primary-900 text-white p-4 justify-center"
+            className="w-[calc(50%-1rem)] md:w-[calc(25%-0.5rem)] h-[80%] flex-col gap-2 bg-primary-900 text-white p-4 justify-center flex-grow"
           >
             <group.icon size={28} />
             <Text tt="capitalize" className="font-semibold text-2xl">
