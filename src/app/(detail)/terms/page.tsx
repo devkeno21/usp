@@ -138,7 +138,7 @@ export default function TermsAndConditions() {
               "linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0.3254551820728291) 63%)",
           }}
         />
-        <Flex className="justify-center  flex-col gap-2 text-white ml-12 z-10">
+        <Flex className="justify-center  flex-col gap-2 text-white ml-10 z-10">
           <Text tt="uppercase" className="text-xl md:text-5xl font-semibold">
             Terms and conditions
           </Text>
@@ -149,7 +149,7 @@ export default function TermsAndConditions() {
         </Flex>
         <ScrollArea
           h={250}
-          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-12 w-[45%]"
+          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-10 w-[45%]"
           styles={{
             thumb: {
               backgroundColor: "white",
