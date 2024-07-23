@@ -135,7 +135,7 @@ export default function TermsAndConditions() {
           className=" w-full h-[100%] absolute bottom-0 z-8"
           style={{
             background:
-              "linear-gradient(90deg, rgba(0,0,0,1) 35%, rgba(0,0,0,0.3254551820728291) 63%)",
+              "linear-gradient(90deg, rgba(0,0,0,1) 40%, rgba(0,0,0,0.3254551820728291) 63%)",
           }}
         />
         <Flex className="justify-center  flex-col gap-2 text-white ml-12 z-10">
@@ -149,7 +149,7 @@ export default function TermsAndConditions() {
         </Flex>
         <ScrollArea
           h={250}
-          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-12 w-[42%]"
+          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-12 w-[45%]"
           styles={{
             thumb: {
               backgroundColor: "white",
