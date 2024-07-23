@@ -149,7 +149,7 @@ export default function TermsAndConditions() {
         </Flex>
         <ScrollArea
           h={250}
-          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-10 w-[45%]"
+          className="min-h-[50dvh] md:min-h-[65dvh] items-center relative pt-2 p-8 pl-10 w-[43%]"
           styles={{
             thumb: {
               backgroundColor: "white",
