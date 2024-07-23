@@ -49,7 +49,7 @@ export default function Preloader() {
             justifyContent: "center",
             margin: "auto",
             clipPath: "circle(0% at 50% 50%)",
-            backgroundColor: "white",
+            backgroundColor: "black",
             // backgroundImage:
             //   matches == true
             //     ? `url(${MobileBg.src})` : matches == false ?
