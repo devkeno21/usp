@@ -156,7 +156,7 @@ export default function TermsAndConditions() {
             },
           }}
         >
-          <Stack gap={5}>
+          <Stack gap={12}>
             {terms.map((term) => (
               <Text
                 key={term.id}

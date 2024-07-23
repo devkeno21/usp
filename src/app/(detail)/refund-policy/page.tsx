@@ -37,7 +37,7 @@ export default function RefundPolicy() {
           >
             <Image height={700} width={700} src={Bg.src} alt="car"/>
           </Box>
-          <Box className="w-full flex flex-col justify-center font-semibold">
+          <Box className="w-full flex flex-col justify-center font-semibold text-lg">
             <p>
               Cancellations for airport/train station transfers or minimum
               charge bookings made within two hours of the collection time will

@@ -5,16 +5,20 @@ import { preLoaderAnim } from "./animations/index";
 import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
 import Trans from "./deskBg.png";
-import TransMob from "./mobileBg.png";
+import MobileBg from "./mobileBg.png"
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Preloader() {
   const matches = useMediaQuery("(max-width: 40em)", true, {
-    getInitialValueInEffect: false,
+    getInitialValueInEffect: true,
   });
+
   useEffect(() => {
     matches ? preLoaderAnimMob() : preLoaderAnim();
   }, [matches]);
+
+  console.log(matches)
+  
   return (
     <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
@@ -46,10 +50,11 @@ export default function Preloader() {
             margin: "auto",
             clipPath: "circle(0% at 50% 50%)",
             backgroundImage:
-              matches
-                ? `url(${TransMob.src})`
-                : `url(${Trans.src})`,
-            backgroundSize: "contain",
+              matches == true
+                ? `url(${MobileBg.src})` : matches == false ?
+                 `url(${Trans.src})` : null,
+            backgroundSize: matches ? "cover" : "contain",
+            backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             zIndex: "50",
           }}
