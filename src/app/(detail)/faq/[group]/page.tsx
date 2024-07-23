@@ -170,7 +170,7 @@ export default function DetailFaq() {
         />
        
         <Box className="p-8 md:p-6 md:pl-12">
-        <ScrollArea h={250} className="min-h-[50dvh] md:w-5/12 text-white" styles={{thumb: { backgroundColor: "white"}}}>
+        <ScrollArea h={250} className="min-h-[50dvh] md:w-[42%] text-white" styles={{thumb: { backgroundColor: "white"}}}>
           <Stack className="gap-4 p-4">
             {selectedGroup?.items.map((item) => (
               <Stack key={item.id}>
