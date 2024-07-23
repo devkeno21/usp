@@ -5,7 +5,7 @@ import {
   Stack,
   Text
 } from "@mantine/core";
-import Bg from "./bg.jpg";
+import Bg from "./bg.svg";
 import {
   IconArrowRight,
   IconBookmarkFilled,
