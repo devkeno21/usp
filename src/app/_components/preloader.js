@@ -14,63 +14,63 @@ export default function Preloader() {
   });
 
   useEffect(() => {
-    if (!sessionStorage.getItem("play"))
+    if (typeof window != "undefined" && !sessionStorage.getItem("play")) {
       matches ? preLoaderAnimMob() : preLoaderAnim();
-    setTimeout(function() {
-    sessionStorage.setItem("play", true);
-}, 5000);
+      setTimeout(function () {
+        sessionStorage.setItem("play", true);
+      }, 5000);
+    }
   }, [matches]);
 
-  console.log(matches);
 
-  if(sessionStorage.getItem("play")){
-    return
-  }
-
-  return (
-    <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
-      <div
-        className="preloader-top"
-        style={{
-          width: "100dvw",
-          height: "100dvh",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <div className="w-fit h-fit" style={{ zIndex: "100" }}>
-          <img
-            src={logo.src}
-            alt="Logo"
-            className="logo"
-            style={{ width: "0rem", height: "0rem" }}
-          />
-        </div>
+  if (typeof window != "undefined" && sessionStorage.getItem("play")) return null ;
+  else {
+    return (
+      <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
         <div
-          className="preloader-bottom"
+          className="preloader-top"
           style={{
             width: "100dvw",
             height: "100dvh",
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            margin: "auto",
-            clipPath: "circle(0% at 50% 50%)",
-            backgroundColor: "black",
-            // backgroundImage:
-            //   matches == true
-            //     ? `url(${MobileBg.src})` : matches == false ?
-            //      `url(${Trans.src})` : null,
-            backgroundSize: matches ? "cover" : "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            zIndex: "50",
           }}
-        ></div>
+        >
+          <div className="w-fit h-fit" style={{ zIndex: "100" }}>
+            <img
+              src={logo.src}
+              alt="Logo"
+              className="logo"
+              style={{ width: "0rem", height: "0rem" }}
+            />
+          </div>
+          <div
+            className="preloader-bottom"
+            style={{
+              width: "100dvw",
+              height: "100dvh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              margin: "auto",
+              clipPath: "circle(0% at 50% 50%)",
+              backgroundColor: "black",
+              // backgroundImage:
+              //   matches == true
+              //     ? `url(${MobileBg.src})` : matches == false ?
+              //      `url(${Trans.src})` : null,
+              backgroundSize: matches ? "cover" : "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              zIndex: "50",
+            }}
+          ></div>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+  
 }
 
 {
