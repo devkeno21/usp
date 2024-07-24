@@ -5,7 +5,7 @@ import { preLoaderAnim } from "./animations/index";
 import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
 import Trans from "./deskBg.png";
-import MobileBg from "./mobileBg.png"
+import MobileBg from "./mobileBg.png";
 import { useMediaQuery } from "@mantine/hooks";
 
 export default function Preloader() {
@@ -14,11 +14,19 @@ export default function Preloader() {
   });
 
   useEffect(() => {
-    matches ? preLoaderAnimMob() : preLoaderAnim();
+    if (!sessionStorage.getItem("play"))
+      matches ? preLoaderAnimMob() : preLoaderAnim();
+    setTimeout(function() {
+    sessionStorage.setItem("play", true);
+}, 5000);
   }, [matches]);
 
-  console.log(matches)
-  
+  console.log(matches);
+
+  if(sessionStorage.getItem("play")){
+    return
+  }
+
   return (
     <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
@@ -61,7 +69,12 @@ export default function Preloader() {
           }}
         ></div>
       </div>
-      {/* <div
+    </div>
+  );
+}
+
+{
+  /* <div
         className="preloader-bottom"
         style={{
           width: "50dvw",
@@ -80,7 +93,5 @@ export default function Preloader() {
             style={{ width: "20rem", height: "24rem" }}
           />
         </div>
-      </div> */}
-    </div>
-  );
+      </div> */
 }
