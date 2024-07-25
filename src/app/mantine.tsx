@@ -1,6 +1,6 @@
 "use client";
 
-import { MantineProvider, MantineThemeOverride } from "@mantine/core";
+import { Box, Loader, MantineProvider, MantineThemeOverride } from "@mantine/core";
 import { theme as baseTheme } from "@/config/theme";
 
 export default function RootStyleRegistry({
@@ -9,6 +9,8 @@ export default function RootStyleRegistry({
   children: React.ReactNode;
 }) {
   const theme: Partial<MantineThemeOverride> = baseTheme;
+
+  
 
   return <MantineProvider theme={theme} defaultColorScheme="light">{children}</MantineProvider>;
 }

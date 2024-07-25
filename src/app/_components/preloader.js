@@ -7,24 +7,33 @@ import logo from "./car-1.png";
 import Trans from "./deskBg.png";
 import MobileBg from "./mobileBg.png";
 import { useMediaQuery } from "@mantine/hooks";
+import { useAnimationStore } from "@/state/zustand/animation.state";
+import { getCookie, setCookie } from "cookies-next";
+import { Box, Loader } from "@mantine/core";
 
 export default function Preloader() {
   const matches = useMediaQuery("(max-width: 40em)", true, {
     getInitialValueInEffect: true,
   });
 
+  const setAnimationStatus = useAnimationStore(
+    (state) => state.setAnimationStatus
+  );
+  const animationStatus = useAnimationStore((state) => state.animationStatus);
+
   useEffect(() => {
-    if (typeof window != "undefined" && !sessionStorage.getItem("play")) {
+    if (!getCookie("play")) {
       matches ? preLoaderAnimMob() : preLoaderAnim();
-      setTimeout(function () {
-        sessionStorage.setItem("play", true);
-      }, 5000);
     }
-  }, [matches]);
+    setTimeout(function () {
+      setCookie("play", false, {
+        expires: new Date(new Date().getTime() + 5 * 60 * 1000),
+      });
+    }, 5000);
+  }, [matches, getCookie("play")]);
 
 
-  if (typeof window != "undefined" && sessionStorage.getItem("play")) return null ;
-  else {
+  if (!getCookie("play")) {
     return (
       <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
         <div
@@ -69,8 +78,7 @@ export default function Preloader() {
         </div>
       </div>
     );
-  }
-  
+  } else return null;
 }
 
 {

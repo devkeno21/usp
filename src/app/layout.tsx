@@ -10,15 +10,15 @@ import RootStyleRegistry from "./mantine";
 import { Notifications } from "@mantine/notifications";
 import Preloader from "./_components/preloader";
 import { Providers } from "@/state/provider";
+import AnimationWrap from "./animation-wrap";
 
 export const metadata: Metadata = {
   title: "USP",
   description: "USP Transportation",
   icons: {
     icon: "/usp-logo-white.png",
-  }
+  },
 };
-
 
 export default function RootLayout({
   children,
@@ -29,10 +29,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={centuryFont.className}>
         <Providers>
-          
           <RootStyleRegistry>
             <Notifications />
-            {children}
+            <AnimationWrap>{children}</AnimationWrap>
           </RootStyleRegistry>
         </Providers>
       </body>
