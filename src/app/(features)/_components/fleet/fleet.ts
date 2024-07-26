@@ -23,19 +23,23 @@ import Modelx2 from "./gallery/model-x/model-x2.jpg";
 import Modelx4 from "./gallery/model-x/model-x4.jpg";
 import Modelx5 from "./gallery/model-x/model-x5.jpg";
 import Modelx6 from "./gallery/model-x/model-x6.jpg";
-import Modelx7 from "./gallery/model-x/model-x7.jpg";
 
-import Models2 from "./gallery/model-s/model-s2.jpg";
-import Models3 from "./gallery/model-s/model-s3.jpg";
-import Models4 from "./gallery/model-s/model-s4.jpg";
 import Models5 from "./gallery/model-s/model-s5.jpg";
 import Models6 from "./gallery/model-s/model-s6.jpeg";
+import Models7 from "./gallery/model-s/model-s7.jpg";
+import Models8 from "./gallery/model-s/model-s8.jpg";
+import Models9 from "./gallery/model-s/model-s9.jpg";
+import Models10 from "./gallery/model-s/model-s10.jpg";
+import Models11 from "./gallery/model-s/model-s11.jpg";
 
 import RangeRover1 from "./gallery/range-rover/range-rover1.jpeg";
 import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
 import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
 import RangeRover4 from "./gallery/range-rover/range-rover4.jpeg";
-import RangeRover5 from "./gallery/range-rover/range-rover5.jpeg";
+import RangeRover5 from "./gallery/range-rover/range-rover5.jpg";
+import RangeRover6 from "./gallery/range-rover/range-rover5.jpg";
+import RangeRover7 from "./gallery/range-rover/range-rover5.jpg";
+import RangeRover8 from "./gallery/range-rover/range-rover5.jpg";
 
 import Escalade2 from "./gallery/escalade/escalade-2.jpg";
 import Escalade3 from "./gallery/escalade/escalade-3.jpeg";
@@ -165,6 +169,10 @@ export const fleet = [
       RangeRover2.src,
       RangeRover3.src,
       RangeRover4.src,
+      RangeRover5.src,
+      RangeRover6.src,
+      RangeRover7.src,
+      RangeRover8.src,
     ],
     features: [
       "Providing immense space with a power recline",
@@ -185,7 +193,15 @@ export const fleet = [
     imageUrl: Car6.src,
     bgUrl: Car6Bg.src,
     videoUrl: "-TSRWxqWSkk",
-    gallery: [Models2.src, Models3.src, Models4.src, Models5.src, Models6.src],
+    gallery: [
+      Models5.src,
+      Models6.src,
+      Models7.src,
+      Models8.src,
+      Models9.src,
+      Models10.src,
+      Models11.src,
+    ],
     features: [
       "Zero-emission electric",
       "Unparalleled execution in all weather conditions",
