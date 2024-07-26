@@ -19,7 +19,6 @@ import Modelx5 from "./gallery/model-x/model-x5.jpg";
 import Modelx6 from "./gallery/model-x/model-x6.jpg";
 import Modelx7 from "./gallery/model-x/model-x7.jpg";
 
-import Models1 from "./gallery/model-s/model-s1.jpg";
 import Models2 from "./gallery/model-s/model-s2.jpg";
 import Models3 from "./gallery/model-s/model-s3.jpg";
 import Models4 from "./gallery/model-s/model-s4.jpg";
@@ -31,17 +30,14 @@ import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
 import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
 import RangeRover4 from "./gallery/range-rover/range-rover4.jpeg";
 import RangeRover5 from "./gallery/range-rover/range-rover5.jpeg";
-import RangeRover6 from "./gallery/range-rover/range-rover6.png";
-import RangeRover7 from "./gallery/range-rover/range-rover7.png";
 
-import Escalade1 from "./gallery/escalade/escalade-1.jpeg";
+
 import Escalade2 from "./gallery/escalade/escalade-2.jpeg";
 import Escalade3 from "./gallery/escalade/escalade-3.jpeg";
 import Escalade4 from "./gallery/escalade/escalade-4.jpeg";
 import Escalade5 from "./gallery/escalade/escalade-5.png";
 import Escalade6 from "./gallery/escalade/escalade-6.png";
 
-import Sprinter1 from "./gallery/sprinter/sprinter-1.jpg";
 import Sprinter2 from "./gallery/sprinter/sprinter-2.jpeg";
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
 import Sprinter5 from "./gallery/sprinter/sprinter-5.jpg";
@@ -72,7 +68,7 @@ export const fleet = [
     brand: "Mercedes",
     description: `The Mercedes E-Class combines exceptional design and innovative technology to provide a seamless journey. Perfect for any executive, this modern vehicle works with comprehensive and intelligent technology to enhance your trip, whether it be to a business meeting or a sporting event. Get there effortlessly with our Mercedes E-Class sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.`,
     titleDesc: "Luxury Seating for up to 6",
-    seats: 6,
+    seats: 3,
     fleetType: "Executive Sedan",
     price: "$110",
     imageUrl: Car4.src,
@@ -101,12 +97,11 @@ export const fleet = [
     titleDesc: "Luxury Seating for up to 6",
     seats: 6,
     fleetType: "Luxury Sedan",
-    price: "$125",
+    price: "$150",
     imageUrl: Car1.src,
     bgUrl: Car2.src,
     videoUrl:"lTVEkHfUKLk",
     gallery: [
-      Escalade1.src,
       Escalade2.src,
       Escalade3.src,
       Escalade4.src,
@@ -125,7 +120,7 @@ export const fleet = [
     description:
       "When you require the ultimate luxury SUV, look no further than our Range Rover Vogue. Providing immense space with a power recline and heated leather rear seats, the panoramic roof delivers excellent natural light to the vehicle. Also available with a long-wheelbase option for extra comfort.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
-    seats: 6,
+    seats: 4,
     fleetType: "LUXURY",
     price: "$150",
     imageUrl: Car5.src,
@@ -136,9 +131,6 @@ export const fleet = [
       RangeRover2.src,
       RangeRover3.src,
       RangeRover4.src,
-      RangeRover5.src,
-      RangeRover6.src,
-      RangeRover7.src,
     ],
     features: [
       "Providing immense space with a power recline",
@@ -152,14 +144,13 @@ export const fleet = [
     description:
       "Enter the eco fleet; the zero-emission electric Tesla Model S sets an industry standard for performance and safety. Tesla's all-electric power train delivers unparalleled execution in all weather conditions. Do your bit for the environment without compromising style by traveling in the world's first-ever premium all-electric sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
-    seats: 6,
+    seats: 3,
     fleetType: "LUXURY",
     price: "$95",
     imageUrl: Car6.src,
     bgUrl: Car6Bg.src,
     videoUrl:"-TSRWxqWSkk",
     gallery: [
-      Models1.src,
       Models2.src,
       Models3.src,
       Models4.src,
@@ -178,7 +169,7 @@ export const fleet = [
     description:
       "Ultimate comfort, elegantly designed, and exceptional chauffeur vehicle.  luxuriously equipped with exquisite, comfortable leather massage seats and rear entertainment screens\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 5",
-    seats: 5,
+    seats: 3,
     fleetType: "LUXURY",
     price: "$150",
     imageUrl: Sclass.src,
@@ -204,7 +195,7 @@ export const fleet = [
     description:
       "The Tesla Model X is deemed one of the safest SUV's ever. Built from the ground up as an electric vehicle, the body, chassis, restraints, and battery technology provide a very low probability of occupant injury. The Tesla X is a zero-emission, all-electric vehicle without compromising performance, speed, or comfort.\n\n*Includes 15% discount  \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations between 22:00 pm and 06:00 am will only be effective from 06:00 am.\n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
-    seats: 6,
+    seats: 4,
     fleetType: "LUXURY",
     price: "$110",
     imageUrl: Car7.src,
@@ -217,7 +208,6 @@ export const fleet = [
       Modelx4.src,
       Modelx5.src,
       Modelx6.src,
-      Modelx7.src,
     ],
     features: [
       "One of the safest SUV's ever",
@@ -231,14 +221,13 @@ export const fleet = [
     description:
       "You can maintain comfort and luxury, even when transporting more prominent groups. Our Mercedes Sprinter enables you to travel easily with executive-style leather seating, ample space, and a safe, comfortable ride, providing a pleasant commute for you and your colleagues/friends. Perfect for more significant group events and functions. Get to your destination conveniently and restfully with our Mercedes Sprinter.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
-    seats: 6,
+    seats: 14,
     fleetType: "LUXURY",
     price: "$150",
     imageUrl: Car8.src,
     bgUrl: Car8.src,
     videoUrl:"BxAVmcpXIqo",
     gallery: [
-      Sprinter1.src,
       Sprinter2.src,
       Sprinter4.src,
       Sprinter5.src,
@@ -257,7 +246,7 @@ export const fleet = [
     description:
       "Travel in luxury and arrive in style on board one of our executive coaches, available in varying passenger sizes, ranging from 19 to 57 passenger vehicles. With immaculate interior features, including a rear lounge area, kitchen facilities, color lighting, and hostess service available on board (on selected coaches); these coaches are the pinnacle of excellence, sophistication, and the perfect start to your event.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am.\n \nPlease get in touch with us for further details.",
     titleDesc: "33/43/53/70 Passenger Coaches",
-    seats: 70,
+    seats: 72,
     fleetType: "LUXURY",
     price: "$345",
     imageUrl: Car9.src,

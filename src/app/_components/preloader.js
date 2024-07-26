@@ -8,7 +8,7 @@ import Trans from "./deskBg.png";
 import MobileBg from "./mobileBg.png";
 import { useMediaQuery } from "@mantine/hooks";
 import { useAnimationStore } from "@/state/zustand/animation.state";
-import { getCookie, setCookie } from "cookies-next";
+import { deleteCookie, getCookie, setCookie } from "cookies-next";
 import { Box, Loader } from "@mantine/core";
 
 export default function Preloader() {
@@ -22,6 +22,20 @@ export default function Preloader() {
   const animationStatus = useAnimationStore((state) => state.animationStatus);
 
   useEffect(() => {
+    const cookieValue = getCookie("play");
+    if (cookieValue) {
+      const [value, expiration] = cookieValue.split("|");
+      const now = new Date().getTime();
+      const expirationTime = parseInt(expiration, 10);
+
+      if (now > expirationTime) {
+        // Cookie has expired, delete it
+        deleteCookie("play");
+      }
+    }
+  }, [getCookie("play")]);
+
+  useEffect(() => {
     if (!getCookie("play")) {
       matches ? preLoaderAnimMob() : preLoaderAnim();
     }
@@ -31,7 +45,6 @@ export default function Preloader() {
       });
     }, 5000);
   }, [matches, getCookie("play")]);
-
 
   if (!getCookie("play")) {
     return (
