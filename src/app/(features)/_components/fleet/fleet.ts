@@ -9,7 +9,13 @@ import Car6Bg from "./s-bg.png";
 import Car7 from "./car-7.png";
 import Car7Bg from "./x-bg.png";
 import Car8 from "./sprinter.png";
+
 import Car9 from "./car-9.png";
+import Coach1 from "./gallery/coach/coach-1.jpg";
+import Coach2 from "./gallery/coach/coach-2.jpg";
+import Coach3 from "./gallery/coach/coach-3.jpg";
+import Coach4 from "./gallery/coach/coach-4.jpg";
+import Coach5 from "./gallery/coach/coach-5.jpg";
 
 import Modelx1 from "./gallery/model-x/model-x1.jpg";
 import Modelx2 from "./gallery/model-x/model-x2.jpg";
@@ -31,18 +37,24 @@ import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
 import RangeRover4 from "./gallery/range-rover/range-rover4.jpeg";
 import RangeRover5 from "./gallery/range-rover/range-rover5.jpeg";
 
-
-import Escalade2 from "./gallery/escalade/escalade-2.jpeg";
+import Escalade2 from "./gallery/escalade/escalade-2.jpg";
 import Escalade3 from "./gallery/escalade/escalade-3.jpeg";
 import Escalade4 from "./gallery/escalade/escalade-4.jpeg";
 import Escalade5 from "./gallery/escalade/escalade-5.png";
 import Escalade6 from "./gallery/escalade/escalade-6.png";
+import Escalade7 from "./gallery/escalade/escalade-7.jpg";
+import Escalade8 from "./gallery/escalade/escalade-8.jpg";
+import Escalade9 from "./gallery/escalade/escalade-9.jpg";
+import Escalade10 from "./gallery/escalade/escalade-10.jpg";
 
 import Sprinter2 from "./gallery/sprinter/sprinter-2.jpeg";
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
 import Sprinter5 from "./gallery/sprinter/sprinter-5.jpg";
 import Sprinter6 from "./gallery/sprinter/sprinter-6.png";
 import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
+import Sprinter8 from "./gallery/sprinter/sprinter-8.jpg";
+import Sprinter9 from "./gallery/sprinter/sprinter-9.jpg";
+import Sprinter10 from "./gallery/sprinter/sprinter-10.jpg";
 
 import Eclass1 from "./gallery/e-class/eclass1.jpg";
 import Eclass2 from "./gallery/e-class/eclass2.jpg";
@@ -51,15 +63,26 @@ import Eclass4 from "./gallery/e-class/eclass4.jpg";
 import Eclass5 from "./gallery/e-class/eclass5.jpg";
 import Eclass6 from "./gallery/e-class/eclass6.jpg";
 import Eclass7 from "./gallery/e-class/eclass7.jpg";
+import Eclass8 from "./gallery/e-class/eclass8.jpg";
+import Eclass9 from "./gallery/e-class/eclass9.jpg";
+import Eclass10 from "./gallery/e-class/eclass10.jpg";
+import Eclass11 from "./gallery/e-class/eclass11.jpg";
 
-import SBg from "./ms-bg.png"
-import Sclass from "./gallery/s-class/s-class.png"
+import SBg from "./ms-bg.png";
+import Sclass from "./gallery/s-class/s-class.png";
 import Sclass1 from "./gallery/s-class/s-class1.jpeg";
 import Sclass2 from "./gallery/s-class/s-class2.jpeg";
 import Sclass3 from "./gallery/s-class/s-class3.jpg";
 import Sclass4 from "./gallery/s-class/s-class4.jpg";
 import Sclass5 from "./gallery/s-class/s-class5.jpeg";
 import Sclass6 from "./gallery/s-class/s-class6.jpeg";
+import Sclass7 from "./gallery/s-class/s-class7.jpg";
+import Sclass8 from "./gallery/s-class/s-class8.jpg";
+import Sclass9 from "./gallery/s-class/s-class9.jpg";
+import Sclass10 from "./gallery/s-class/s-class10.jpg";
+import Sclass11 from "./gallery/s-class/s-class11.jpg";
+import Sclass12 from "./gallery/s-class/s-class12.jpg";
+import Sclass13 from "./gallery/s-class/s-class13.jpg";
 
 export const fleet = [
   {
@@ -74,7 +97,7 @@ export const fleet = [
     price: "$110",
     imageUrl: Car4.src,
     bgUrl: Car3Bg.src,
-    videoUrl:"_YZV22g_CZg",
+    videoUrl: "_YZV22g_CZg",
     gallery: [
       Eclass1.src,
       Eclass2.src,
@@ -83,6 +106,10 @@ export const fleet = [
       Eclass5.src,
       Eclass6.src,
       Eclass7.src,
+      Eclass8.src,
+      Eclass9.src,
+      Eclass10.src,
+      Eclass11.src,
     ],
     features: [
       "Exceptional design and innovative technology ",
@@ -102,13 +129,17 @@ export const fleet = [
     price: "$150",
     imageUrl: Car1.src,
     bgUrl: Car2.src,
-    videoUrl:"lTVEkHfUKLk",
+    videoUrl: "lTVEkHfUKLk",
     gallery: [
       Escalade2.src,
       Escalade3.src,
       Escalade4.src,
       Escalade5.src,
       Escalade6.src,
+      Escalade7.src,
+      Escalade8.src,
+      Escalade9.src,
+      Escalade10.src,
     ],
     features: [
       "Full-size SUV that offers high-end features",
@@ -128,7 +159,7 @@ export const fleet = [
     price: "$150",
     imageUrl: Car5.src,
     bgUrl: Car5Bg.src,
-    videoUrl:"SBQlKwZnIFA",
+    videoUrl: "SBQlKwZnIFA",
     gallery: [
       RangeRover1.src,
       RangeRover2.src,
@@ -153,14 +184,8 @@ export const fleet = [
     price: "$95",
     imageUrl: Car6.src,
     bgUrl: Car6Bg.src,
-    videoUrl:"-TSRWxqWSkk",
-    gallery: [
-      Models2.src,
-      Models3.src,
-      Models4.src,
-      Models5.src,
-      Models6.src,
-    ],
+    videoUrl: "-TSRWxqWSkk",
+    gallery: [Models2.src, Models3.src, Models4.src, Models5.src, Models6.src],
     features: [
       "Zero-emission electric",
       "Unparalleled execution in all weather conditions",
@@ -179,7 +204,7 @@ export const fleet = [
     price: "$150",
     imageUrl: Sclass.src,
     bgUrl: SBg.src,
-    videoUrl:"-4zsY28t76k",
+    videoUrl: "-4zsY28t76k",
     gallery: [
       Sclass1.src,
       Sclass2.src,
@@ -187,6 +212,13 @@ export const fleet = [
       Sclass4.src,
       Sclass5.src,
       Sclass6.src,
+      Sclass7.src,
+      Sclass8.src,
+      Sclass9.src,
+      Sclass10.src,
+      Sclass11.src,
+      Sclass12.src,
+      Sclass13.src,
     ],
     features: [
       "Highly advanced air suspension ",
@@ -206,7 +238,7 @@ export const fleet = [
     price: "$110",
     imageUrl: Car7.src,
     bgUrl: Car7Bg.src,
-    videoUrl:"LLZtGpduhas",
+    videoUrl: "LLZtGpduhas",
     gallery: [
       //   Modelx3.src,
       Modelx1.src,
@@ -233,13 +265,16 @@ export const fleet = [
     price: "$150",
     imageUrl: Car8.src,
     bgUrl: Car8.src,
-    videoUrl:"BxAVmcpXIqo",
+    videoUrl: "BxAVmcpXIqo",
     gallery: [
       Sprinter2.src,
       Sprinter4.src,
       Sprinter5.src,
       Sprinter6.src,
       Sprinter7.src,
+      Sprinter8.src,
+      Sprinter9.src,
+      Sprinter10.src,
     ],
     features: [
       "Transporting more prominent groups",
@@ -259,8 +294,15 @@ export const fleet = [
     price: "$345",
     imageUrl: Car9.src,
     bgUrl: Car9.src,
-    videoUrl:"mScks7rqtwM",
-    gallery: [Car9.src],
+    videoUrl: "mScks7rqtwM",
+    gallery: [
+      Car9.src,
+      Coach1.src,
+      Coach2.src,
+      Coach3.src,
+      Coach4.src,
+      Coach5.src,
+    ],
     features: [
       "Travel in luxury and arrive in style",
       "Available in varying passenger sizes",
