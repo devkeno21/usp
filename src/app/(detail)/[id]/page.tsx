@@ -32,6 +32,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { useParams, useRouter } from "next/navigation";
 import whiteCar from "./white-car.png";
 import { fleet } from "@/app/(features)/_components/fleet/fleet";
+import { Luggage } from "./_components/luggage";
 
 export default function DetailFleet() {
   const theme = useMantineTheme();
@@ -151,6 +152,10 @@ export default function DetailFleet() {
               <Group gap={4}>
                 <Seats />
                 <p className="font-semibold">{car.seats} Seats</p>
+              </Group>
+              <Group gap={4}>
+                <Luggage />
+                <p className="font-semibold">{car.seats} KG</p>
               </Group>
             </Flex>
             <FormatedText text={car.description} />
