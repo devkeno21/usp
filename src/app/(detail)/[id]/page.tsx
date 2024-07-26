@@ -16,6 +16,7 @@ import YouTube from "react-youtube";
 import {
   IconArrowLeft,
   IconArrowRight,
+  IconLuggage,
   IconPoint,
   IconStar,
 } from "@tabler/icons-react";
@@ -154,7 +155,7 @@ export default function DetailFleet() {
                 <p className="font-semibold">{car.seats} Seats</p>
               </Group>
               <Group gap={4}>
-                <Luggage />
+                <IconLuggage color={"#9A1F21"} size={25}/>
                 <p className="font-semibold">{car.seats} KG</p>
               </Group>
             </Flex>
