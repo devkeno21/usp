@@ -123,7 +123,8 @@ export default function Fleet() {
                           {car.title}
                         </Text>
                         <Text c="white" className="text-center">
-                          {car.titleDesc}
+                          {/* {car.titleDesc} */}
+                          Luxury Seating for up to {car.seats}
                         </Text>
                         <Text tt="capitalize" c="white" className="text-center">
                           {car.fleetType}
