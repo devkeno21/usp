@@ -150,7 +150,7 @@ export const fleet = [
   {
     id: 4,
     title: "Range Rover Vogue",
-    brand: "Range Rover",
+    brand: "RangeRover",
     description:
       "When you require the ultimate luxury SUV, look no further than our Range Rover Vogue. Providing immense space with a power recline and heated leather rear seats, the panoramic roof delivers excellent natural light to the vehicle. Also available with a long-wheelbase option for extra comfort.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -265,7 +265,7 @@ export const fleet = [
   {
     id: 7,
     title: "Executive Minibus (Mercedes Sprinter)",
-    brand: "Marcedes",
+    brand: "Mercedes",
     description:
       "You can maintain comfort and luxury, even when transporting more prominent groups. Our Mercedes Sprinter enables you to travel easily with executive-style leather seating, ample space, and a safe, comfortable ride, providing a pleasant commute for you and your colleagues/friends. Perfect for more significant group events and functions. Get to your destination conveniently and restfully with our Mercedes Sprinter.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -294,7 +294,7 @@ export const fleet = [
   {
     id: 8,
     title: "Executive Coach",
-    brand: "Executive Coach",
+    brand: "ExecutiveCoach",
     description:
       "Travel in luxury and arrive in style on board one of our executive coaches, available in varying passenger sizes, ranging from 19 to 57 passenger vehicles. With immaculate interior features, including a rear lounge area, kitchen facilities, color lighting, and hostess service available on board (on selected coaches); these coaches are the pinnacle of excellence, sophistication, and the perfect start to your event.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am.\n \nPlease get in touch with us for further details.",
     titleDesc: "33/43/53/70 Passenger Coaches",

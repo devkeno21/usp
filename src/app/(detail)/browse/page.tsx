@@ -6,6 +6,7 @@ import {
   Checkbox,
   Flex,
   Group,
+  RangeSlider,
   Slider,
   Stack,
   Text,
@@ -22,12 +23,60 @@ import {
 import { Accordion } from "@mantine/core";
 import { useRouter } from "next/navigation";
 import { fleet } from "@/app/(features)/_components/fleet/fleet";
-import { Metadata } from "next";
-
+import { useState } from "react";
 
 export default function Browse() {
   const theme = useMantineTheme();
   const router = useRouter();
+  const [carBrand, setCarBrand] = useState<string[]>([]);
+  const [filteredFleets,setFilteredFleets] = useState(fleet)
+  const [priceRange, setPriceRange] = useState<[number,number]>([95, 345]);
+  const [seats,setSeats] = useState<number[]>([]);
+
+  const onCarBrandChange = (brand: string) => {
+    if (carBrand.includes(brand)) {
+      setCarBrand(carBrand.filter((b) => b !== brand));
+    } else {
+      setCarBrand([...carBrand, brand]);
+    }
+  };
+  const onCarSeatChange = (seat: number) => {
+    if (seats.includes(seat)) {
+      setSeats(seats.filter((s) => s !== seat));
+    } else {
+      setSeats([...seats, seat]);
+    }
+  };
+
+  const onFilter =()=>{
+    let temp =[...fleet];
+    // filter by brand
+    if(carBrand.length>0){
+      temp = temp.filter(f=>carBrand.includes(f.brand));
+    }
+
+    // filter by seats
+    if(seats.length>0){
+      temp = temp.filter(f=>seats.includes(f.seats))
+    }
+    //filter by price
+    temp= temp.filter(f=>{
+      const price = parseFloat(f.price.replace(/[^0-9.]/g, ''))
+      return price>=priceRange[0] && price<=priceRange[1]})
+
+    setFilteredFleets(temp)
+  }
+
+  const onReset = ()=>{
+    setCarBrand([])
+    setSeats([])
+    setPriceRange([95, 345])
+    setFilteredFleets(fleet)
+  }
+
+  const onSearch=(query:string)=>{
+    setFilteredFleets(fleet.filter(f=>f.title.toLowerCase().includes(query.toLowerCase())))
+  }
   return (
     <>
       <Breadcrumb
@@ -37,105 +86,161 @@ export default function Browse() {
         ]}
       />
 
-      <Box  className="p-5 flex flex-col md:flex-row gap-10">
+      <Box className="p-5 flex flex-col md:flex-row gap-10">
         <Box className="w-full md:w-1/3 px-10 bg-white">
-          
-            <Flex justify="space-between">
-              <p className="font-semibold text-xl">Filter By</p>
-              <p className="text-sm text-slate-500 flex gap-2 items-center">
-                Reset All <IconX size={14} />
-              </p>
-            </Flex>
+          <Flex justify="space-between">
+            <p className="font-semibold text-xl">Filter By</p>
+            <p className="text-sm text-slate-500 flex gap-2 items-center cursor-pointer" onClick={onReset}>
+              Reset All <IconX size={14} />
+            </p>
+          </Flex>
 
-            <TextInput
-              placeholder="Search"
-              rightSection={<IconSearch size={14} />}
-              className="my-2 border rounded"
-              styles={{
-                input: {
-                  color: "black",
-                },
-              }}
-            />
+          <TextInput
+            placeholder="Search"
+            rightSection={<IconSearch size={14} />}
+            className="my-2 border rounded"
+            styles={{
+              input: {
+                color: "black",
+              },
+            }}
+            onChange={e=>onSearch(e.target.value)}
+          />
 
-            <Accordion>
-              <Accordion.Item value="rentalType" className="mt-5">
-                <Accordion.Control className="text-semibold">
-                  Rental Type
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <Group justify="space-between">
-                    <Button color="black" variant="outline" size="xs" px={25}>
-                      Any
-                    </Button>
-                    <Button color="black" variant="outline" size="xs" px={25}>
-                      Instant
-                    </Button>
-                    <Button color="black" variant="outline" size="xs" px={25}>
-                      Hourly
-                    </Button>
-                  </Group>
-                </Accordion.Panel>
-              </Accordion.Item>
+          <Accordion>
+            <Accordion.Item value="rentalType" className="mt-5">
+              <Accordion.Control className="text-semibold">
+                Rental Type
+              </Accordion.Control>
+              <Accordion.Panel>
+                <Group justify="space-between">
+                  <Button color="black" variant="outline" size="xs" px={25}>
+                    Any
+                  </Button>
+                  <Button color="black" variant="outline" size="xs" px={25}>
+                    Instant
+                  </Button>
+                  <Button color="black" variant="outline" size="xs" px={25}>
+                    Hourly
+                  </Button>
+                </Group>
+              </Accordion.Panel>
+            </Accordion.Item>
 
-              <Accordion.Item value="price" className="mt-5">
-                <Accordion.Control className="text-semibold">
-                  Price Per Hour
-                </Accordion.Control>
-                <Accordion.Panel>
-                  <Slider color={theme.colors.secondary[9]} />
-                </Accordion.Panel>
-              </Accordion.Item>
+            <Accordion.Item value="price" className="mt-5">
+              <Accordion.Control className="text-semibold">
+                Price Per Hour
+              </Accordion.Control>
+              <Accordion.Panel>
+                <RangeSlider color={theme.colors.secondary[9]} min={95} max={345} value={priceRange} onChange={setPriceRange}/>
+              </Accordion.Panel>
+            </Accordion.Item>
 
-              <Accordion.Item value="brand" className="mt-5">
-                <Accordion.Control className="text-semibold">
-                  Car Brand
-                </Accordion.Control>
-                <Accordion.Panel >
-                  <Box className="grid grid-cols-3 ">
-                  <Checkbox label="Mercedes Benz" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="Sedan" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="Cadilac" color={theme.colors.secondary[9]} size="xs"/>
-
-                  </Box>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="style" className="mt-5">
-                <Accordion.Control className="text-semibold">
-                  Body Style
-                </Accordion.Control>
-                <Accordion.Panel>
-                <Box className="grid grid-cols-3 gap-5">
-                  <Checkbox label="Sedan" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="SUV" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="Crossover" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="Wagon" color={theme.colors.secondary[9]} size="xs"/>
-
-                  </Box>
-                </Accordion.Panel>
-              </Accordion.Item>
-
-              <Accordion.Item value="seats" className="mt-5">
-                <Accordion.Control className="text-semibold">
-                  Seats
-                </Accordion.Control>
-                <Accordion.Panel>
+            <Accordion.Item value="brand" className="mt-5">
+              <Accordion.Control className="text-semibold">
+                Car Brand
+              </Accordion.Control>
+              <Accordion.Panel>
                 <Box className="grid grid-cols-3 ">
-                  <Checkbox label="4 Seats" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="2 Seats" color={theme.colors.secondary[9]} size="xs"/>
-                  <Checkbox label="6 Seats" color={theme.colors.secondary[9]} size="xs"/>
+                  <Checkbox
+                    label="Mercedes Benz"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    checked={carBrand.includes("Mercedes")}
+                    onChange={() => onCarBrandChange("Mercedes")}
+                  />
+                  <Checkbox
+                    label="Tesla"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    checked={carBrand.includes("Tesla")}
+                    onChange={() => onCarBrandChange("Tesla")}
+                  />
+                  <Checkbox
+                    label="Cadilac"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    checked={carBrand.includes("Cadilac")}
+                    onChange={() => onCarBrandChange("Cadilac")}
+                  />
+                </Box>
+              </Accordion.Panel>
+            </Accordion.Item>
 
-                  </Box>
-                </Accordion.Panel>
-              </Accordion.Item>
-            </Accordion>
+            <Accordion.Item value="style" className="mt-5">
+              <Accordion.Control className="text-semibold">
+                Body Style
+              </Accordion.Control>
+              <Accordion.Panel>
+                <Box className="grid grid-cols-3 gap-5">
+                  <Checkbox
+                    label="Sedan"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                  />
+                  <Checkbox
+                    label="SUV"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                  />
+                  <Checkbox
+                    label="Crossover"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                  />
+                  <Checkbox
+                    label="Wagon"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                  />
+                </Box>
+              </Accordion.Panel>
+            </Accordion.Item>
 
-            <Button className="mt-10" color={theme.colors.secondary[9]} fullWidth size="xl">Filter</Button>
-          
+            <Accordion.Item value="seats" className="mt-5">
+              <Accordion.Control className="text-semibold">
+                Seats
+              </Accordion.Control>
+              <Accordion.Panel>
+                <Box className="grid grid-cols-3 ">
+                  <Checkbox
+                    label="4 Seats"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    onChange={() => onCarSeatChange(4)}
+                    checked={seats.includes(4)}
+                  />
+                  <Checkbox
+                    label="3 Seats"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    onChange={() => onCarSeatChange(3)}
+                    checked={seats.includes(3)}
+                  />
+                  <Checkbox
+                    label="6 Seats"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    onChange={() => onCarSeatChange(6)}
+                    checked={seats.includes(6)}
+                  />
+                </Box>
+              </Accordion.Panel>
+            </Accordion.Item>
+          </Accordion>
+
+          <Button
+            className="mt-10"
+            color={theme.colors.secondary[9]}
+            fullWidth
+            size="xl"
+            onClick={onFilter}
+          >
+            Filter
+          </Button>
         </Box>
         <Box className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-5">
-          {fleet.map((car, index) => (
+          {filteredFleets.map((car, index) => (
             <Box className="relative w-full" key={index} h={300}>
               <Box className="h-full w-full absolute top-0">
                 <Stack className="h-full items-center gap-2 bg-red-800  hover:opacity-0">
@@ -165,7 +270,7 @@ export default function Browse() {
                       color={theme.colors.primary[9]}
                       className="m-4"
                       rightSection={<IconArrowRight />}
-                      onClick={()=>router.push(car.id.toString())}
+                      onClick={() => router.push(car.id.toString())}
                     >
                       View Details
                     </Button>
@@ -233,7 +338,7 @@ export default function Browse() {
                           size="xs"
                           color={theme.colors.secondary[9]}
                           rightSection={<IconArrowRight />}
-                          onClick={()=>router.push(car.id.toString())}
+                          onClick={() => router.push(car.id.toString())}
                         >
                           View Details
                         </Button>
