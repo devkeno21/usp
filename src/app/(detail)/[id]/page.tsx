@@ -156,7 +156,7 @@ export default function DetailFleet() {
               </Group>
               <Group gap={4}>
                 <IconLuggage color={"#9A1F21"} size={25}/>
-                <p className="font-semibold">{car.seats} KG</p>
+                <p className="font-semibold">{car.seats}</p>
               </Group>
             </Flex>
             <FormatedText text={car.description} />
