@@ -270,7 +270,8 @@ export const fleet = [
   },
   {
     id: 7,
-    title: "Executive Minibus (Mercedes Sprinter)",
+    // title: "Executive Minibus (Mercedes Sprinter)",
+    title: "Mercedes Sprinter",
     brand: "Mercedes",
     type:"Van",
     description:
