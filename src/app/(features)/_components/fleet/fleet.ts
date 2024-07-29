@@ -74,12 +74,9 @@ import Eclass11 from "./gallery/e-class/eclass11.jpg";
 
 import SBg from "./ms-bg.png";
 import Sclass from "./gallery/s-class/s-class.png";
-import Sclass1 from "./gallery/s-class/s-class1.jpeg";
-import Sclass2 from "./gallery/s-class/s-class2.jpeg";
 import Sclass3 from "./gallery/s-class/s-class3.jpg";
 import Sclass4 from "./gallery/s-class/s-class4.jpg";
 import Sclass5 from "./gallery/s-class/s-class5.jpeg";
-import Sclass6 from "./gallery/s-class/s-class6.jpeg";
 import Sclass7 from "./gallery/s-class/s-class7.jpg";
 import Sclass8 from "./gallery/s-class/s-class8.jpg";
 import Sclass9 from "./gallery/s-class/s-class9.jpg";
@@ -222,12 +219,9 @@ export const fleet = [
     bgUrl: SBg.src,
     videoUrl: "-4zsY28t76k",
     gallery: [
-      Sclass1.src,
-      Sclass2.src,
       Sclass3.src,
       Sclass4.src,
       Sclass5.src,
-      Sclass6.src,
       Sclass7.src,
       Sclass8.src,
       Sclass9.src,
