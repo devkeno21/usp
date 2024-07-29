@@ -90,6 +90,7 @@ export const fleet = [
     id: 1,
     title: "Mercedes E Class",
     brand: "Mercedes",
+    type:"Sedan",
     description: `The Mercedes E-Class combines exceptional design and innovative technology to provide a seamless journey. Perfect for any executive, this modern vehicle works with comprehensive and intelligent technology to enhance your trip, whether it be to a business meeting or a sporting event. Get there effortlessly with our Mercedes E-Class sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.`,
     titleDesc: "Luxury Seating for up to 6",
     seats: 3,
@@ -121,6 +122,7 @@ export const fleet = [
     id: 3,
     title: "Escalade ESV Luxury SUV",
     brand: "Cadilac",
+    type:"Suv",
     description:
       "The Escalade is a luxury full-size SUV that offers high-end features, a plush ride, and powerful engine options.  The Escalade’s interior boasts luxury amenities such as semi-aniline leather seats, aluminum speaker grilles, adjustable interior ambient lighting, and a curved OLED digital dashboard that houses both the driver’s gauge cluster and infotainment system. The SUV also offers advanced technology features like Super Cruise adaptive cruise control, which enables hands-free driving, and an augmented reality navigation system. Apple CarPlay/Android Auto integration and a Wi-Fi hotspot are also standard.",
     titleDesc: "Luxury Seating for up to 6",
@@ -151,6 +153,7 @@ export const fleet = [
     id: 4,
     title: "Range Rover Vogue",
     brand: "RangeRover",
+    type:"Suv",
     description:
       "When you require the ultimate luxury SUV, look no further than our Range Rover Vogue. Providing immense space with a power recline and heated leather rear seats, the panoramic roof delivers excellent natural light to the vehicle. Also available with a long-wheelbase option for extra comfort.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -180,6 +183,7 @@ export const fleet = [
     id: 5,
     title: "Executive Eco Sedan (Tesla Model S)",
     brand: "Tesla",
+    type:"Sedan",
     description:
       "Enter the eco fleet; the zero-emission electric Tesla Model S sets an industry standard for performance and safety. Tesla's all-electric power train delivers unparalleled execution in all weather conditions. Do your bit for the environment without compromising style by traveling in the world's first-ever premium all-electric sedan.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -208,6 +212,7 @@ export const fleet = [
     id: 9,
     title: "Mercedes-Benz S-Class",
     brand: "Mercedes",
+    type:"Sedan",
     description:
       "Ultimate comfort, elegantly designed, and exceptional chauffeur vehicle.  luxuriously equipped with exquisite, comfortable leather massage seats and rear entertainment screens\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 5",
@@ -239,6 +244,7 @@ export const fleet = [
     id: 6,
     title: "Executive Eco SUV (Tesla Model X)",
     brand: "Tesla",
+    type:"Suv",
     description:
       "The Tesla Model X is deemed one of the safest SUV's ever. Built from the ground up as an electric vehicle, the body, chassis, restraints, and battery technology provide a very low probability of occupant injury. The Tesla X is a zero-emission, all-electric vehicle without compromising performance, speed, or comfort.\n\n*Includes 15% discount  \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations between 22:00 pm and 06:00 am will only be effective from 06:00 am.\n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -266,6 +272,7 @@ export const fleet = [
     id: 7,
     title: "Executive Minibus (Mercedes Sprinter)",
     brand: "Mercedes",
+    type:"Van",
     description:
       "You can maintain comfort and luxury, even when transporting more prominent groups. Our Mercedes Sprinter enables you to travel easily with executive-style leather seating, ample space, and a safe, comfortable ride, providing a pleasant commute for you and your colleagues/friends. Perfect for more significant group events and functions. Get to your destination conveniently and restfully with our Mercedes Sprinter.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am. \n\nPlease get in touch with us for further details.",
     titleDesc: "Luxury Seating for up to 6",
@@ -295,6 +302,7 @@ export const fleet = [
     id: 8,
     title: "Executive Coach",
     brand: "ExecutiveCoach",
+    type:"Bus",
     description:
       "Travel in luxury and arrive in style on board one of our executive coaches, available in varying passenger sizes, ranging from 19 to 57 passenger vehicles. With immaculate interior features, including a rear lounge area, kitchen facilities, color lighting, and hostess service available on board (on selected coaches); these coaches are the pinnacle of excellence, sophistication, and the perfect start to your event.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am.\n \nPlease get in touch with us for further details.",
     titleDesc: "33/43/53/70 Passenger Coaches",
