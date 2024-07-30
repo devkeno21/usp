@@ -42,7 +42,8 @@ export default function About() {
         ></Box>
       </Flex>
         <Stack className="md:w-2/5 pt-4 p-4 md:p-6 relative z-8">
-          <Text className="text-justify font-semibold text-md md:text-lg text-white">
+          {/* <Text className="text-justify font-semibold text-md md:text-lg text-white"> */}
+          <Text className="font-semibold text-md md:text-lg text-white">
             In 2008, USP Holdings expanded its corporate mission and engaged in
             shuttle bus and limousine services. Our transportation mission is to
             provide safe, dependable, and efficient services for people who need

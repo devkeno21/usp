@@ -31,6 +31,7 @@ export default function RootLayout({
         <Providers>
           <RootStyleRegistry>
             <Notifications />
+            <Preloader/>
             <AnimationWrap>{children}</AnimationWrap>
           </RootStyleRegistry>
         </Providers>

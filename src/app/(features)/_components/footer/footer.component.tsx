@@ -48,15 +48,15 @@ export function Footer() {
   const now = new Date();
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<"a">
+      <Link
         key={index}
         className={classes.link}
-        component="a"
+        // component="a"
         href={link.link}
         // onClick={(event) => event.preventDefault()}
       >
         {link.label}
-      </Text>
+      </Link>
     ));
 
     return (

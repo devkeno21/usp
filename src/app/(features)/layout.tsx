@@ -13,7 +13,6 @@ export default function LandingLayout({ children}: {children: React.ReactNode}) 
       backgroundPosition: "center",
       backgroundRepeat:'repeat'
     }}>
-       <Preloader />
         <NavBar/>
         {children}
         <Footer/>
