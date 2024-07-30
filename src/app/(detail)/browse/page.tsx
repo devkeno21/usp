@@ -141,7 +141,7 @@ export default function Browse() {
                 Car Brand
               </Accordion.Control>
               <Accordion.Panel>
-                <Box className="grid grid-cols-3 gap-5">
+                <Box className="grid grid-cols-3 gap-y-5">
                   <Checkbox
                     label="Mercedes Benz"
                     color={theme.colors.secondary[9]}
