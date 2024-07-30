@@ -315,7 +315,7 @@ export const fleet = [
     bgUrl: Car9.src,
     videoUrl: "mScks7rqtwM",
     gallery: [
-      Car9.src,
+      // Car9.src,
       Coach1.src,
       Coach2.src,
       Coach3.src,
