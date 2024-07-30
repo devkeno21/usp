@@ -302,7 +302,7 @@ export const fleet = [
   {
     id: 8,
     title: "Executive Coach",
-    brand: "ExecutiveCoach",
+    brand: "Mercedes",
     type:"Bus",
     description:
       "Travel in luxury and arrive in style on board one of our executive coaches, available in varying passenger sizes, ranging from 19 to 57 passenger vehicles. With immaculate interior features, including a rear lounge area, kitchen facilities, color lighting, and hostess service available on board (on selected coaches); these coaches are the pinnacle of excellence, sophistication, and the perfect start to your event.\n\n*Includes 15% discount   \n*All payments made by credit card will incur a 3.5% card processing fee \n*All hourly movements traveling outside of the M25 will also be subject to a mileage charge. \n*All cancellations made between the hours of 22:00 pm and 06:00 am will only be effective from 06:00 am.\n \nPlease get in touch with us for further details.",

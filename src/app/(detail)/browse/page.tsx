@@ -163,6 +163,13 @@ export default function Browse() {
                     checked={carBrand.includes("Cadilac")}
                     onChange={() => onCarBrandChange("Cadilac")}
                   />
+                  <Checkbox
+                    label="Range Rover"
+                    color={theme.colors.secondary[9]}
+                    size="xs"
+                    checked={carBrand.includes("RangeRover")}
+                    onChange={() => onCarBrandChange("RangeRover")}
+                  />
                 </Box>
               </Accordion.Panel>
             </Accordion.Item>
