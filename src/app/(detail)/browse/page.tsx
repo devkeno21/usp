@@ -6,6 +6,7 @@ import {
   Checkbox,
   Flex,
   Group,
+  NumberInput,
   RangeSlider,
   Slider,
   Stack,
@@ -29,10 +30,10 @@ export default function Browse() {
   const theme = useMantineTheme();
   const router = useRouter();
   const [carBrand, setCarBrand] = useState<string[]>([]);
-  const [filteredFleets,setFilteredFleets] = useState(fleet)
-  const [priceRange, setPriceRange] = useState<[number,number]>([95, 345]);
-  const [seats,setSeats] = useState<number[]>([]);
-  const [bodyStyle,setBodyStyle] = useState<string[]>([]);
+  const [filteredFleets, setFilteredFleets] = useState(fleet);
+  const [priceRange, setPriceRange] = useState<[number, number]>([95, 345]);
+  const [seats, setSeats] = useState<number[]>([]);
+  const [bodyStyle, setBodyStyle] = useState<string[]>([]);
 
   const onCarBrandChange = (brand: string) => {
     if (carBrand.includes(brand)) {
@@ -57,43 +58,51 @@ export default function Browse() {
     }
   };
 
-  const onFilter =()=>{
-    let temp =[...fleet];
+  const handleMinChange = (value: number|string) => {
+    setPriceRange([Math.max(95, Math.min(value as number, 345)), priceRange[1]]);
+  };
+
+  const handleMaxChange = (value: number|string) => {
+    setPriceRange([priceRange[0], Math.max(95, Math.min(value as number, 345))]);
+  };
+  const onFilter = () => {
+    let temp = [...fleet];
     // filter by brand
-    if(carBrand.length>0){
-      temp = temp.filter(f=>carBrand.includes(f.brand));
+    if (carBrand.length > 0) {
+      temp = temp.filter((f) => carBrand.includes(f.brand));
     }
 
     // filter by seats
-    if(seats.length>0){
-      temp = temp.filter(f=>seats.includes(f.seats))
+    if (seats.length > 0) {
+      temp = temp.filter((f) => seats.includes(f.seats));
     }
 
     //filter by body style
-    if(bodyStyle.length>0){
-      temp = temp.filter(f=>bodyStyle.includes(f.type))
+    if (bodyStyle.length > 0) {
+      temp = temp.filter((f) => bodyStyle.includes(f.type));
     }
 
     //filter by price
-    temp= temp.filter(f=>{
-      const price = parseFloat(f.price.replace(/[^0-9.]/g, ''))
-      return price>=priceRange[0] && price<=priceRange[1]})
+    temp = temp.filter((f) => {
+      const price = parseFloat(f.price.replace(/[^0-9.]/g, ""));
+      return price >= priceRange[0] && price <= priceRange[1];
+    });
 
-    
+    setFilteredFleets(temp);
+  };
 
-    setFilteredFleets(temp)
-  }
+  const onReset = () => {
+    setCarBrand([]);
+    setSeats([]);
+    setPriceRange([95, 345]);
+    setFilteredFleets(fleet);
+  };
 
-  const onReset = ()=>{
-    setCarBrand([])
-    setSeats([])
-    setPriceRange([95, 345])
-    setFilteredFleets(fleet)
-  }
-
-  const onSearch=(query:string)=>{
-    setFilteredFleets(fleet.filter(f=>f.title.toLowerCase().includes(query.toLowerCase())))
-  }
+  const onSearch = (query: string) => {
+    setFilteredFleets(
+      fleet.filter((f) => f.title.toLowerCase().includes(query.toLowerCase()))
+    );
+  };
   return (
     <>
       <Breadcrumb
@@ -104,10 +113,13 @@ export default function Browse() {
       />
 
       <Box className="p-5 flex flex-col md:flex-row gap-10">
-        <Box className="w-full md:w-1/3 px-10 bg-white">
+        <Box className="w-full md:w-1/3  md:px-10 bg-white">
           <Flex justify="space-between">
             <p className="font-semibold text-xl">Filter By</p>
-            <p className="text-sm text-slate-500 flex gap-2 items-center cursor-pointer" onClick={onReset}>
+            <p
+              className="text-sm text-slate-500 flex gap-2 items-center cursor-pointer"
+              onClick={onReset}
+            >
               Reset All <IconX size={14} />
             </p>
           </Flex>
@@ -121,18 +133,62 @@ export default function Browse() {
                 color: "black",
               },
             }}
-            onChange={e=>onSearch(e.target.value)}
+            onChange={(e) => onSearch(e.target.value)}
           />
 
           <Accordion>
-            
-
             <Accordion.Item value="price" className="mt-5">
               <Accordion.Control className="text-semibold">
                 Price Per Hour
               </Accordion.Control>
               <Accordion.Panel>
-                <RangeSlider color={theme.colors.secondary[9]} min={95} max={345} value={priceRange} onChange={setPriceRange}/>
+                <RangeSlider
+                  color={theme.colors.secondary[9]}
+                  min={95}
+                  max={345}
+                  value={priceRange}
+                  onChange={setPriceRange}
+                />
+                <Flex gap="10">
+                  <NumberInput
+                    leftSection="From"
+                    className="my-2 border rounded"
+                    value={priceRange[0]}
+                    onChange={handleMinChange}
+                    styles={{
+                      input: {
+                        color: "black",
+                        width: "75%",
+                        marginLeft: "auto",
+                        border:"none"
+                      },
+                      section: {
+                        width: "40%",
+                        paddingHorizontal: "60px",
+                        borderRight: "1px solid #e5e7eb",
+                      },
+                    }}
+                  />
+                  <NumberInput
+                    leftSection="To"                    
+                    className="my-2 border rounded"
+                    value={priceRange[1]}
+                    onChange={handleMaxChange}
+                    styles={{
+                      input: {
+                        color: "black",
+                        width: "75%",
+                        marginLeft: "auto",
+                        border:"none"
+                      },
+                      section: {
+                        width: "40%",
+                        paddingHorizontal: "60px",
+                        borderRight: "1px solid #e5e7eb",
+                      },
+                    }}
+                  />
+                </Flex>
               </Accordion.Panel>
             </Accordion.Item>
 
@@ -184,28 +240,28 @@ export default function Browse() {
                     label="Sedan"
                     color={theme.colors.secondary[9]}
                     size="xs"
-                    onChange={()=>onBodyStyleChange("Sedan")}
+                    onChange={() => onBodyStyleChange("Sedan")}
                     checked={bodyStyle.includes("Sedan")}
                   />
                   <Checkbox
                     label="Suv"
                     color={theme.colors.secondary[9]}
                     size="xs"
-                    onChange={()=>onBodyStyleChange("Suv")}
+                    onChange={() => onBodyStyleChange("Suv")}
                     checked={bodyStyle.includes("Suv")}
                   />
                   <Checkbox
                     label="Van"
                     color={theme.colors.secondary[9]}
                     size="xs"
-                    onChange={()=>onBodyStyleChange("Van")}
+                    onChange={() => onBodyStyleChange("Van")}
                     checked={bodyStyle.includes("Van")}
                   />
                   <Checkbox
                     label="Bus"
                     color={theme.colors.secondary[9]}
                     size="xs"
-                    onChange={()=>onBodyStyleChange("Bus")}
+                    onChange={() => onBodyStyleChange("Bus")}
                     checked={bodyStyle.includes("Bus")}
                   />
                 </Box>
@@ -218,7 +274,6 @@ export default function Browse() {
               </Accordion.Control>
               <Accordion.Panel>
                 <Box className="grid grid-cols-3 gap-10">
-                  
                   <Checkbox
                     label="3 Seats"
                     color={theme.colors.secondary[9]}
