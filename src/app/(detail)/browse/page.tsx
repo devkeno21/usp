@@ -241,7 +241,7 @@ export default function Browse() {
                     checked={seats.includes(14)}
                   />
                   <Checkbox
-                    label="14 Seats"
+                    label="72 Seats"
                     color={theme.colors.secondary[9]}
                     size="xs"
                     onChange={() => onCarSeatChange(72)}
