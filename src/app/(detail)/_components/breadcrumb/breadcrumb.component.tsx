@@ -10,7 +10,7 @@ export const Breadcrumb = ({links}:any) => {
   ));
   return (
     <Box className="bg-primary-900 px-5 py-10" style={{
-      backgroundImage: `url(/form-bg.svg)`,
+      // backgroundImage: `url(/form-bg.svg)`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
