@@ -20,7 +20,6 @@ import {
   IconPoint,
   IconStar,
 } from "@tabler/icons-react";
-import LiteYouTubeEmbed from "react-lite-youtube-embed";
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 import { SUV } from "./_components/suv";
 import { Seats } from "./_components/seats";
@@ -31,9 +30,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import { useRef, useState } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { useParams, useRouter } from "next/navigation";
-import whiteCar from "./white-car.png";
 import { fleet } from "@/app/(features)/_components/fleet/fleet";
-import { Luggage } from "./_components/luggage";
 
 export default function DetailFleet() {
   const theme = useMantineTheme();
@@ -131,7 +128,7 @@ export default function DetailFleet() {
               </Box>
             </Stack>
           </Box>
-          <Box className="w-full px-10">
+          <Box className="w-full px-2 md:px-10">
             <p className="font-semibold text-xl text-slate-500">{car.brand}</p>
             <Flex justify="space-between" align="center">
               <p className="font-semibold text-2xl">{car.title}</p>
