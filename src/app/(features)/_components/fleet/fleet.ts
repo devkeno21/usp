@@ -37,9 +37,6 @@ import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
 import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
 import RangeRover4 from "./gallery/range-rover/range-rover4.jpeg";
 import RangeRover5 from "./gallery/range-rover/range-rover5.jpg";
-import RangeRover6 from "./gallery/range-rover/range-rover5.jpg";
-import RangeRover7 from "./gallery/range-rover/range-rover5.jpg";
-import RangeRover8 from "./gallery/range-rover/range-rover5.jpg";
 
 import Escalade2 from "./gallery/escalade/escalade-2.jpg";
 import Escalade3 from "./gallery/escalade/escalade-3.jpeg";
@@ -135,14 +132,14 @@ export const fleet = [
     videoUrl: "lTVEkHfUKLk",
     gallery: [
       Escalade2.src,
-      Escalade3.src,
+      // Escalade3.src,
       Escalade4.src,
-      Escalade5.src,
+      // Escalade5.src,
       Escalade6.src,
       Escalade7.src,
       Escalade8.src,
       Escalade9.src,
-      Escalade10.src,
+      // Escalade10.src,
     ],
     features: [
       "Full-size SUV that offers high-end features",
@@ -168,11 +165,8 @@ export const fleet = [
       RangeRover1.src,
       RangeRover2.src,
       RangeRover3.src,
-      RangeRover4.src,
+      // RangeRover4.src,
       RangeRover5.src,
-      RangeRover6.src,
-      RangeRover7.src,
-      RangeRover8.src,
     ],
     features: [
       "Providing immense space with a power recline",
@@ -228,10 +222,10 @@ export const fleet = [
       Sclass4.src,
       Sclass5.src,
       Sclass7.src,
-      Sclass8.src,
-      Sclass9.src,
-      Sclass10.src,
-      Sclass11.src,
+      // Sclass8.src,
+      // Sclass9.src,
+      // Sclass10.src,
+      // Sclass11.src,
       Sclass12.src,
       Sclass13.src,
     ],
@@ -260,7 +254,7 @@ export const fleet = [
       Modelx1.src,
       Modelx2.src,
       Modelx4.src,
-      Modelx5.src,
+      // Modelx5.src,
       Modelx6.src,
     ],
     features: [
@@ -285,10 +279,10 @@ export const fleet = [
     bgUrl: Car8.src,
     videoUrl: "BxAVmcpXIqo",
     gallery: [
-      Sprinter2.src,
+      // Sprinter2.src,
       Sprinter4.src,
-      Sprinter5.src,
-      Sprinter6.src,
+      // Sprinter5.src,
+      // Sprinter6.src,
       Sprinter7.src,
       Sprinter8.src,
       Sprinter9.src,
