@@ -161,7 +161,7 @@ export default function TermsAndConditions() {
               <Text
                 key={term.id}
                 // className="text-justify font-semibold text-md md:text-lg text-white pb-5"
-                className=" font-semibold text-md md:text-lg text-white pb-5"
+                className=" font-semibold text-md md:text-lg text-white pb-2"
               >
                 {term.id}. {term.title}
               </Text>
