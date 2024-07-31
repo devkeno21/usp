@@ -21,9 +21,15 @@ import Coach7 from "./gallery/coach/coach-7.jpg";
 
 import Modelx1 from "./gallery/model-x/model-x1.jpg";
 import Modelx2 from "./gallery/model-x/model-x2.jpg";
-// import Modelx3 from './gallery/model-x/model-x3.mp4'
 import Modelx4 from "./gallery/model-x/model-x4.jpg";
 import Modelx6 from "./gallery/model-x/model-x6.jpg";
+import Modelx7 from "./gallery/model-x/model-x7.jpg";
+import Modelx8 from "./gallery/model-x/model-x8.jpg";
+import Modelx9 from "./gallery/model-x/model-x9.jpg";
+import Modelx10 from "./gallery/model-x/model-x10.jpg";
+import Modelx11 from "./gallery/model-x/model-x11.jpg";
+import Modelx12 from "./gallery/model-x/model-x12.jpg";
+import Modelx13 from "./gallery/model-x/model-x13.jpg";
 
 import Models5 from "./gallery/model-s/model-s5.jpg";
 import Models6 from "./gallery/model-s/model-s6.jpeg";
@@ -32,11 +38,22 @@ import Models8 from "./gallery/model-s/model-s8.jpg";
 import Models9 from "./gallery/model-s/model-s9.jpg";
 import Models10 from "./gallery/model-s/model-s10.jpg";
 import Models11 from "./gallery/model-s/model-s11.jpg";
+import Models12 from "./gallery/model-s/model-s12.png";
+import Models13 from "./gallery/model-s/model-s13.jpg";
+import Models14 from "./gallery/model-s/model-s14.jpg";
+import Models15 from "./gallery/model-s/model-s15.jpg";
+import Models16 from "./gallery/model-s/model-s16.jpg";
 
 import RangeRover1 from "./gallery/range-rover/range-rover1.jpeg";
 import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
 import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
 import RangeRover5 from "./gallery/range-rover/range-rover5.jpg";
+import RangeRover6 from "./gallery/range-rover/range-rover6.jpg";
+import RangeRover7 from "./gallery/range-rover/range-rover7.jpg";
+import RangeRover8 from "./gallery/range-rover/range-rover8.jpg";
+import RangeRover10 from "./gallery/range-rover/range-rover10.jpg";
+import RangeRover12 from "./gallery/range-rover/range-rover12.png";
+import RangeRover13 from "./gallery/range-rover/range-rover13.jpg";
 
 import Escalade2 from "./gallery/escalade/escalade-2.jpg";
 import Escalade4 from "./gallery/escalade/escalade-4.jpeg";
@@ -55,6 +72,12 @@ import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
 import Sprinter8 from "./gallery/sprinter/sprinter-8.jpg";
 import Sprinter9 from "./gallery/sprinter/sprinter-9.jpg";
 import Sprinter10 from "./gallery/sprinter/sprinter-10.jpg";
+import Sprinter11 from "./gallery/sprinter/sprinter-11.jpg";
+import Sprinter12 from "./gallery/sprinter/sprinter-12.jpg";
+import Sprinter13 from "./gallery/sprinter/sprinter-13.jpg";
+import Sprinter14 from "./gallery/sprinter/sprinter-14.jpg";
+import Sprinter15 from "./gallery/sprinter/sprinter-15.jpg";
+import Sprinter16 from "./gallery/sprinter/sprinter-16.jpg";
 
 import Eclass1 from "./gallery/e-class/eclass1.jpg";
 import Eclass2 from "./gallery/e-class/eclass2.jpg";
@@ -170,6 +193,12 @@ export const fleet = [
       RangeRover2.src,
       RangeRover3.src,
       RangeRover5.src,
+      RangeRover6.src,
+      RangeRover7.src,
+      RangeRover8.src,
+      RangeRover10.src,
+      RangeRover12.src,
+      RangeRover13.src,
     ],
     features: [
       "Providing immense space with a power recline",
@@ -199,6 +228,11 @@ export const fleet = [
       Models9.src,
       Models10.src,
       Models11.src,
+      Models12.src,
+      Models13.src,
+      Models14.src,
+      Models15.src,
+      Models16.src,
     ],
     features: [
       "Zero-emission electric",
@@ -260,6 +294,13 @@ export const fleet = [
       Modelx2.src,
       Modelx4.src,
       Modelx6.src,
+      Modelx7.src,
+      Modelx8.src,
+      Modelx9.src,
+      Modelx10.src,
+      Modelx11.src,
+      Modelx12.src,
+      Modelx13.src,
     ],
     features: [
       "One of the safest SUV's ever",
@@ -287,6 +328,12 @@ export const fleet = [
       Sprinter8.src,
       Sprinter9.src,
       Sprinter10.src,
+      Sprinter11.src,
+      Sprinter12.src,
+      Sprinter13.src,
+      Sprinter14.src,
+      Sprinter15.src,
+      Sprinter16.src,
     ],
     features: [
       "Transporting more prominent groups",
