@@ -55,7 +55,7 @@ export default function DetailFleet() {
       <Box
         className="p-5"
         style={{
-          backgroundImage: `url(${Wave.src})`,
+          // backgroundImage: `url(${Wave.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
