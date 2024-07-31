@@ -44,6 +44,7 @@ import Models13 from "./gallery/model-s/model-s13.jpg";
 import Models14 from "./gallery/model-s/model-s14.jpg";
 import Models15 from "./gallery/model-s/model-s15.jpg";
 import Models16 from "./gallery/model-s/model-s16.jpg";
+import Models17 from "./gallery/model-s/model-s17.jpg";
 
 import RangeRover1 from "./gallery/range-rover/range-rover1.jpeg";
 import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
@@ -67,6 +68,7 @@ import Escalade12 from "./gallery/escalade/escalade-12.jpg";
 import Escalade13 from "./gallery/escalade/escalade-13.jpg";
 import Escalade14 from "./gallery/escalade/escalade-14.jpg";
 import Escalade15 from "./gallery/escalade/escalade-15.jpg";
+import Escalade16 from "./gallery/escalade/escalade-16.jpg";
 
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
 import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
@@ -178,6 +180,7 @@ export const fleet = [
       Escalade13.src,
       Escalade14.src,
       Escalade15.src,
+      Escalade16.src,
     ],
     features: [
       "Full-size SUV that offers high-end features",
@@ -244,6 +247,7 @@ export const fleet = [
       Models14.src,
       Models15.src,
       Models16.src,
+      Models17.src,
     ],
     features: [
       "Zero-emission electric",
