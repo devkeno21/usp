@@ -30,6 +30,7 @@ import Modelx10 from "./gallery/model-x/model-x10.jpg";
 import Modelx11 from "./gallery/model-x/model-x11.jpg";
 import Modelx12 from "./gallery/model-x/model-x12.jpg";
 import Modelx13 from "./gallery/model-x/model-x13.jpg";
+import Modelx14 from "./gallery/model-x/model-x14.jpg";
 
 import Models5 from "./gallery/model-s/model-s5.jpg";
 import Models6 from "./gallery/model-s/model-s6.jpeg";
@@ -90,6 +91,11 @@ import Eclass8 from "./gallery/e-class/eclass8.jpg";
 import Eclass9 from "./gallery/e-class/eclass9.jpg";
 import Eclass10 from "./gallery/e-class/eclass10.jpg";
 import Eclass11 from "./gallery/e-class/eclass11.jpg";
+import Eclass12 from "./gallery/e-class/eclass12.jpg";
+import Eclass13 from "./gallery/e-class/eclass13.jpg";
+import Eclass14 from "./gallery/e-class/eclass14.jpg";
+import Eclass15 from "./gallery/e-class/eclass15.jpg";
+import Eclass16 from "./gallery/e-class/eclass16.jpg";
 
 import SBg from "./ms-bg.png";
 import Sclass from "./gallery/s-class/s-class.png";
@@ -134,6 +140,11 @@ export const fleet = [
       Eclass9.src,
       Eclass10.src,
       Eclass11.src,
+      Eclass12.src,
+      Eclass13.src,
+      Eclass14.src,
+      Eclass15.src,
+      Eclass16.src,
     ],
     features: [
       "Exceptional design and innovative technology ",
@@ -301,6 +312,7 @@ export const fleet = [
       Modelx11.src,
       Modelx12.src,
       Modelx13.src,
+      Modelx14.src,
     ],
     features: [
       "One of the safest SUV's ever",
