@@ -50,7 +50,8 @@ export default function Affiliates() {
             a sophisticated clientele, enhancing your professional reputation
             and earning potential.
           </Text>
-          <Text className="text-justify text-white font-semibold md:text-lg">
+          {/* <Text className="text-justify text-white font-semibold md:text-lg"> */}
+          <Text className=" text-white font-semibold md:text-lg">
             Sign up today to embark on your journey as an affiliated driver.
             Experience the benefits of driving for a premium market and elevate
             your career to new heights.
