@@ -16,12 +16,13 @@ import Coach2 from "./gallery/coach/coach-2.jpg";
 import Coach3 from "./gallery/coach/coach-3.jpg";
 import Coach4 from "./gallery/coach/coach-4.jpg";
 import Coach5 from "./gallery/coach/coach-5.jpg";
+import Coach6 from "./gallery/coach/coach-6.jpg";
+import Coach7 from "./gallery/coach/coach-7.jpg";
 
 import Modelx1 from "./gallery/model-x/model-x1.jpg";
 import Modelx2 from "./gallery/model-x/model-x2.jpg";
 // import Modelx3 from './gallery/model-x/model-x3.mp4'
 import Modelx4 from "./gallery/model-x/model-x4.jpg";
-import Modelx5 from "./gallery/model-x/model-x5.jpg";
 import Modelx6 from "./gallery/model-x/model-x6.jpg";
 
 import Models5 from "./gallery/model-s/model-s5.jpg";
@@ -35,23 +36,21 @@ import Models11 from "./gallery/model-s/model-s11.jpg";
 import RangeRover1 from "./gallery/range-rover/range-rover1.jpeg";
 import RangeRover2 from "./gallery/range-rover/range-rover2.jpeg";
 import RangeRover3 from "./gallery/range-rover/range-rover3.jpg";
-import RangeRover4 from "./gallery/range-rover/range-rover4.jpeg";
 import RangeRover5 from "./gallery/range-rover/range-rover5.jpg";
 
 import Escalade2 from "./gallery/escalade/escalade-2.jpg";
-import Escalade3 from "./gallery/escalade/escalade-3.jpeg";
 import Escalade4 from "./gallery/escalade/escalade-4.jpeg";
-import Escalade5 from "./gallery/escalade/escalade-5.png";
 import Escalade6 from "./gallery/escalade/escalade-6.png";
 import Escalade7 from "./gallery/escalade/escalade-7.jpg";
 import Escalade8 from "./gallery/escalade/escalade-8.jpg";
 import Escalade9 from "./gallery/escalade/escalade-9.jpg";
-import Escalade10 from "./gallery/escalade/escalade-10.jpg";
+import Escalade11 from "./gallery/escalade/escalade-11.jpg";
+import Escalade12 from "./gallery/escalade/escalade-12.jpg";
+import Escalade13 from "./gallery/escalade/escalade-13.jpg";
+import Escalade14 from "./gallery/escalade/escalade-14.jpg";
+import Escalade15 from "./gallery/escalade/escalade-15.jpg";
 
-import Sprinter2 from "./gallery/sprinter/sprinter-2.jpeg";
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
-import Sprinter5 from "./gallery/sprinter/sprinter-5.jpg";
-import Sprinter6 from "./gallery/sprinter/sprinter-6.png";
 import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
 import Sprinter8 from "./gallery/sprinter/sprinter-8.jpg";
 import Sprinter9 from "./gallery/sprinter/sprinter-9.jpg";
@@ -75,12 +74,15 @@ import Sclass3 from "./gallery/s-class/s-class3.jpg";
 import Sclass4 from "./gallery/s-class/s-class4.jpg";
 import Sclass5 from "./gallery/s-class/s-class5.jpeg";
 import Sclass7 from "./gallery/s-class/s-class7.jpg";
-import Sclass8 from "./gallery/s-class/s-class8.jpg";
-import Sclass9 from "./gallery/s-class/s-class9.jpg";
-import Sclass10 from "./gallery/s-class/s-class10.jpg";
-import Sclass11 from "./gallery/s-class/s-class11.jpg";
 import Sclass12 from "./gallery/s-class/s-class12.jpg";
 import Sclass13 from "./gallery/s-class/s-class13.jpg";
+import Sclass14 from "./gallery/s-class/s-class14.jpg";
+import Sclass15 from "./gallery/s-class/s-class15.jpg";
+import Sclass16 from "./gallery/s-class/s-class16.jpg";
+import Sclass17 from "./gallery/s-class/s-class17.jpg";
+import Sclass18 from "./gallery/s-class/s-class18.jpg";
+import Sclass19 from "./gallery/s-class/s-class19.jpg";
+import Sclass20 from "./gallery/s-class/s-class20.jpg";
 
 export const fleet = [
   {
@@ -132,14 +134,16 @@ export const fleet = [
     videoUrl: "lTVEkHfUKLk",
     gallery: [
       Escalade2.src,
-      // Escalade3.src,
       Escalade4.src,
-      // Escalade5.src,
       Escalade6.src,
       Escalade7.src,
       Escalade8.src,
       Escalade9.src,
-      // Escalade10.src,
+      Escalade11.src,
+      Escalade12.src,
+      Escalade13.src,
+      Escalade14.src,
+      Escalade15.src,
     ],
     features: [
       "Full-size SUV that offers high-end features",
@@ -165,7 +169,6 @@ export const fleet = [
       RangeRover1.src,
       RangeRover2.src,
       RangeRover3.src,
-      // RangeRover4.src,
       RangeRover5.src,
     ],
     features: [
@@ -222,12 +225,15 @@ export const fleet = [
       Sclass4.src,
       Sclass5.src,
       Sclass7.src,
-      // Sclass8.src,
-      // Sclass9.src,
-      // Sclass10.src,
-      // Sclass11.src,
       Sclass12.src,
       Sclass13.src,
+      Sclass14.src,
+      Sclass15.src,
+      Sclass16.src,
+      Sclass17.src,
+      Sclass18.src,
+      Sclass19.src,
+      Sclass20.src,
     ],
     features: [
       "Highly advanced air suspension ",
@@ -250,11 +256,9 @@ export const fleet = [
     bgUrl: Car7Bg.src,
     videoUrl: "LLZtGpduhas",
     gallery: [
-      //   Modelx3.src,
       Modelx1.src,
       Modelx2.src,
       Modelx4.src,
-      // Modelx5.src,
       Modelx6.src,
     ],
     features: [
@@ -264,7 +268,6 @@ export const fleet = [
   },
   {
     id: 7,
-    // title: "Executive Minibus (Mercedes Sprinter)",
     title: "Mercedes Sprinter",
     brand: "Mercedes",
     type:"Van",
@@ -279,10 +282,7 @@ export const fleet = [
     bgUrl: Car8.src,
     videoUrl: "BxAVmcpXIqo",
     gallery: [
-      // Sprinter2.src,
       Sprinter4.src,
-      // Sprinter5.src,
-      // Sprinter6.src,
       Sprinter7.src,
       Sprinter8.src,
       Sprinter9.src,
@@ -309,12 +309,13 @@ export const fleet = [
     bgUrl: Car9.src,
     videoUrl: "mScks7rqtwM",
     gallery: [
-      // Car9.src,
       Coach1.src,
       Coach2.src,
       Coach3.src,
       Coach4.src,
       Coach5.src,
+      Coach6.src,
+      Coach7.src,
     ],
     features: [
       "Travel in luxury and arrive in style",
