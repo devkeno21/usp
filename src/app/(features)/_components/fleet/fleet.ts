@@ -68,7 +68,7 @@ import Escalade12 from "./gallery/escalade/escalade-12.jpg";
 import Escalade13 from "./gallery/escalade/escalade-13.jpg";
 import Escalade14 from "./gallery/escalade/escalade-14.jpg";
 import Escalade15 from "./gallery/escalade/escalade-15.jpg";
-import Escalade16 from "./gallery/escalade/escalade-16.jpg";
+import Escalade16 from "./gallery/escalade/escalade-16.png";
 
 import Sprinter4 from "./gallery/sprinter/sprinter-4.jpg";
 import Sprinter7 from "./gallery/sprinter/sprinter-7.jpg";
