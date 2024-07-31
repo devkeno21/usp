@@ -160,7 +160,8 @@ export default function TermsAndConditions() {
             {terms.map((term) => (
               <Text
                 key={term.id}
-                className="text-justify font-semibold text-md md:text-lg text-white"
+                // className="text-justify font-semibold text-md md:text-lg text-white pb-5"
+                className=" font-semibold text-md md:text-lg text-white pb-5"
               >
                 {term.id}. {term.title}
               </Text>
