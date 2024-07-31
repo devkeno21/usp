@@ -151,7 +151,7 @@ export default function Browse() {
                 />
                 <Flex gap="10">
                   <NumberInput
-                    leftSection="From"
+                    leftSection="From ($)"
                     className="my-2 border rounded"
                     value={priceRange[0]}
                     onChange={handleMinChange}
@@ -170,8 +170,9 @@ export default function Browse() {
                     }}
                   />
                   <NumberInput
-                    leftSection="To"                    
+                    leftSection="To ($)"                    
                     className="my-2 border rounded"
+                    // rightSection="USD"
                     value={priceRange[1]}
                     onChange={handleMaxChange}
                     styles={{
