@@ -55,7 +55,7 @@ export default function Affiliate() {
     formData.append('chauffeurInformation', JSON.stringify(chauffeurInformation))
     formData.append('fleetInformation', JSON.stringify(fleetInformation))
     formData.append('billingInformation', JSON.stringify(billingInformation))
-    formData.append('file', file)
+    formData.append('file', file[0])
     console.log({formData})
     try{
       await joinAffiliate(formData).unwrap();

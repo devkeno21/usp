@@ -1,6 +1,6 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
-import CarBg from "./carBg.png";
+import CarBg from "./affiliates-car.webp";
 import { useRouter } from "next/navigation";
 
 export default function Affiliates() {

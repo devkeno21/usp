@@ -9,7 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import React from "react";
-import SubscribeCar from "./subscribe-2.png";
+import SubscribeCar from "./subscribe-car.webp";
 import classes from "./subscribe.module.css"
 
 export default function Subscribe() {

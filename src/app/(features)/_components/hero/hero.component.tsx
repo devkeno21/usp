@@ -1,7 +1,7 @@
 "use client";
 import { Box, Button, Flex, Stack, Text, useMantineTheme } from "@mantine/core";
 import React from "react";
-import HeroCar from "./hero-car.jpg";
+import HeroCar from "./hero-car.webp";
 import Wave from "../services/Vector.svg";
 
 export default function HeroSection() {
