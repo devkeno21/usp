@@ -13,7 +13,7 @@ import { Metadata } from "next";
 export const metadata:Metadata ={
   title:"USP Transportation - Luxury Car Service & VIP Transportation",
   description:"Experience ultimate comfort and style with USP Transportation. We offer premium car services, airport transfers, and VIP transportation solutions. Book your luxury ride today!",
-  keywords: ['USP', 'transportation', 'luxury', 'car', 'service'],
+  keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"usptransportation","usp transportation","Usp Transportation"],
   openGraph:{
     title: 'USP Transportation - Luxury Car Service & VIP Transportation',
     description: 'Experience ultimate comfort and style with USP Transportation. We offer premium car services, airport transfers, and VIP transportation solutions. Book your luxury ride today!',

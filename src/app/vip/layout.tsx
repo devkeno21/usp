@@ -13,7 +13,7 @@ export const metadata:Metadata ={
   
     },
     description:"Join USP Transportation's VIP Program for premium benefits, priority booking, and personalised luxury transportation services. Elevate your travel experience today.",
-    keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"vip"],
+    keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"usptransportation","usp transportation","Usp Transportation","vip","vip transportation"],
   }
   
 

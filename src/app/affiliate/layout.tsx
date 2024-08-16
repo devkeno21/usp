@@ -4,7 +4,7 @@ import React from "react";
 export const metadata:Metadata ={
     title:"Join Our Affiliate Program | Partnership Opportunities",
     description:"Sign up for our affiliate program. Earn rewards by promoting our products/services. Easy registration process.",
-    keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"affiliate"],
+    keywords: ['USP', 'transportation', 'luxury', 'car', 'service',"usptransportation","usp transportation","Usp Transportation"],
     openGraph:{
         type:"website",
         url:"/affiliate",
