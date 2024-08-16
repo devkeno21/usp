@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@builder.io/partytown':
+    specifier: ^0.10.2
+    version: 0.10.2
   '@hookform/resolvers':
     specifier: ^3.6.0
     version: 3.6.0(react-hook-form@7.52.0)
@@ -125,6 +128,12 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
+    dev: false
+
+  /@builder.io/partytown@0.10.2:
+    resolution: {integrity: sha512-A9U+4PREWcS+CCYzKGIPovtGB/PBgnH/8oQyCE6Nr9drDJk6cMPpLQIEajpGPmG9tYF7N3FkRvhXm/AS9+0iKg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
     dev: false
 
   /@eslint-community/eslint-utils@4.4.0(eslint@8.57.0):
