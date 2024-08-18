@@ -9,7 +9,7 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-import CarBg from "./about-car.png";
+import CarBg from "./about-car.webp";
 
 export default function About() {
   const theme = useMantineTheme();
