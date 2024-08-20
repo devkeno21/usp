@@ -5,9 +5,6 @@ import { preLoaderAnim } from "./animations/index";
 import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
 import { useMediaQuery } from "@mantine/hooks";
-import Head from "next/head";
-import { Partytown } from '@builder.io/partytown/react';
-
 export default function Preloader() {
   const matches = useMediaQuery("(max-width: 40em)", true, {
     getInitialValueInEffect: true,
@@ -18,10 +15,7 @@ export default function Preloader() {
   }, [matches]);
 
   return (
-    <>
-      <Head>
-        <Partytown debug={true} forward={['dataLayer.push']} />
-      </Head>
+    
     <div className="preloader" style={{ backgroundColor: "#9A8E84" }}>
       <div
         className="preloader-top"
@@ -64,7 +58,7 @@ export default function Preloader() {
         ></div>
       </div>
     </div>
-    </>
+  
   );
 }
 
