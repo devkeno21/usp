@@ -4,12 +4,7 @@ import "./preloader.css";
 import { preLoaderAnim } from "./animations/index";
 import { preLoaderAnimMob } from "./mobile/index";
 import logo from "./car-1.png";
-import Trans from "./deskBg.png";
-import MobileBg from "./mobileBg.png";
 import { useMediaQuery } from "@mantine/hooks";
-import { useAnimationStore } from "@/state/zustand/animation.state";
-import { deleteCookie, getCookie, setCookie } from "cookies-next";
-import { Box, Loader } from "@mantine/core";
 
 export default function Preloader() {
   const matches = useMediaQuery("(max-width: 40em)", true, {
