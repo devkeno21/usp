@@ -1,16 +1,16 @@
-import Car1 from "./car-1.png";
-import Car2 from "./car-2.png";
-import Car3Bg from "./e-bg.png";
-import Car4 from "./car-4.png";
-import Car5 from "./car-5.png";
-import Car5Bg from "./rover-bg.png";
-import Car6 from "./car-6.png";
-import Car6Bg from "./s-bg.png";
-import Car7 from "./car-7.png";
-import Car7Bg from "./x-bg.png";
-import Car8 from "./sprinter.png";
+import Car1 from "./car-1.webp";
+import Car2 from "./car-2.webp";
+import Car3Bg from "./e-bg.webp";
+import Car4 from "./car-4.webp";
+import Car5 from "./car-5.webp";
+import Car5Bg from "./rover-bg.webp";
+import Car6 from "./car-6.webp";
+import Car6Bg from "./s-bg.webp";
+import Car7 from "./car-7.webp";
+import Car7Bg from "./x-bg.webp";
+import Car8 from "./sprinter.webp";
 
-import Car9 from "./car-9.png";
+import Car9 from "./car-9.webp";
 import Coach1 from "./gallery/coach/coach-1.jpg";
 import Coach2 from "./gallery/coach/coach-2.jpg";
 import Coach3 from "./gallery/coach/coach-3.jpg";
@@ -99,7 +99,7 @@ import Eclass14 from "./gallery/e-class/eclass14.jpg";
 import Eclass15 from "./gallery/e-class/eclass15.jpg";
 import Eclass16 from "./gallery/e-class/eclass16.jpg";
 
-import SBg from "./ms-bg.png";
+import SBg from "./ms-bg.webp";
 import Sclass from "./gallery/s-class/s-class.png";
 import Sclass3 from "./gallery/s-class/s-class3.jpg";
 import Sclass4 from "./gallery/s-class/s-class4.jpg";
