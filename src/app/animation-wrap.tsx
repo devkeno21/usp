@@ -1,8 +1,6 @@
 "use client"
 import { Box, Loader } from "@mantine/core";
-import Head from "next/head";
 import React from "react";
-import { Partytown } from '@builder.io/partytown/react';
 
 
 export default function AnimationWrap({
@@ -17,9 +15,7 @@ export default function AnimationWrap({
     );
 
     return <>
-     <Head>
-        <Partytown debug={true} forward={['dataLayer.push']} />
-      </Head>
+   
     {children}
     </>
 }
