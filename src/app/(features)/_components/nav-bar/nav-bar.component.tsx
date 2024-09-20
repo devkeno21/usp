@@ -34,6 +34,7 @@ import {
 import classes from "./nav-bar.module.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const mockdata = [
   {
@@ -149,27 +150,42 @@ export function NavBar() {
           <Divider my="sm" />
           <Stack>
             <Stack className="mx-auto">
-              <a href="#" className={classes.link}>
+              <Link href="#" className={classes.link}>
                 Home
-              </a>
+              </Link>
 
               <Collapse in={linksOpened}>{links}</Collapse>
 
-              <a href="#about" className={`text-black `}>
+              <UnstyledButton onClick={()=>{
+                router.push("#about")
+                closeDrawer()
+              }} className={`text-black `}>
                 About
-              </a>
-              <a href="#services" className={`text-black `}>
+              </UnstyledButton>
+              <UnstyledButton onClick={()=>{
+                router.push("#services")
+                closeDrawer()
+              }}  className={`text-black `}>
                 Services
-              </a>
-              <a href="#fleets" className={`text-black `}>
+              </UnstyledButton>
+              <UnstyledButton onClick={()=>{
+                router.push("#fleets")
+                closeDrawer()
+              }} className={`text-black `}>
                 Fleets
-              </a>
-              <a href="#affiliates" className={`text-black`}>
+              </UnstyledButton>
+              <UnstyledButton onClick={()=>{
+                router.push("#affiliates")
+                closeDrawer()
+              }} className={`text-black`}>
                 Affiliates
-              </a>
-              <a href="#contact" className={`text-black `}>
+              </UnstyledButton>
+              <UnstyledButton onClick={()=>{
+                router.push("#contact")
+                closeDrawer()
+              }}  className={`text-black `}>
                 Contact
-              </a>
+              </UnstyledButton>
               <Divider my="sm" />
             </Stack>
 
